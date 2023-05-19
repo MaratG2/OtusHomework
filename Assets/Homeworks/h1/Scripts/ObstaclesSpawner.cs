@@ -1,11 +1,16 @@
 using System;
+using Homeworks.h1.GameManager;
 using Homeworks.h1.SO;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Homeworks.h1
 {
-    public class ObstaclesSpawner : MonoBehaviour
+    public class ObstaclesSpawner : MonoBehaviour,
+        IGameStartListener,
+        IGameEndListener,
+        IGamePauseListener,
+        IGameResumeListener
     {
         [SerializeField, Required] private ObstaclesSpawnerDataSO _obstaclesSpawnerData;
         [SerializeField, Required] private ObstacleBehaviour _obstaclePrefab;
@@ -13,6 +18,11 @@ namespace Homeworks.h1
         [SerializeField, Required] private Transform _obstaclesContainer;
 
         private float _timer = 0f;
+
+        private void Awake()
+        {
+            this.enabled = false;
+        }
 
         private void Update()
         {
@@ -35,6 +45,26 @@ namespace Homeworks.h1
             Vector3 pos = _target.transform.position;
             pos += new Vector3(0f, 0f, _obstaclesSpawnerData.SpawnOffset);
             return pos;
+        }
+
+        public void OnGameStart()
+        {
+            this.enabled = true;
+        }
+
+        public void OnGameEnd()
+        {
+            this.enabled = false;
+        }
+
+        public void OnGamePause()
+        {
+            this.enabled = false;
+        }
+
+        public void OnGameResume()
+        {
+            this.enabled = true;
         }
     }
 }

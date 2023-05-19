@@ -1,3 +1,4 @@
+using Homeworks.h1.GameManager;
 using Homeworks.h1.SO;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -5,7 +6,11 @@ using UnityEngine;
 namespace Homeworks.h1
 {
     [RequireComponent(typeof(Rigidbody))]
-    public class MovementController : MonoBehaviour
+    public class MovementController : MonoBehaviour,
+        IGameStartListener,
+        IGameEndListener,
+        IGamePauseListener,
+        IGameResumeListener
     {
         [SerializeField, Required] private MovementDataSO _movementData;
         [SerializeField] private Vector2 _trackBorders = new(0, 2);
@@ -15,6 +20,7 @@ namespace Homeworks.h1
         private void Awake()
         {
             _rb = GetComponent<Rigidbody>();
+            this.enabled = false;
         }
 
         private void FixedUpdate()
@@ -41,6 +47,28 @@ namespace Homeworks.h1
             Vector3 newPos = transform.localPosition;
             newPos += transform.right * trackShift * _movementData.ShiftSize;
             transform.localPosition = newPos;
+        }
+
+        public void OnGameStart()
+        {
+            this.enabled = true;
+        }
+
+        public void OnGameEnd()
+        {
+            this.enabled = false;
+            _rb.velocity = Vector3.zero;
+        }
+
+        public void OnGamePause()
+        {
+            this.enabled = false;
+            _rb.velocity = Vector3.zero;
+        }
+
+        public void OnGameResume()
+        {
+            this.enabled = true;
         }
     }
 }
