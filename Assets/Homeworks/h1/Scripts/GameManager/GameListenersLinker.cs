@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Homeworks.h1.GameManager
+namespace Homeworks.h1.GameManagement
 {
     [RequireComponent(typeof(GameManager))]
     public class GameListenersLinker : MonoBehaviour

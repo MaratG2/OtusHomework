@@ -1,4 +1,4 @@
-using Homeworks.h1.GameManager;
+using Homeworks.h1.GameManagement;
 using Homeworks.h1.SO;
 using Sirenix.OdinInspector;
 using UnityEngine;

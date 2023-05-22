@@ -1,5 +1,5 @@
 using System;
-using Homeworks.h1.GameManager;
+using Homeworks.h1.GameManagement;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using DefaultInputActions = UnityEngine.InputSystem.h1.DefaultInputActions;

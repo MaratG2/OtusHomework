@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Homeworks.h1.GameManager
+namespace Homeworks.h1.GameManagement
 {
     public enum GameState
     {

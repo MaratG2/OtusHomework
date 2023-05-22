@@ -1,4 +1,4 @@
-namespace Homeworks.h1.GameManager
+namespace Homeworks.h1.GameManagement
 {
     public interface IGameListener
     { }
