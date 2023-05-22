@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Homeworks.h1.Tags
 {
-    public class PlayerTag : MonoBehaviour
+    public class ObstacleTag : MonoBehaviour
     {
     }
 }
