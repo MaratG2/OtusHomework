@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveInput: {fileID: 495204229}
-  _playerMover: {fileID: 935600135}
+  _playerRoadMover: {fileID: 935600135}
 --- !u!1 &552849335
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,6 +2332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 935600132}
   - component: {fileID: 935600135}
+  - component: {fileID: 935600137}
   - component: {fileID: 935600134}
   - component: {fileID: 935600133}
   - component: {fileID: 935600136}
@@ -2413,6 +2414,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f4179d3e03382f468c706f722162c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &935600137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935600131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25447f27936c4085be12cd763db29ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movementData: {fileID: 11400000, guid: 29060962d8ff63d4c93fb7874b977f9b, type: 2}
 --- !u!1 &1033653086
 GameObject:
   m_ObjectHideFlags: 0
