@@ -6,16 +6,16 @@ namespace Homeworks.h1
     public class PlayerMoveController : MonoBehaviour
     {
         [SerializeField, Required] MoveInput _moveInput;
-        [SerializeField, Required] MovementController _movementController;
+        [SerializeField, Required] PlayerMover _playerMover;
 
         private void OnEnable()
         {
-            _moveInput.OnMoveToSide += _movementController.ChangeTrack;
+            _moveInput.OnMoveToSide += _playerMover.ChangeTrack;
         }
 
         private void OnDisable()
         {
-            _moveInput.OnMoveToSide -= _movementController.ChangeTrack;
+            _moveInput.OnMoveToSide -= _playerMover.ChangeTrack;
         }
     }
 }

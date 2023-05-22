@@ -1076,8 +1076,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6acafa7268919b4e819c63a297c2c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inputController: {fileID: 495204229}
-  _movementController: {fileID: 935600135}
+  _moveInput: {fileID: 495204229}
+  _playerMover: {fileID: 935600135}
 --- !u!1 &552849335
 GameObject:
   m_ObjectHideFlags: 0

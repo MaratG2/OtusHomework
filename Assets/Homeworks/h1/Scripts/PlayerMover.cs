@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Homeworks.h1
 {
     [RequireComponent(typeof(Rigidbody))]
-    public class MovementController : MonoBehaviour,
+    public class PlayerMover : MonoBehaviour,
         IGameStartListener,
         IGameEndListener,
         IGamePauseListener,
