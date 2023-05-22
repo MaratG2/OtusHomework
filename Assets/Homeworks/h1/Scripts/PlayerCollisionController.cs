@@ -1,4 +1,5 @@
 ﻿using Homeworks.h1.GameManagement;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Homeworks.h1
@@ -9,8 +10,8 @@ namespace Homeworks.h1
         IGamePauseListener,
         IGameResumeListener
     {
-        [SerializeField] private PlayerCollisionComponent _playerCollision;
-        [SerializeField] private GameManager _gameManager;
+        [SerializeField, Required] private PlayerCollisionComponent _playerCollision;
+        [SerializeField, Required] private GameManager _gameManager;
 
 
         public void OnGameStart()
