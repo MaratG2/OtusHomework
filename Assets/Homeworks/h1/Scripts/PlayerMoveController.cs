@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Homeworks.h1
 {
-    public class InputMovementAdapter : MonoBehaviour
+    public class PlayerMoveController : MonoBehaviour
     {
         [SerializeField, Required] MoveInput _moveInput;
         [SerializeField, Required] MovementController _movementController;
