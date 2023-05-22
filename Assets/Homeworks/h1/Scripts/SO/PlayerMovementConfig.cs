@@ -2,8 +2,8 @@
 
 namespace Homeworks.h1.SO
 {
-    [CreateAssetMenu(fileName = "MovementData", menuName = "SO/MovementData")]
-    public class MovementDataSO : ScriptableObject
+    [CreateAssetMenu(fileName = "PlayerMovementConfig", menuName = "SO/PlayerMovementConfig")]
+    public class PlayerMovementConfig : ScriptableObject
     {
         [SerializeField] private float _speed;
         [SerializeField] private float _shiftSize;

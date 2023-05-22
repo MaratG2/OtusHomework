@@ -12,7 +12,7 @@ namespace Homeworks.h1
         IGamePauseListener,
         IGameResumeListener
     {
-        [SerializeField, Required] private MovementDataSO _movementData;
+        [SerializeField, Required] private PlayerMovementConfig _playerMovementConfig;
         private Rigidbody _rb;
         
         private void Awake()
@@ -28,7 +28,7 @@ namespace Homeworks.h1
 
         private void MoveForward()
         {
-            _rb.velocity = transform.forward * _movementData.Speed;
+            _rb.velocity = transform.forward * _playerMovementConfig.Speed;
         }
         
         public void OnGameStart()

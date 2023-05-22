@@ -12,7 +12,7 @@ namespace Homeworks.h1
         IGamePauseListener,
         IGameResumeListener
     {
-        [SerializeField, Required] private MovementDataSO _movementData;
+        [SerializeField, Required] private PlayerMovementConfig _playerMovementConfig;
         [SerializeField] private Vector2 _trackBorders = new(0, 2);
         private int _currentTrack = 1;
 
@@ -33,7 +33,7 @@ namespace Homeworks.h1
         private void MoveToTrack(int trackShift)
         {
             Vector3 newPos = transform.localPosition;
-            newPos += transform.right * trackShift * _movementData.ShiftSize;
+            newPos += transform.right * trackShift * _playerMovementConfig.ShiftSize;
             transform.localPosition = newPos;
         }
 
