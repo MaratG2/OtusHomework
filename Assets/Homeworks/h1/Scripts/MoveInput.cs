@@ -6,7 +6,7 @@ using DefaultInputActions = UnityEngine.InputSystem.h1.DefaultInputActions;
 
 namespace Homeworks.h1
 {
-    public class InputController : MonoBehaviour,
+    public class MoveInput : MonoBehaviour,
         IGameStartListener,
         IGameEndListener,
         IGamePauseListener,

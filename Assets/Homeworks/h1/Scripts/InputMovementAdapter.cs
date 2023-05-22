@@ -5,17 +5,17 @@ namespace Homeworks.h1
 {
     public class InputMovementAdapter : MonoBehaviour
     {
-        [SerializeField, Required] InputController _inputController;
+        [SerializeField, Required] MoveInput _moveInput;
         [SerializeField, Required] MovementController _movementController;
 
         private void OnEnable()
         {
-            _inputController.OnMoveToSide += _movementController.ChangeTrack;
+            _moveInput.OnMoveToSide += _movementController.ChangeTrack;
         }
 
         private void OnDisable()
         {
-            _inputController.OnMoveToSide -= _movementController.ChangeTrack;
+            _moveInput.OnMoveToSide -= _movementController.ChangeTrack;
         }
     }
 }
