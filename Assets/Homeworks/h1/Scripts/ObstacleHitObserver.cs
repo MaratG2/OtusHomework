@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Homeworks.h1
 {
-    public class PlayerCollisionController : MonoBehaviour,
+    public class ObstacleHitObserver : MonoBehaviour,
         IGameStartListener,
         IGameEndListener,
         IGamePauseListener,

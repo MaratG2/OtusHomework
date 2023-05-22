@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 74615490}
   - component: {fileID: 74615491}
   m_Layer: 2
-  m_Name: Player Collisions
+  m_Name: Obstacle Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2433,7 +2433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33ec58c5c53b9684faf6e08cb4c92a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementData: {fileID: 11400000, guid: 29060962d8ff63d4c93fb7874b977f9b, type: 2}
+  _playerMovementConfig: {fileID: 0}
   _trackBorders: {x: 0, y: 2}
 --- !u!114 &935600137
 MonoBehaviour:
@@ -2447,7 +2447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25447f27936c4085be12cd763db29ac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementData: {fileID: 11400000, guid: 29060962d8ff63d4c93fb7874b977f9b, type: 2}
+  _playerMovementConfig: {fileID: 0}
 --- !u!114 &935600138
 MonoBehaviour:
   m_ObjectHideFlags: 0

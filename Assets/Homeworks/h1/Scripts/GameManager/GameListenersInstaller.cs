@@ -3,7 +3,7 @@ using UnityEngine;
 namespace Homeworks.h1.GameManagement
 {
     [RequireComponent(typeof(GameManager))]
-    public class GameListenersLinker : MonoBehaviour
+    public class GameListenersInstaller : MonoBehaviour
     {
         private void Awake()
         { 
