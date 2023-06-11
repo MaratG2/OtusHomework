@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ShootEmUp
+namespace ShootEmUp.Inputs
 {
     public sealed class InputManager : MonoBehaviour
     {

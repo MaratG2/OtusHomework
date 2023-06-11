@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="" />
+    <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/DefaultInputActions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/DefaultInputActions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/DefaultInputActions.inputactions" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/DefaultInputActions.inputactions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementInput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementInput.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootInput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootInput.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/SceneInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/SceneInstaller.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/CharacterController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Input.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Input/InputManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Input/InputManager.cs.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +37,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/SceneInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.6.6/Editor/BurstAotCompiler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.6.6/Tests/Runtime/Shared/050-TestStructs.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.6.6/Tests/Runtime/Shared/081-UnityMath.cs" root0="SKIP_HIGHLIGHTING" />
@@ -30,12 +56,16 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2PxpmqeYXLghpptNMV9yjjIcYAI" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Discover.Launch.Via.Unity": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -43,7 +73,7 @@
     "git-widget-placeholder": "homework2",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Unity_Projects/OtusHomework/Assets/Homeworks/2/Scripts",
-    "settings.editor.selected.configurable": "CodeLensConfigurable"
+    "settings.editor.selected.configurable": "CodeInspectionSettingsId"
   },
   "keyToStringList": {
     "rider.external.source.directories": [
@@ -114,13 +144,14 @@
       <workItem from="1686326675118" duration="876000" />
       <workItem from="1686330388955" duration="654000" />
       <workItem from="1686331077239" duration="1241000" />
-      <workItem from="1686470353245" duration="3346000" />
+      <workItem from="1686470353245" duration="7519000" />
     </task>
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

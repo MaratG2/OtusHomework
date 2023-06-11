@@ -1,3 +1,4 @@
+using ShootEmUp.Configs;
 using UnityEngine;
 
 namespace ShootEmUp
