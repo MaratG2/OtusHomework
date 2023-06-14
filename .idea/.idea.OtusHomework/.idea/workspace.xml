@@ -5,28 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/GameObject.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/GameObject/BulletInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/GameObject/BulletInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/Scene.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Pool.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Pool/PoolFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Pool/PoolFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Pool/PoolManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Pool/PoolManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Character.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletUtils.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/CharacterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Components/HitPointsComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Components/HitPointsComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/Agents/EnemyAttackAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/Agents/EnemyAttackAgent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemyManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/SceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/Scene/SceneInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/SceneInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/Scene/SceneInstaller.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +37,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/UnitPreservation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../nb/Assets/UnityScripts/Controllers/CheatsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -148,7 +133,7 @@
       <workItem from="1686331077239" duration="1241000" />
       <workItem from="1686470353245" duration="13244000" />
       <workItem from="1686663716001" duration="598000" />
-      <workItem from="1686727559132" duration="584000" />
+      <workItem from="1686727559132" duration="2291000" />
     </task>
     <servers />
   </component>
