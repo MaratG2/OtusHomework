@@ -5,28 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/DefaultInputActions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/DefaultInputActions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/DefaultInputActions.inputactions" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/DefaultInputActions.inputactions.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementInput.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootInput.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/SceneInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/SceneInstaller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/GameObject.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/GameObject/BulletInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/GameObject/BulletInstaller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/Scene.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Character.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/Bullet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletUtils.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/CharacterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Input.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Input/InputManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Input/InputManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Components/HitPointsComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Components/HitPointsComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/Agents/EnemyAttackAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/Agents/EnemyAttackAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/SceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/Scene/SceneInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/SceneInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/Scene/SceneInstaller.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +39,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/SceneInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/Scene/SceneInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/Contexts/GameObjectContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Main/DiContainer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.6.6/Editor/BurstAotCompiler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.6.6/Tests/Runtime/Shared/050-TestStructs.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.6.6/Tests/Runtime/Shared/081-UnityMath.cs" root0="SKIP_HIGHLIGHTING" />
@@ -63,26 +65,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "homework2",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Unity_Projects/OtusHomework/Assets/Homeworks/2/Scripts",
-    "settings.editor.selected.configurable": "CodeInspectionSettingsId"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;homework2&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Unity_Projects/OtusHomework/Assets/Homeworks/2/Scripts&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeInspectionSettingsId&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\DecompilerCache",
-      "C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\SourcesCache",
-      "C:\\Users\\god79\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\DecompilerCache&quot;,
+      &quot;C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\SourcesCache&quot;,
+      &quot;C:\\Users\\god79\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files (x86)\Unity_Editors\2021.3.7f1\Editor\Unity.exe" />
@@ -144,7 +146,9 @@
       <workItem from="1686326675118" duration="876000" />
       <workItem from="1686330388955" duration="654000" />
       <workItem from="1686331077239" duration="1241000" />
-      <workItem from="1686470353245" duration="7519000" />
+      <workItem from="1686470353245" duration="13244000" />
+      <workItem from="1686663716001" duration="598000" />
+      <workItem from="1686727559132" duration="584000" />
     </task>
     <servers />
   </component>

@@ -6,7 +6,7 @@ namespace ShootEmUp.Configs
         fileName = "BulletConfig",
         menuName = "Bullets/New BulletConfig"
     )]
-    public sealed class BulletConfig : ScriptableObject
+    public class BulletConfig : ScriptableObject
     {
         [SerializeField] private PhysicsLayer _physicsLayer;
         [SerializeField] private Color _color;

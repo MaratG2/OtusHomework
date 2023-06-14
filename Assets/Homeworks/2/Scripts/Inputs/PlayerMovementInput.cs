@@ -5,7 +5,7 @@ using DefaultInputActions = UnityEngine.InputSystem.h2.DefaultInputActions;
 
 namespace ShootEmUp.Inputs
 {
-    public class PlayerMovementInput : MonoBehaviour
+    public sealed class PlayerMovementInput : MonoBehaviour
     {
         public Action<Vector2> OnMove;
         private DefaultInputActions _inputActions;

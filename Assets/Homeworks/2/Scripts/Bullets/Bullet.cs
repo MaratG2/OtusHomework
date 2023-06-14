@@ -1,44 +1,37 @@
 using System;
 using UnityEngine;
+using Zenject;
 
-namespace ShootEmUp
+namespace ShootEmUp.Bullets
 {
     public sealed class Bullet : MonoBehaviour
     {
         public event Action<Bullet, Collision2D> OnCollisionEntered;
-
         [NonSerialized] public bool isPlayer;
         [NonSerialized] public int damage;
+        private Rigidbody2D _rb2d;
+        private SpriteRenderer _spriteRenderer;
 
-        [SerializeField]
-        private new Rigidbody2D rigidbody2D;
+        [Inject]
+        private void Construct(Rigidbody2D rb2d, SpriteRenderer spriteRenderer)
+        {
+            this._rb2d = rb2d;
+            this._spriteRenderer = spriteRenderer;
+        }
 
-        [SerializeField]
-        private SpriteRenderer spriteRenderer;
+        public void Init(BulletSystem.Args args)
+        {
+            transform.position = args.position;
+            _spriteRenderer.color = args.color;
+            gameObject.layer = args.physicsLayer;
+            damage = args.damage;
+            isPlayer = args.isPlayer;
+            _rb2d.velocity = args.velocity;
+        }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            this.OnCollisionEntered?.Invoke(this, collision);
-        }
-
-        public void SetVelocity(Vector2 velocity)
-        {
-            this.rigidbody2D.velocity = velocity;
-        }
-
-        public void SetPhysicsLayer(int physicsLayer)
-        {
-            this.gameObject.layer = physicsLayer;
-        }
-
-        public void SetPosition(Vector3 position)
-        {
-            this.transform.position = position;
-        }
-
-        public void SetColor(Color color)
-        {
-            this.spriteRenderer.color = color;
+            OnCollisionEntered?.Invoke(this, collision);
         }
     }
 }

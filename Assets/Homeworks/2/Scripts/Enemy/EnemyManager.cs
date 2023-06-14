@@ -24,22 +24,24 @@ namespace ShootEmUp
                 {
                     if (this.m_activeEnemies.Add(enemy))
                     {
-                        enemy.GetComponent<HitPointsComponent>().hpEmpty += this.OnDestroyed;
+                        enemy.GetComponent<HitPointsComponent>().OnDeath += this.OnDestroyed;
                         enemy.GetComponent<EnemyAttackAgent>().OnFire += this.OnFire;
                     }    
                 }
             }
         }
 
-        private void OnDestroyed(GameObject enemy)
+        private void OnDestroyed()
         {
+            /*
             if (m_activeEnemies.Remove(enemy))
             {
-                enemy.GetComponent<HitPointsComponent>().hpEmpty -= this.OnDestroyed;
+                enemy.GetComponent<HitPointsComponent>().OnDeath -= this.OnDestroyed;
                 enemy.GetComponent<EnemyAttackAgent>().OnFire -= this.OnFire;
 
                 _enemyPool.UnspawnEnemy(enemy);
             }
+            */
         }
 
         private void OnFire(GameObject enemy, Vector2 position, Vector2 direction)

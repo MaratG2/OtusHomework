@@ -2,9 +2,9 @@ using ShootEmUp.Inputs;
 using UnityEngine;
 using Zenject;
 
-namespace ShootEmUp.Installers
+namespace ShootEmUp.Installers.Scene
 {
-    public class SceneInstaller : MonoInstaller<SceneInstaller>
+    public sealed class SceneInstaller : MonoInstaller<SceneInstaller>
     {
         [SerializeField] private MoveComponent _playerMovement;
         public override void InstallBindings()

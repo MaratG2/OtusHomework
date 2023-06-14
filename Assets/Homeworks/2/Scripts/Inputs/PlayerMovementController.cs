@@ -3,7 +3,7 @@ using Zenject;
 
 namespace ShootEmUp.Inputs
 {
-    public class PlayerMovementController : MonoBehaviour
+    public sealed class PlayerMovementController : MonoBehaviour
     {
         private PlayerMovementInput _input;
         private MoveComponent _movement;
