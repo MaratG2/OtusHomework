@@ -1,75 +1,42 @@
-using System.Collections.Generic;
-using ShootEmUp.Bullets;
+using System.Linq;
 using UnityEngine;
 using Zenject;
+using ShootEmUp.Bullets;
+using ShootEmUp.Pool;
 
 namespace ShootEmUp
 {
     public sealed class BulletSystem : MonoBehaviour
     {
-        [SerializeField]
-        private int initialCount = 50;
-        
-        [SerializeField] private Transform container;
-        [SerializeField] private Bullet prefab;
+        [SerializeField] private PoolSettings _poolSettings;
         [SerializeField] private Transform worldTransform;
         [SerializeField] private LevelBounds levelBounds;
+        private PoolFacade<Bullet> _poolFacade;
 
-        private readonly Queue<Bullet> m_bulletPool = new();
-        private readonly HashSet<Bullet> m_activeBullets = new();
-        private readonly List<Bullet> m_cache = new();
-
-        private DiContainer _container;
-
-        [Inject]
-        private void Construct(DiContainer container)
-        {
-            this._container = container;
-        }
-        
         private void Awake()
         {
-            for (var i = 0; i < this.initialCount; i++)
-            {
-                var bullet = _container.InstantiatePrefabForComponent<Bullet>
-                    (this.prefab, this.container);
-                this.m_bulletPool.Enqueue(bullet);
-            }
+            _poolFacade = new PoolFacade<Bullet>(_poolSettings);
         }
         
         private void FixedUpdate()
         {
-            this.m_cache.Clear();
-            this.m_cache.AddRange(this.m_activeBullets);
-
-            for (int i = 0, count = this.m_cache.Count; i < count; i++)
+            var poolObjects = _poolFacade.GetAllActive();
+            foreach (var poolObj in poolObjects.ToList())
             {
-                var bullet = this.m_cache[i];
-                if (!this.levelBounds.InBounds(bullet.transform.position))
-                {
-                    this.RemoveBullet(bullet);
-                }
+                if (!levelBounds.InBounds(poolObj.transform.position))
+                    _poolFacade.EnPool(poolObj);
             }
         }
 
         public void FlyBulletByArgs(Args args)
         {
-            if (this.m_bulletPool.TryDequeue(out var bullet))
-            {
-                bullet.transform.SetParent(this.worldTransform);
-            }
-            else
-            {
-                bullet = _container.InstantiatePrefabForComponent<Bullet>
-                    (prefab.gameObject, worldTransform);
-            }
+            var poolBullet = _poolFacade.DePool();
+            if (!poolBullet)
+                poolBullet = _poolFacade.AddActive();
             
-            bullet.Init(args);
-
-            if (this.m_activeBullets.Add(bullet))
-            {
-                bullet.OnCollisionEntered += this.OnBulletCollision;
-            }
+            poolBullet.Init(args);
+            
+            poolBullet.OnCollisionEntered += this.OnBulletCollision;
         }
         
         private void OnBulletCollision(Bullet bullet, Collision2D collision)
@@ -80,12 +47,9 @@ namespace ShootEmUp
 
         private void RemoveBullet(Bullet bullet)
         {
-            if (this.m_activeBullets.Remove(bullet))
-            {
-                bullet.OnCollisionEntered -= this.OnBulletCollision;
-                bullet.transform.SetParent(this.container);
-                this.m_bulletPool.Enqueue(bullet);
-            }
+            bullet.OnCollisionEntered -= this.OnBulletCollision;
+            bullet.transform.SetParent(_poolSettings.Parent);
+            _poolFacade.EnPool(bullet);
         }
         
         public struct Args
