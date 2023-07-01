@@ -1,4 +1,5 @@
 using ShootEmUp.Configs;
+using ShootEmUp.GameManagement;
 using UnityEngine;
 
 namespace ShootEmUp
@@ -14,12 +15,12 @@ namespace ShootEmUp
 
         private void OnEnable()
         {
-            character.GetComponent<HitPointsComponent>().OnDeath += gameManager.FinishGame;
+            character.GetComponent<HitPointsComponent>().OnDeath += gameManager.EndGame;
         }
 
         private void OnDisable()
         {
-            character.GetComponent<HitPointsComponent>().OnDeath -= gameManager.FinishGame;
+            character.GetComponent<HitPointsComponent>().OnDeath -= gameManager.EndGame;
         }
         
         private void FixedUpdate()
@@ -36,7 +37,6 @@ namespace ShootEmUp
             var weapon = this.character.GetComponent<WeaponComponent>();
             _bulletSystem.FlyBulletByArgs(new BulletSystem.Args
             {
-                isPlayer = true,
                 physicsLayer = (int) this._bulletConfig.PhysicsLayer,
                 color = this._bulletConfig.Color,
                 damage = this._bulletConfig.Damage,

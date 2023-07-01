@@ -1,6 +1,5 @@
 using System.Linq;
 using UnityEngine;
-using Zenject;
 using ShootEmUp.Bullets;
 using ShootEmUp.Pool;
 
@@ -9,7 +8,6 @@ namespace ShootEmUp
     public sealed class BulletSystem : MonoBehaviour
     {
         [SerializeField] private PoolSettings _poolSettings;
-        [SerializeField] private Transform worldTransform;
         [SerializeField] private LevelBounds levelBounds;
         private PoolFacade<Bullet> _poolFacade;
 
@@ -34,22 +32,7 @@ namespace ShootEmUp
             if (!poolBullet)
                 poolBullet = _poolFacade.AddActive();
             
-            poolBullet.Init(args);
-            
-            poolBullet.OnCollisionEntered += this.OnBulletCollision;
-        }
-        
-        private void OnBulletCollision(Bullet bullet, Collision2D collision)
-        {
-            BulletUtils.DealDamage(bullet, collision.gameObject);
-            this.RemoveBullet(bullet);
-        }
-
-        private void RemoveBullet(Bullet bullet)
-        {
-            bullet.OnCollisionEntered -= this.OnBulletCollision;
-            bullet.transform.SetParent(_poolSettings.Parent);
-            _poolFacade.EnPool(bullet);
+            poolBullet.Init(args, new PoolObject<Bullet>(_poolFacade));
         }
         
         public struct Args
@@ -59,7 +42,6 @@ namespace ShootEmUp
             public Color color;
             public int physicsLayer;
             public int damage;
-            public bool isPlayer;
         }
     }
 }
