@@ -1,3 +1,4 @@
+using ShootEmUp.GameManagement;
 using ShootEmUp.Inputs;
 using UnityEngine;
 using Zenject;
@@ -13,6 +14,9 @@ namespace ShootEmUp.Installers.Scene
             Container.Bind<PlayerMovementInput>().FromComponentInHierarchy().AsSingle();
             Container.Bind<PlayerShootInput>().FromComponentInHierarchy().AsSingle();
             Container.Bind<CharacterController>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<GameManager>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<BulletSystem>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<IGameListener>().FromComponentsInHierarchy().AsCached();
         }
     }
 }

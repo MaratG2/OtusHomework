@@ -1,11 +1,16 @@
 using System;
+using ShootEmUp.GameManagement;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using DefaultInputActions = UnityEngine.InputSystem.h2.DefaultInputActions;
 
 namespace ShootEmUp.Inputs
 {
-    public sealed class PlayerShootInput : MonoBehaviour
+    public sealed class PlayerShootInput : MonoBehaviour,
+        IGameStartListener,
+        IGameEndListener,
+        IGameResumeListener,
+        IGamePauseListener
     {
         public Action OnShoot;
         private DefaultInputActions _inputActions;
@@ -15,21 +20,31 @@ namespace ShootEmUp.Inputs
             _inputActions = new DefaultInputActions();
         }
 
-        private void OnEnable()
+        private void OnInputShoot(InputAction.CallbackContext ctx)
+        {
+            OnShoot?.Invoke();
+        }
+
+        public void OnGameStart()
         {
             _inputActions.Enable();
             _inputActions.Player.Fire.performed += OnInputShoot;
         }
 
-        private void OnDisable()
+        public void OnGameEnd()
         {
             _inputActions.Disable();
             _inputActions.Player.Fire.performed -= OnInputShoot;
         }
 
-        private void OnInputShoot(InputAction.CallbackContext ctx)
+        public void OnGameResume()
         {
-            OnShoot?.Invoke();
+            _inputActions.Enable();
+        }
+
+        public void OnGamePause()
+        {
+            _inputActions.Disable();
         }
     }
 }

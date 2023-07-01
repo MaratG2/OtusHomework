@@ -1,47 +1,55 @@
 using ShootEmUp.Configs;
 using ShootEmUp.GameManagement;
 using UnityEngine;
+using Zenject;
 
 namespace ShootEmUp
 {
     public sealed class CharacterController : MonoBehaviour
     {
-        [SerializeField] private GameObject character; 
-        [SerializeField] private GameManager gameManager;
-        [SerializeField] private BulletSystem _bulletSystem;
+        [SerializeField] private GameObject _character;
         [SerializeField] private BulletConfig _bulletConfig;
+        private BulletSystem _bulletSystem;
+        private GameManager _gameManager;
         
         public bool _fireRequired;
 
+        [Inject]
+        private void Construct(GameManager gameManager, BulletSystem bulletSystem)
+        {
+            this._gameManager = gameManager;
+            this._bulletSystem = bulletSystem;
+        }
+        
         private void OnEnable()
         {
-            character.GetComponent<HitPointsComponent>().OnDeath += gameManager.EndGame;
+            _character.GetComponent<HitPointsComponent>().OnDeath += _gameManager.EndGame;
         }
 
         private void OnDisable()
         {
-            character.GetComponent<HitPointsComponent>().OnDeath -= gameManager.EndGame;
+            _character.GetComponent<HitPointsComponent>().OnDeath -= _gameManager.EndGame;
         }
         
         private void FixedUpdate()
         {
-            if (this._fireRequired)
+            if (_fireRequired)
             {
-                this.OnFlyBullet();
-                this._fireRequired = false;
+                OnFlyBullet();
+                _fireRequired = false;
             }
         }
 
         private void OnFlyBullet()
         {
-            var weapon = this.character.GetComponent<WeaponComponent>();
+            var weapon = _character.GetComponent<WeaponComponent>();
             _bulletSystem.FlyBulletByArgs(new BulletSystem.Args
             {
-                physicsLayer = (int) this._bulletConfig.PhysicsLayer,
-                color = this._bulletConfig.Color,
-                damage = this._bulletConfig.Damage,
+                physicsLayer = (int)_bulletConfig.PhysicsLayer,
+                color = _bulletConfig.Color,
+                damage = _bulletConfig.Damage,
                 position = weapon.Position,
-                velocity = weapon.Rotation * Vector3.up * this._bulletConfig.Speed
+                velocity = weapon.Rotation * Vector3.up * _bulletConfig.Speed
             });
         }
     }
