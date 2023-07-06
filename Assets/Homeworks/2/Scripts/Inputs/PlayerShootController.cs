@@ -1,3 +1,4 @@
+using ShootEmUp.Character;
 using ShootEmUp.GameManagement;
 using UnityEngine;
 using Zenject;
@@ -11,18 +12,18 @@ namespace ShootEmUp.Inputs
         IGamePauseListener
     {
         private PlayerShootInput _input;
-        private CharacterController _character;
+        private WeaponController _playerWeapon;
         
         [Inject]
-        private void Construct(PlayerShootInput input, CharacterController character)
+        private void Construct(PlayerShootInput input, WeaponController playerWeapon)
         {
             this._input = input;
-            this._character = character;
+            this._playerWeapon = playerWeapon;
         }
 
         private void PrepareAndShoot()
         {
-            _character._fireRequired = true;
+            _playerWeapon.Fire();
         }
 
         public void OnGameStart()

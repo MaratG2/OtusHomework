@@ -14,9 +14,13 @@ GameObject:
   - component: {fileID: 659620479434099170}
   - component: {fileID: 5568771391735819372}
   - component: {fileID: 5568771391735819373}
+  - component: {fileID: 6851233101506281445}
   - component: {fileID: 5568771391735819374}
   - component: {fileID: 8186052948131603766}
   - component: {fileID: 6896809305229427933}
+  - component: {fileID: -2866078827457789214}
+  - component: {fileID: 3040821319289723225}
+  - component: {fileID: 8160217772613060990}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Untagged
@@ -156,6 +160,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitPoints: 2
+--- !u!114 &6851233101506281445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559606060570185700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 952cd3c0b1db44e3931c906821141ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5568771391735819374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +213,49 @@ MonoBehaviour:
   weaponComponent: {fileID: 5568771391735819374}
   moveAgent: {fileID: 8186052948131603766}
   countdown: 1
+--- !u!114 &-2866078827457789214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559606060570185700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b604ab15941542cba101f631357ee4bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletConfig: {fileID: 0}
+--- !u!114 &3040821319289723225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559606060570185700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08eca9f7688a0a24685b89133b020c8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectInstallers: []
+  _monoInstallers:
+  - {fileID: 8160217772613060990}
+  _installerPrefabs: []
+  _autoRun: 1
+  _kernel: {fileID: 0}
+--- !u!114 &8160217772613060990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559606060570185700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4f8da94b434ef88ad931ca5ecedeb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2239154907127902911
 GameObject:
   m_ObjectHideFlags: 0

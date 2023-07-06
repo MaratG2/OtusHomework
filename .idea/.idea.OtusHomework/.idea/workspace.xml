@@ -5,27 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/GameManager/GameListeners.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/GameManager/GameListeners.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/GameManager/GameListenersInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/GameManager/GameListenersInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Pool/PoolObject.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Pool/PoolObject.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/HitPointsControllerEnemy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/HitPointsControllerEnemy.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/HitPointsControllerPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/HitPointsControllerPlayer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/WeaponController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/WeaponController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/GameObject/EnemyInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/GameObject/EnemyInstaller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/GameObject/PlayerInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/GameObject/PlayerInstaller.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Character.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletUtils.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletUtils.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/CharacterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Components/TeamComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Components/TeamComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/CharacterController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/CharacterController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemyManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/GameManager.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/GameManager.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/GameManager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/GameManager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/GameManager/GameManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/GameManager/GameManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/GameObject/BulletInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/GameObject/BulletInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/Scene/SceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/Scene/SceneInstaller.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +35,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/GameManager/GameEndBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/GameManager/GameListeners.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootInput.cs" root0="FORCE_HIGHLIGHTING" />
@@ -155,6 +155,7 @@
       <workItem from="1686727559132" duration="4529000" />
       <workItem from="1686732570067" duration="5623000" />
       <workItem from="1687847040806" duration="818000" />
+      <workItem from="1688664814828" duration="330000" />
     </task>
     <servers />
   </component>

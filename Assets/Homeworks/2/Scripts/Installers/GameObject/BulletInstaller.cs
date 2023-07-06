@@ -1,4 +1,3 @@
-using ShootEmUp.Bullets;
 using UnityEngine;
 using Zenject;
 

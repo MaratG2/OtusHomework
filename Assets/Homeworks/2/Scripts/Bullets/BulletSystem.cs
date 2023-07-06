@@ -2,15 +2,22 @@ using System.Linq;
 using UnityEngine;
 using ShootEmUp.Bullets;
 using ShootEmUp.Pool;
+using Zenject;
 
 namespace ShootEmUp
 {
     public sealed class BulletSystem : MonoBehaviour
     {
         [SerializeField] private PoolSettings _poolSettings;
-        [SerializeField] private LevelBoundsController _levelBoundsController;
+        private LevelBoundsController _levelBoundsController;
         private PoolFacade<Bullet> _poolFacade;
 
+        [Inject]
+        private void Construct(LevelBoundsController levelBoundsController)
+        {
+            this._levelBoundsController = levelBoundsController;
+        }
+        
         private void Awake()
         {
             _poolFacade = new PoolFacade<Bullet>(_poolSettings);
@@ -29,13 +36,13 @@ namespace ShootEmUp
             }
         }
 
-        public void FlyBulletByArgs(Args args)
+        public void Fire(Args args)
         {
-            var poolBullet = _poolFacade.DePool();
-            if (!poolBullet)
-                poolBullet = _poolFacade.AddActive();
+            var bulletFromPool = _poolFacade.DePool();
+            if (!bulletFromPool)
+                bulletFromPool = _poolFacade.AddActive();
             
-            poolBullet.Init(args, new PoolObject<Bullet>(_poolFacade));
+            bulletFromPool.Init(args, new PoolObject<Bullet>(_poolFacade));
         }
         
         public struct Args

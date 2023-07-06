@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 namespace ShootEmUp
 {
     public sealed class EnemyManager : MonoBehaviour
     {
-        [SerializeField]
         private EnemyPool _enemyPool;
-
-        [SerializeField]
         private BulletSystem _bulletSystem;
-        
         private readonly HashSet<GameObject> m_activeEnemies = new();
 
+        [Inject]
+        private void Construct(EnemyPool enemyPool, BulletSystem bulletSystem)
+        {
+            this._enemyPool = enemyPool;
+            this._bulletSystem = bulletSystem;
+        }
+        
         private IEnumerator Start()
         {
             while (true)
@@ -46,7 +50,7 @@ namespace ShootEmUp
 
         private void OnFire(GameObject enemy, Vector2 position, Vector2 direction)
         {
-            _bulletSystem.FlyBulletByArgs(new BulletSystem.Args
+            _bulletSystem.Fire(new BulletSystem.Args
             {
                 physicsLayer = (int) PhysicsLayer.ENEMY_BULLET,
                 color = Color.red,
