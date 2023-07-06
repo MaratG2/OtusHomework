@@ -1,48 +1,38 @@
-using ShootEmUp.GameManagement;
 using UnityEngine;
 using Zenject;
 
 namespace ShootEmUp
 {
-    public class HitPointsControllerEnemy : MonoBehaviour,
-        IGameStartListener,
-        IGameEndListener,
-        IGameResumeListener,
-        IGamePauseListener
+    public class HitPointsControllerEnemy : MonoBehaviour
     {
-        private EnemyPool _enemyPool;
+        private EnemySystem _enemySystem;
         private HitPointsComponent _hitPointsComponent;
 
         [Inject]
-        private void Construct(EnemyPool enemyPool, HitPointsComponent hitPointsComponent)
+        private void Construct(EnemySystem enemySystem, HitPointsComponent hitPointsComponent)
         {
-            this._enemyPool = enemyPool;
+            this._enemySystem = enemySystem;
             this._hitPointsComponent = hitPointsComponent;
         }
+
+        public void Reset()
+        {
+            _hitPointsComponent.Reset();
+        }
         
-        public void OnGameStart()
+        public void OnEnable()
         {
             _hitPointsComponent.OnDeath += UnspawnEnemy;
         }
 
-        public void OnGameEnd()
-        {
-            _hitPointsComponent.OnDeath -= UnspawnEnemy;
-        }
-
-        public void OnGameResume()
-        {
-            _hitPointsComponent.OnDeath += UnspawnEnemy;
-        }
-
-        public void OnGamePause()
+        public void OnDisable()
         {
             _hitPointsComponent.OnDeath -= UnspawnEnemy;
         }
 
         private void UnspawnEnemy()
         {
-            _enemyPool.UnspawnEnemy(gameObject);
+            _enemySystem.UnspawnEnemy(gameObject);
         }
     }
 }

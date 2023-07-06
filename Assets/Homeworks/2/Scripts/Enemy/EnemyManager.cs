@@ -7,23 +7,28 @@ namespace ShootEmUp
 {
     public sealed class EnemyManager : MonoBehaviour
     {
-        private EnemyPool _enemyPool;
+        private EnemySystem _enemySystem;
         private BulletSystem _bulletSystem;
         private readonly HashSet<GameObject> m_activeEnemies = new();
 
         [Inject]
-        private void Construct(EnemyPool enemyPool, BulletSystem bulletSystem)
+        private void Construct(EnemySystem enemySystem, BulletSystem bulletSystem)
         {
-            this._enemyPool = enemyPool;
+            this._enemySystem = enemySystem;
             this._bulletSystem = bulletSystem;
         }
         
-        private IEnumerator Start()
+        private void Start()
         {
-            while (true)
+            StartCoroutine(SpawnAllEnemies());
+        }
+
+        private IEnumerator SpawnAllEnemies()
+        {
+            for (int i = 0; i < 7; i++)
             {
                 yield return new WaitForSeconds(1);
-                var enemy = this._enemyPool.SpawnEnemy();
+                var enemy = this._enemySystem.SpawnEnemy();
                 if (enemy != null)
                 {
                     if (this.m_activeEnemies.Add(enemy))

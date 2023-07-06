@@ -8,6 +8,7 @@ namespace ShootEmUp.GameManagement
         public void OnGameEnd()
         {
             Debug.Log("Вы проиграли");
+            Time.timeScale = 0f;
         }
     }
 }

@@ -24,12 +24,18 @@ namespace ShootEmUp.Pool
                 _poolManager.AddPool(_poolFactory.Create(_poolSettings.Parent));
         }
 
-        public T DePool() //+active, -pool
+        ///<summary>
+        /// +active, -pool
+        ///</summary>  
+        public T DePool()
         {
             return _poolManager.DePool();
         }
 
-        public void EnPool(T obj) //-active, +pool
+        ///<summary>
+        /// -active, +pool
+        ///</summary>  
+        public void EnPool(T obj)
         {
             _poolManager.EnPool(obj);
         }

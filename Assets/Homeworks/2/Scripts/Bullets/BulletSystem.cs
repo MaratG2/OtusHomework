@@ -8,24 +8,28 @@ namespace ShootEmUp
 {
     public sealed class BulletSystem : MonoBehaviour
     {
-        [SerializeField] private PoolSettings _poolSettings;
+        private PoolSettings _poolSettings;
         private LevelBoundsController _levelBoundsController;
         private PoolFacade<Bullet> _poolFacade;
 
         [Inject]
-        private void Construct(LevelBoundsController levelBoundsController)
+        private void Construct(PoolSettings poolSettings,
+            LevelBoundsController levelBoundsController)
         {
+            this._poolSettings = poolSettings;
             this._levelBoundsController = levelBoundsController;
         }
         
         private void Awake()
         {
-            _poolFacade = new PoolFacade<Bullet>(_poolSettings);
+            _poolFacade = new (_poolSettings);
         }
+        
         private void FixedUpdate()
         {
             CheckBulletsOutOfBounds();
         }
+        
         private void CheckBulletsOutOfBounds()
         {
             var poolObjects = _poolFacade.GetAllActive();

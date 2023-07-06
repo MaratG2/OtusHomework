@@ -21,7 +21,7 @@ namespace ShootEmUp.Installers.Scene
             Container.Bind<BulletSystem>().FromComponentInHierarchy().AsSingle();
             Container.Bind<IGameListener>().FromComponentsInHierarchy().AsCached();
             Container.Bind<LevelBoundsController>().FromComponentInHierarchy().AsSingle();
-            Container.Bind<EnemyPool>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<EnemySystem>().FromComponentInHierarchy().AsSingle();
         }
     }
 }

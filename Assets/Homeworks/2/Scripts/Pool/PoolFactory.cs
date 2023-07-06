@@ -17,7 +17,14 @@ namespace ShootEmUp.Pool
         {
             var newPrefab = _container.InstantiatePrefabForComponent<T>
                 (_prefab, parent);
+            SetGameObjectName(newPrefab.gameObject);
             return newPrefab;
+        }
+
+        private void SetGameObjectName(GameObject go) //7 symbols for (clone)
+        {
+            string nameWithoutClone = go.name.Remove(go.name.Length - 7);
+            go.name = nameWithoutClone + go.transform.GetSiblingIndex();
         }
     }
 }

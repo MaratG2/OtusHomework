@@ -42,6 +42,10 @@ namespace ShootEmUp.Pool
         {
             if (_activeObjects.TryGetValue(obj, out T stored))
             {
+                var toReset = obj.GetComponent<IResetReceiver>();
+                if(toReset != null)
+                    toReset.OnReset();
+                
                 stored.gameObject.SetActive(false);
                 _pool.Enqueue(stored);
                 _activeObjects.Remove(stored);
