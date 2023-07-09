@@ -1,7 +1,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace ShootEmUp
+namespace ShootEmUp.Enemies
 {
     public class HitPointsControllerEnemy : MonoBehaviour
     {

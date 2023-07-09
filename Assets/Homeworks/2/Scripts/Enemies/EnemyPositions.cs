@@ -2,7 +2,7 @@ using ShootEmUp.Level;
 using UnityEngine;
 using Zenject;
 
-namespace ShootEmUp
+namespace ShootEmUp.Enemies
 {
     public sealed class EnemyPositions : MonoBehaviour
     {

@@ -2,7 +2,7 @@ using ShootEmUp.Pool;
 using UnityEngine;
 using Zenject;
 
-namespace ShootEmUp
+namespace ShootEmUp.Enemies
 {
     public class Enemy : MonoBehaviour, IResetReceiver
     {

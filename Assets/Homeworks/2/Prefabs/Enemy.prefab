@@ -16,10 +16,10 @@ GameObject:
   - component: {fileID: 5568771391735819373}
   - component: {fileID: 6851233101506281445}
   - component: {fileID: 5568771391735819374}
+  - component: {fileID: 4118523830814280085}
   - component: {fileID: 1198308693272240573}
   - component: {fileID: 8186052948131603766}
   - component: {fileID: 6896809305229427933}
-  - component: {fileID: -2866078827457789214}
   - component: {fileID: 3040821319289723225}
   - component: {fileID: 8160217772613060990}
   m_Layer: 11
@@ -185,7 +185,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce164c84a74a425f8d2e82764aef9e34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 3195880656587174614}
+  _firePoint: {fileID: 3195880656587174614}
+--- !u!114 &4118523830814280085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559606060570185700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ecf51fa9eb45ab8258230fb28daf7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletConfig: {fileID: 11400000, guid: b65d1f6b3d2f91948ab24728e018cd81, type: 2}
 --- !u!114 &1198308693272240573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,7 +223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bdb5771141e4cf18c434a69ec116e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveComponent: {fileID: 5568771391735819372}
 --- !u!114 &6896809305229427933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,22 +235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba7965842e74a9f89ba3aa66d61da46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponComponent: {fileID: 5568771391735819374}
-  moveAgent: {fileID: 8186052948131603766}
-  countdown: 1
---- !u!114 &-2866078827457789214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 559606060570185700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b604ab15941542cba101f631357ee4bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bulletConfig: {fileID: 0}
 --- !u!114 &3040821319289723225
 MonoBehaviour:
   m_ObjectHideFlags: 0

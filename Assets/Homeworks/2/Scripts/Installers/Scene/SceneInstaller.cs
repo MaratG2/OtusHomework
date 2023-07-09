@@ -1,4 +1,5 @@
 using ShootEmUp.Character;
+using ShootEmUp.Enemies;
 using ShootEmUp.GameManagement;
 using ShootEmUp.Inputs;
 using ShootEmUp.Level;

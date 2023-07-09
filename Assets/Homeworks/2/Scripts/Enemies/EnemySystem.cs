@@ -1,8 +1,9 @@
+using ShootEmUp.Enemies.Agents;
 using ShootEmUp.Pool;
 using UnityEngine;
 using Zenject;
 
-namespace ShootEmUp
+namespace ShootEmUp.Enemies
 {
     public sealed class EnemySystem : MonoBehaviour
     {
@@ -25,20 +26,19 @@ namespace ShootEmUp
             _poolFacade = new (_poolSettings);
         }
 
-        public GameObject SpawnEnemy()
+        public void SpawnEnemy()
         {
             var enemy = _poolFacade.DePool();
             if (!enemy)
                 enemy = _poolFacade.AddActive();
             if (!enemy)
-                return null;
+                return;
 
             var spawnPosition = _enemyPositions.RandomSpawnPosition();
             enemy.transform.position = spawnPosition.position;
             var attackPosition = _enemyPositions.RandomAttackPosition();
             enemy.GetComponent<EnemyMoveAgent>().SetDestination(attackPosition.position);
-            enemy.GetComponent<EnemyAttackAgent>().SetTarget(this._character);
-            return enemy.gameObject;
+            enemy.GetComponent<EnemyWeaponController>().SetTarget(_character);
         }
 
         public void UnspawnEnemy(GameObject enemy)
