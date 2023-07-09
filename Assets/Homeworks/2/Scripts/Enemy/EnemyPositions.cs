@@ -6,8 +6,8 @@ namespace ShootEmUp
 {
     public sealed class EnemyPositions : MonoBehaviour
     {
-        [SerializeField] private PositionsContainer _spawnPositions;
-        [SerializeField] private PositionsContainer _attackPositions;
+        private PositionsContainer _spawnPositions;
+        private PositionsContainer _attackPositions;
 
         [Inject]
         private void Construct(PositionsContainer[] positions)
