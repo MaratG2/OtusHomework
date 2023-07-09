@@ -1,13 +1,22 @@
+using System.Linq;
 using UnityEngine;
+using Zenject;
 
 namespace ShootEmUp.Level
 {
     public sealed class LevelBoundsController : MonoBehaviour
     {
-        [SerializeField] private Transform _leftBorder;
-        [SerializeField] private Transform _rightBorder;
-        [SerializeField] private Transform _downBorder;
-        [SerializeField] private Transform _topBorder;
+        private Transform _leftBorder, _rightBorder, _downBorder, _topBorder;
+        
+        [Inject]
+        private void Construct(Transform[] borders)
+        {
+            borders = borders.Skip(1).ToArray();
+            this._leftBorder = borders[0];
+            this._rightBorder = borders[1];
+            this._downBorder = borders[2];
+            this._topBorder = borders[3];
+        }
         
         public bool IsInBounds(Vector3 position)
         {
