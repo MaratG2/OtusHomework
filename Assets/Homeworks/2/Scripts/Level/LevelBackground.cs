@@ -1,65 +1,40 @@
-using System;
 using UnityEngine;
 
 namespace ShootEmUp.Level
 {
     public sealed class LevelBackground : MonoBehaviour
     {
-        private float startPositionY;
-
-        private float endPositionY;
-
-        private float movingSpeedY;
-
-        private float positionX;
-
-        private float positionZ;
-
-        private Transform myTransform;
-
-        [SerializeField]
-        private Params m_params;
-
+        [Header("Settings")]
+        [SerializeField] public float _startPositionY;
+        [SerializeField] public float _endPositionY;
+        [SerializeField] public float _movingSpeedY;
+        
         private void Awake()
         {
-            this.startPositionY = this.m_params.m_startPositionY;
-            this.endPositionY = this.m_params.m_endPositionY;
-            this.movingSpeedY = this.m_params.m_movingSpeedY;
-            this.myTransform = this.transform;
-            var position = this.myTransform.position;
-            this.positionX = position.x;
-            this.positionZ = position.z;
+            ResetPos();
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
-            if (this.myTransform.position.y <= this.endPositionY)
-            {
-                this.myTransform.position = new Vector3(
-                    this.positionX,
-                    this.startPositionY,
-                    this.positionZ
-                );
-            }
-
-            this.myTransform.position -= new Vector3(
-                this.positionX,
-                this.movingSpeedY * Time.fixedDeltaTime,
-                this.positionZ
+            if (transform.position.y <= _endPositionY)
+                ResetPos();
+            
+            transform.position -= new Vector3
+            (
+                transform.position.x,
+                _movingSpeedY * Time.deltaTime,
+                transform.position.z
             );
         }
 
-        [Serializable]
-        public sealed class Params
+        private void ResetPos()
         {
-            [SerializeField]
-            public float m_startPositionY;
-
-            [SerializeField]
-            public float m_endPositionY;
-
-            [SerializeField]
-            public float m_movingSpeedY;
+            transform.position = new Vector3
+            (
+                transform.position.x,
+                _startPositionY,
+                transform.position.z
+            );
         }
     }
 }

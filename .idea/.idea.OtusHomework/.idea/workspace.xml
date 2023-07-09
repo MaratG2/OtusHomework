@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Level/PositionsContainer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Level/PositionsContainer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemyPositions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemyPositions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemySystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/Scene/SceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/Scene/SceneInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Level/LevelBackground.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Level/LevelBackground.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Level/LevelBoundsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Level/LevelBoundsController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +143,7 @@
       <workItem from="1687847040806" duration="818000" />
       <workItem from="1688664814828" duration="2968000" />
       <workItem from="1688667957235" duration="1139000" />
-      <workItem from="1688877301465" duration="2132000" />
+      <workItem from="1688877301465" duration="2673000" />
     </task>
     <servers />
   </component>
