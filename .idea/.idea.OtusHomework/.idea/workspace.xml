@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/CharacterPopup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/CharacterPopup.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/CharacterPresenter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/CharacterPresenter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/ICharacterPresenter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/ICharacterPresenter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/IUserPresenter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/IUserPresenter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/UserPopup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/UserPopup.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/UserPresenter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/UserPresenter.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/3/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/MaratG2/CanvasScalerMatchChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/MaratG2/CanvasScalerMatchChanger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +30,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/3/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/CharacterPresenter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../nb/Assets/UnityScripts/Controllers/CheatsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../unity-pro-04.2023/Assets/Lessons/I.Architecture/Lesson_PM/Scripts/Popups/ProductPopup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../unity-pro-04.2023/Assets/Lessons/I.Architecture/Lesson_PM/Scripts/Product/IProductPresentationModel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../unity-pro-04.2023/Assets/Lessons/I.Architecture/Lesson_PM/Scripts/Product/Product.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../unity-pro-04.2023/Assets/Lessons/I.Architecture/Lesson_PM/Scripts/Product/ProductBuyer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../unity-pro-04.2023/Assets/Lessons/I.Architecture/Lesson_PM/Scripts/Product/ProductPopupShower.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../unity-pro-04.2023/Assets/Lessons/I.Architecture/Lesson_PM/Scripts/Product/ProductPresentationModel.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -33,23 +50,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "homework__presentation__model",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;homework__presentation__model&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\DecompilerCache",
-      "C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\SourcesCache",
-      "C:\\Users\\god79\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\DecompilerCache&quot;,
+      &quot;C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\SourcesCache&quot;,
+      &quot;C:\\Users\\god79\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files (x86)\Unity_Editors\2021.3.7f1\Editor\Unity.exe" />
@@ -107,13 +125,17 @@
       <workItem from="1684408757228" duration="8421000" />
       <workItem from="1684667551182" duration="1263000" />
       <workItem from="1684745531623" duration="3740000" />
-      <workItem from="1688901789572" duration="1752000" />
+      <workItem from="1688901789572" duration="2082000" />
+      <workItem from="1688928569281" duration="1736000" />
+      <workItem from="1688930444244" duration="91000" />
+      <workItem from="1688930583037" duration="28000" />
     </task>
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>
