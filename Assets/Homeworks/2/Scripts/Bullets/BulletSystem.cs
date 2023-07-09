@@ -1,6 +1,7 @@
 using System.Linq;
 using UnityEngine;
 using ShootEmUp.Bullets;
+using ShootEmUp.Level;
 using ShootEmUp.Pool;
 using Zenject;
 

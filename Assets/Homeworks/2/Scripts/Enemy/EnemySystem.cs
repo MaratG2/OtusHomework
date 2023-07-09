@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using ShootEmUp.Bullets;
 using ShootEmUp.Pool;
 using UnityEngine;
 using Zenject;

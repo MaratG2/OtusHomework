@@ -1,6 +1,7 @@
 using ShootEmUp.Character;
 using ShootEmUp.GameManagement;
 using ShootEmUp.Inputs;
+using ShootEmUp.Level;
 using UnityEngine;
 using Zenject;
 

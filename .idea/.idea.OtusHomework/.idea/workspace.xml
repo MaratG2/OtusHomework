@@ -5,30 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/Enemy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/Enemy.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/GameObject/BulletSystemInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/GameObject/BulletSystemInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/GameObject/EnemySystemInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/GameObject/EnemySystemInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Pool/IResetReceiver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Pool/IResetReceiver.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Level/PositionsContainer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Level/PositionsContainer.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Prefabs/Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/HitPointsControllerEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Character/HitPointsControllerEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Components/HitPointsComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Components/HitPointsComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/Agents/EnemyAttackAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/Agents/EnemyAttackAgent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemyManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemyPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemySystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemyPool.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemySystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Game.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Game.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/GameManager/GameEndBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/GameManager/GameEndBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemyPositions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemyPositions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Enemy/EnemySystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/Scene/SceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/Scene/SceneInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Pool/PoolFacade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Pool/PoolFacade.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Pool/PoolFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Pool/PoolFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Pool/PoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Pool/PoolManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Level/LevelBackground.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Level/LevelBackground.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Level/LevelBoundsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Level/LevelBoundsController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +29,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/GameManager/GameListeners.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerMovementController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/GameObject/EnemyPositionsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Installers/Scene/SceneInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Level/PositionsContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Pool/PoolManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Pool/PoolSettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/Contexts/GameObjectContext.cs" root0="SKIP_HIGHLIGHTING" />
@@ -163,7 +151,8 @@
       <workItem from="1686732570067" duration="5623000" />
       <workItem from="1687847040806" duration="818000" />
       <workItem from="1688664814828" duration="2968000" />
-      <workItem from="1688667957235" duration="1055000" />
+      <workItem from="1688667957235" duration="1139000" />
+      <workItem from="1688877301465" duration="2132000" />
     </task>
     <servers />
   </component>
