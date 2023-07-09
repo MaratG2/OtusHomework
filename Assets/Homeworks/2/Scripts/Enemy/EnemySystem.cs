@@ -7,14 +7,17 @@ namespace ShootEmUp
     public sealed class EnemySystem : MonoBehaviour
     {
         private PoolSettings _poolSettings;
-        [SerializeField] private EnemyPositions enemyPositions;
-        [SerializeField] private GameObject character;
+        private EnemyPositions _enemyPositions;
+        private GameObject _character;
         private PoolFacade<Enemy> _poolFacade;
         
         [Inject]
-        private void Construct(PoolSettings poolSettings)
+        private void Construct(PoolSettings poolSettings, EnemyPositions enemyPositions,
+            MoveComponent moveComponent)
         {
             this._poolSettings = poolSettings;
+            this._enemyPositions = enemyPositions;
+            this._character = moveComponent.gameObject;
         }
         
         private void Awake()
@@ -30,12 +33,11 @@ namespace ShootEmUp
             if (!enemy)
                 return null;
 
-            //enemy.transform.SetParent(this.worldTransform);
-            var spawnPosition = enemyPositions.RandomSpawnPosition();
+            var spawnPosition = _enemyPositions.RandomSpawnPosition();
             enemy.transform.position = spawnPosition.position;
-            var attackPosition = enemyPositions.RandomAttackPosition();
+            var attackPosition = _enemyPositions.RandomAttackPosition();
             enemy.GetComponent<EnemyMoveAgent>().SetDestination(attackPosition.position);
-            enemy.GetComponent<EnemyAttackAgent>().SetTarget(this.character);
+            enemy.GetComponent<EnemyAttackAgent>().SetTarget(this._character);
             return enemy.gameObject;
         }
 

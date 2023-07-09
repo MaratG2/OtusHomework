@@ -23,6 +23,7 @@ namespace ShootEmUp.Installers.Scene
             Container.Bind<IGameListener>().FromComponentsInHierarchy().AsCached();
             Container.Bind<LevelBoundsController>().FromComponentInHierarchy().AsSingle();
             Container.Bind<EnemySystem>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<EnemyPositions>().FromComponentInHierarchy().AsSingle();
         }
     }
 }
