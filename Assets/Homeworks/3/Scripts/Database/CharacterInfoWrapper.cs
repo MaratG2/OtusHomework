@@ -34,7 +34,6 @@ namespace Homework3.Database
                     stats.Add(newStat);
                 }
                 dataStruct.stats = stats.ToArray();
-                Debug.Log("ADD STAT");
                 foreach (var stat in dataStruct.stats)
                     _characterInfo.AddStat(stat);
             }
