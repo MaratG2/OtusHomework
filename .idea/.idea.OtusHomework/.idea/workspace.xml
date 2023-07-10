@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/PopupManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/PopupManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/3/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/Database/CharacterInfoWrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/Database/CharacterInfoWrapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/Database/DataContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/Database/DataContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/Database/PlayerLevelWrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/Database/PlayerLevelWrapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/Database/UserInfoWrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/Database/UserInfoWrapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/Installers/Scene/GameSceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/Installers/Scene/GameSceneInstaller.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +120,7 @@
       <workItem from="1688928569281" duration="1736000" />
       <workItem from="1688930444244" duration="91000" />
       <workItem from="1688930583037" duration="28000" />
-      <workItem from="1688967509589" duration="7790000" />
+      <workItem from="1688967509589" duration="8561000" />
     </task>
     <servers />
   </component>

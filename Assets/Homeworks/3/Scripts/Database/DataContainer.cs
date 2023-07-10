@@ -13,7 +13,6 @@ namespace Homework3.Database
         private void Construct(ISaveLoad[] wrappers)
         {
             this._wrappers = wrappers;
-            Debug.Log(_wrappers.Length);
             LoadData();
         }
         
