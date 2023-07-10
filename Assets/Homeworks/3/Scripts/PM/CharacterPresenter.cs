@@ -3,6 +3,7 @@ using Homework3.Database;
 using Lessons.Architecture.PM;
 using UnityEngine;
 using Zenject;
+using CharacterInfo = Lessons.Architecture.PM.CharacterInfo;
 
 namespace Homework3.PM
 {
@@ -12,28 +13,40 @@ namespace Homework3.PM
         [SerializeField] private Sprite _lvlUpButtonActive, _lvlUpButtonInactive;
         public event Action OnLvlChanged;
         public event Action OnExpChanged;
-        
+        public event Action<CharacterStat> OnStatAdded;
+        public event Action<CharacterStat> OnStatRemoved;
+
         private PlayerLevelWrapper _playerLevelWrapper;
+        private CharacterInfoWrapper _characterInfoWrapper;
         private PlayerLevel _playerLevel => _playerLevelWrapper.PlayerLevel;
+        private CharacterInfo _characterInfo => _characterInfoWrapper.CharacterInfo;
 
         [Inject]
         private void Construct(ISaveLoad[] wrappers)
         {
             foreach (var wrapper in wrappers)
+            {
                 if (wrapper is PlayerLevelWrapper playerInfoWraper)
                     this._playerLevelWrapper = playerInfoWraper;
+                if (wrapper is CharacterInfoWrapper characterInfoWrapper)
+                    this._characterInfoWrapper = characterInfoWrapper;
+            }
         }
 
-        public void Start()
+        public void Begin()
         {
             _playerLevel.OnExperienceChanged += ExpChanged;
             _playerLevel.OnLevelUp += LvlChanged;
+            _characterInfo.OnStatAdded += OnStatAdded;
+            _characterInfo.OnStatRemoved += OnStatRemoved;
         }
 
         public void Stop()
         {
             _playerLevel.OnExperienceChanged -= ExpChanged;
             _playerLevel.OnLevelUp -= LvlChanged;
+            _characterInfo.OnStatAdded -= OnStatAdded;
+            _characterInfo.OnStatRemoved -= OnStatRemoved;
         }
         
         public string GetLevel()
@@ -63,6 +76,11 @@ namespace Homework3.PM
             if (CanLvlUp())
                 return _lvlUpButtonActive;
             return _lvlUpButtonInactive;
+        }
+
+        public CharacterStat[] GetAllStats()
+        {
+            return _characterInfo.GetStats();
         }
 
         public float GetProgressBarFill()

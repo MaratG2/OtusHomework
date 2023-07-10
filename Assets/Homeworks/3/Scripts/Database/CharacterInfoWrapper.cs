@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Lessons.Architecture.PM;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -21,9 +23,18 @@ namespace Homework3.Database
             if(SaveLoad.HaveSave(_fileName))
             {
                 string data = SaveLoad.Load(_fileName);
-                CharacterInfoStruct dataStruct = JsonUtility.FromJson<CharacterInfoStruct>(data);
-                if (dataStruct.stats == null)
-                    return;
+                var dataStruct = new CharacterInfoStruct();
+                CharacterStatStruct[] statStructs = JsonHelper.FromJson<CharacterStatStruct>(data);
+                List<CharacterStat> stats = new();
+                foreach (var statStruct in statStructs)
+                {
+                    var newStat = new CharacterStat();
+                    newStat.ChangeName(statStruct.name);
+                    newStat.ChangeValue(statStruct.value);
+                    stats.Add(newStat);
+                }
+                dataStruct.stats = stats.ToArray();
+                Debug.Log("ADD STAT");
                 foreach (var stat in dataStruct.stats)
                     _characterInfo.AddStat(stat);
             }
@@ -34,13 +45,24 @@ namespace Homework3.Database
         {
             var dataStruct = new CharacterInfoStruct();
             dataStruct.stats = _characterInfo.GetStats();
-            var data = JsonUtility.ToJson(dataStruct);
+            List<CharacterStatStruct> statStructs = new();
+            foreach (var stat in dataStruct.stats)
+                statStructs.Add(new () {name = stat.Name, value = stat.Value});
+            var data = JsonHelper.ToJson(statStructs.ToArray());
             SaveLoad.Save(data, _fileName);
         }
 
+        [Serializable]
         private struct CharacterInfoStruct
         {
             public CharacterStat[] stats;
+        }
+
+        [Serializable]
+        private struct CharacterStatStruct
+        {
+            public string name;
+            public int value;
         }
     }
 }

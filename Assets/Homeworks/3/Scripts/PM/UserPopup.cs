@@ -24,7 +24,7 @@ namespace Homework3.PM
             _userPresenter.OnDescChanged += DescChanged;
             _userPresenter.OnIconChanged += IconChanged;
             
-            _userPresenter.Start();
+            _userPresenter.Begin();
         }
 
         public void Hide()

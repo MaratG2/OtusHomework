@@ -1,3 +1,4 @@
+using System;
 using Lessons.Architecture.PM;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -40,6 +41,7 @@ namespace Homework3.Database
             SaveLoad.Save(data, _fileName);
         }
 
+        [Serializable]
         private struct PlayerLevelStruct
         {
             public int level;

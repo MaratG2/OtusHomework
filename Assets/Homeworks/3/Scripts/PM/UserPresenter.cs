@@ -23,7 +23,7 @@ namespace Homework3.PM
                     this._userInfoWrapper = userInfoWraper;
         }
         
-        public void Start()
+        public void Begin()
         {
             _userInfo.OnNameChanged += NameChanged;
             _userInfo.OnDescriptionChanged += DescChanged;

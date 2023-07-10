@@ -15,6 +15,12 @@ namespace Lessons.Architecture.PM
         public int Value { get; private set; }
 
         [Button]
+        public void ChangeName(string name)
+        {
+            this.Name = name;
+            this.OnValueChanged?.Invoke(Value);
+        }
+        [Button]
         public void ChangeValue(int value)
         {
             this.Value = value;

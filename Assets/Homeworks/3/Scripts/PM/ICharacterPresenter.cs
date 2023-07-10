@@ -1,4 +1,5 @@
 using System;
+using Lessons.Architecture.PM;
 using UnityEngine;
 
 namespace Homework3.PM
@@ -7,14 +8,17 @@ namespace Homework3.PM
     {
         event Action OnLvlChanged;
         event Action OnExpChanged;
+        event Action<CharacterStat> OnStatAdded;
+        event Action<CharacterStat> OnStatRemoved;
         string GetLevel();
         bool CanLvlUp();
         string GetExperience();
         Sprite GetProgressBarSprite();
         Sprite GetLvlupButtonSprite();
+        CharacterStat[] GetAllStats();
         float GetProgressBarFill();
         void OnLvlupClicked();
-        void Start();
+        void Begin();
         void Stop();
     }
 }

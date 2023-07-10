@@ -11,7 +11,7 @@ namespace Homework3.PM
         string GetName();
         string GetDescription();
         Sprite GetIcon();
-        void Start();
+        void Begin();
         void Stop();
     }
 }
