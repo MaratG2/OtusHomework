@@ -1,6 +1,8 @@
 using System;
+using Homework3.Database;
 using Lessons.Architecture.PM;
 using UnityEngine;
+using Zenject;
 
 namespace Homework3.PM
 {
@@ -12,12 +14,14 @@ namespace Homework3.PM
         
         private UserInfo _userInfo;
 
-        private void Awake()
+        [Inject]
+        private void Construct(ISaveLoad[] wrappers)
         {
-            //_userInfo could be injected
-            _userInfo = new UserInfo();
+            foreach (var wrapper in wrappers)
+                if (wrapper is UserInfoWrapper userInfoWraper)
+                    this._userInfo = userInfoWraper.UserInfo;
         }
-
+        
         public void Start()
         {
             _userInfo.OnNameChanged += NameChanged;
