@@ -9,6 +9,7 @@ namespace Homework3.PM
     public class CharacterPresenter : MonoBehaviour, ICharacterPresenter
     {
         [SerializeField] private Sprite _expBarCompleted, _expBarUncompleted;
+        [SerializeField] private Sprite _lvlUpButtonActive, _lvlUpButtonInactive;
         public event Action OnLvlChanged;
         public event Action OnExpChanged;
         
@@ -40,6 +41,11 @@ namespace Homework3.PM
             return $"Level: {_playerLevel.CurrentLevel}";
         }
 
+        public bool CanLvlUp()
+        {
+            return GetProgressBarFill().Equals(1f);
+        }
+
         public string GetExperience()
         {
             return $"XP: {_playerLevel.CurrentExperience} / {_playerLevel.RequiredExperience}";
@@ -47,11 +53,18 @@ namespace Homework3.PM
 
         public Sprite GetProgressBarSprite()
         {
-            if (GetProgressBarFill().Equals(1f))
+            if (CanLvlUp())
                 return _expBarCompleted;
             return _expBarUncompleted;
         }
-        
+
+        public Sprite GetLvlupButtonSprite()
+        {
+            if (CanLvlUp())
+                return _lvlUpButtonActive;
+            return _lvlUpButtonInactive;
+        }
+
         public float GetProgressBarFill()
         {
             return _playerLevel.CurrentExperience / (float)_playerLevel.RequiredExperience;

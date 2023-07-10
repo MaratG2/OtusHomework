@@ -23,7 +23,9 @@ namespace Homework3.PM
             _expText.text = _characterPresenter.GetExperience();
             _expBar.sprite = _characterPresenter.GetProgressBarSprite();
             _expBar.fillAmount = _characterPresenter.GetProgressBarFill();
-
+            _lvlupButton.interactable = _characterPresenter.CanLvlUp();
+            _lvlupButton.image.sprite = _characterPresenter.GetLvlupButtonSprite();
+            
             _characterPresenter.OnLvlChanged += LvlChanged;
             _characterPresenter.OnExpChanged += ExpChanged;
             
@@ -50,6 +52,8 @@ namespace Homework3.PM
             _expText.text = _characterPresenter.GetExperience();
             _expBar.sprite = _characterPresenter.GetProgressBarSprite();
             _expBar.fillAmount = _characterPresenter.GetProgressBarFill();
+            _lvlupButton.interactable = _characterPresenter.CanLvlUp();
+            _lvlupButton.image.sprite = _characterPresenter.GetLvlupButtonSprite();
         }
     }
 }
