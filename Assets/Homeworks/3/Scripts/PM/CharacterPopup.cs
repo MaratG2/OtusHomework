@@ -13,6 +13,43 @@ namespace Homework3.PM
         [SerializeField] private Image _expBar;
         [SerializeField] private Button _lvlupButton;
         
-        private CharacterPresenter _characterPresenter;
+        private ICharacterPresenter _characterPresenter;
+        
+        public void Show(ICharacterPresenter characterPresenter)
+        {
+            this._characterPresenter = characterPresenter;
+            
+            _levelText.text = _characterPresenter.GetLevel();
+            _expText.text = _characterPresenter.GetExperience();
+            _expBar.sprite = _characterPresenter.GetProgressBarSprite();
+            _expBar.fillAmount = _characterPresenter.GetProgressBarFill();
+
+            _characterPresenter.OnLvlChanged += LvlChanged;
+            _characterPresenter.OnExpChanged += ExpChanged;
+            
+            _characterPresenter.Start();
+        }
+
+        public void Hide()
+        {
+            _characterPresenter.OnLvlChanged -= LvlChanged;
+            _characterPresenter.OnExpChanged -= ExpChanged;
+            
+            _characterPresenter.Stop();
+            this._characterPresenter = null;
+        }
+
+        private void LvlChanged()
+        {
+            _levelText.text = _characterPresenter.GetLevel();
+            ExpChanged();
+        }
+        
+        private void ExpChanged()
+        {
+            _expText.text = _characterPresenter.GetExperience();
+            _expBar.sprite = _characterPresenter.GetProgressBarSprite();
+            _expBar.fillAmount = _characterPresenter.GetProgressBarFill();
+        }
     }
 }

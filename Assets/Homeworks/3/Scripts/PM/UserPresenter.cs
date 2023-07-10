@@ -12,14 +12,15 @@ namespace Homework3.PM
         public event Action OnDescChanged;
         public event Action OnIconChanged;
         
-        private UserInfo _userInfo;
+        private UserInfoWrapper _userInfoWrapper;
+        private UserInfo _userInfo => _userInfoWrapper.UserInfo; 
 
         [Inject]
         private void Construct(ISaveLoad[] wrappers)
         {
             foreach (var wrapper in wrappers)
                 if (wrapper is UserInfoWrapper userInfoWraper)
-                    this._userInfo = userInfoWraper.UserInfo;
+                    this._userInfoWrapper = userInfoWraper;
         }
         
         public void Start()
