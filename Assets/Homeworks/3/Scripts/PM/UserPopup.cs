@@ -16,8 +16,6 @@ namespace Homework3.PM
         {
             this._userPresenter = userPresenter;
             
-            Debug.Log(_userPresenter.GetName());
-            
             _nameText.text = _userPresenter.GetName();
             _descText.text = _userPresenter.GetDescription();
             _iconImage.sprite = _userPresenter.GetIcon();

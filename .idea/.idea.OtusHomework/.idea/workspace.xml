@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/CharacterPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/CharacterPopup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/CharacterPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/CharacterPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/ICharacterPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/ICharacterPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/3/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/PopupManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/PopupManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +119,7 @@
       <workItem from="1688928569281" duration="1736000" />
       <workItem from="1688930444244" duration="91000" />
       <workItem from="1688930583037" duration="28000" />
-      <workItem from="1688967509589" duration="14879000" />
+      <workItem from="1688967509589" duration="15945000" />
     </task>
     <servers />
   </component>

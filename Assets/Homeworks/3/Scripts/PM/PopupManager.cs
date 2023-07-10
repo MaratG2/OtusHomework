@@ -1,4 +1,3 @@
-using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using Zenject;
@@ -7,6 +6,7 @@ namespace Homework3.PM
 {
     public class PopupManager : MonoBehaviour
     {
+        [SerializeField] private CanvasGroup _popupGroup;
         private UserPopup _userPopup;
         private CharacterPopup _characterPopup;
         private IUserPresenter _userPresenter;
@@ -22,14 +22,12 @@ namespace Homework3.PM
             this._characterPresenter = characterPresenter;
         }
 
-        private void Start()
-        {
-            Show();
-        }
-
         [Button]
         public void Show()
         {
+            _popupGroup.alpha = 1f;
+            _popupGroup.interactable = true;
+            _popupGroup.blocksRaycasts = true;
             _userPopup.Show(_userPresenter);
             _characterPopup.Show(_characterPresenter);
         }
@@ -37,6 +35,9 @@ namespace Homework3.PM
         [Button]
         public void Hide()
         {
+            _popupGroup.alpha = 0f;
+            _popupGroup.interactable = false;
+            _popupGroup.blocksRaycasts = false;
             _userPopup.Hide();
             _characterPopup.Hide();
         }
