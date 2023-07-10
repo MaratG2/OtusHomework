@@ -25,6 +25,7 @@ namespace Homework3.PM
             _expBar.fillAmount = _characterPresenter.GetProgressBarFill();
             _lvlupButton.interactable = _characterPresenter.CanLvlUp();
             _lvlupButton.image.sprite = _characterPresenter.GetLvlupButtonSprite();
+            _lvlupButton.onClick.AddListener(_characterPresenter.OnLvlupClicked);
             
             _characterPresenter.OnLvlChanged += LvlChanged;
             _characterPresenter.OnExpChanged += ExpChanged;
@@ -36,6 +37,7 @@ namespace Homework3.PM
         {
             _characterPresenter.OnLvlChanged -= LvlChanged;
             _characterPresenter.OnExpChanged -= ExpChanged;
+            _lvlupButton.onClick.RemoveListener(_characterPresenter.OnLvlupClicked);
             
             _characterPresenter.Stop();
             this._characterPresenter = null;

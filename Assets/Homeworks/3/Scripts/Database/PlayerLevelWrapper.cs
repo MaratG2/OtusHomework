@@ -21,7 +21,7 @@ namespace Homework3.Database
             {
                 string data = SaveLoad.Load(_fileName);
                 PlayerLevelStruct dataStruct = JsonUtility.FromJson<PlayerLevelStruct>(data);
-                for (int i = 0; i < dataStruct.level; i++)
+                for (int i = 1; i < dataStruct.level; i++)
                 {
                     _playerLevel.AddExperience(_playerLevel.RequiredExperience);
                     _playerLevel.LevelUp();

@@ -43,7 +43,7 @@ namespace Homework3.PM
 
         public bool CanLvlUp()
         {
-            return GetProgressBarFill().Equals(1f);
+            return _playerLevel.CanLevelUp();
         }
 
         public string GetExperience()
@@ -78,6 +78,12 @@ namespace Homework3.PM
         private void LvlChanged()
         {
             OnLvlChanged?.Invoke();
+        }
+        
+        public void OnLvlupClicked()
+        {
+            if(CanLvlUp())
+                _playerLevel.LevelUp();
         }
     }
 }

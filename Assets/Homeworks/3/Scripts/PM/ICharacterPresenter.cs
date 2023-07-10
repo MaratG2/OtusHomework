@@ -13,6 +13,7 @@ namespace Homework3.PM
         Sprite GetProgressBarSprite();
         Sprite GetLvlupButtonSprite();
         float GetProgressBarFill();
+        void OnLvlupClicked();
         void Start();
         void Stop();
     }
