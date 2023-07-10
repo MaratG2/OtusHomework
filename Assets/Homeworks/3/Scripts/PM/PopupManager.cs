@@ -22,7 +22,6 @@ namespace Homework3.PM
             this._characterPresenter = characterPresenter;
         }
 
-        [Button]
         public void Show()
         {
             _popupGroup.alpha = 1f;
@@ -32,7 +31,6 @@ namespace Homework3.PM
             _characterPopup.Show(_characterPresenter);
         }
 
-        [Button]
         public void Hide()
         {
             _popupGroup.alpha = 0f;
