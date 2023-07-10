@@ -1,16 +1,19 @@
 using Sirenix.OdinInspector;
-using Sirenix.Serialization;
 using UnityEngine;
+using Zenject;
 
 namespace Homework3.Database
 {
-    [ExecuteAlways]
     public class DataContainer : SerializedMonoBehaviour
     {
-        [OdinSerialize] private ISaveLoad[] _wrappers;
+        private ISaveLoad[] _wrappers;
+        public ISaveLoad[] Wrappers => _wrappers;
 
-        private void Awake()
+        [Inject]
+        private void Construct(ISaveLoad[] wrappers)
         {
+            this._wrappers = wrappers;
+            Debug.Log(_wrappers.Length);
             LoadData();
         }
         

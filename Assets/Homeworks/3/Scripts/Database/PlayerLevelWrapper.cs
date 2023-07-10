@@ -6,7 +6,6 @@ using UnityEngine;
 namespace Homework3.Database
 {
     [RequireComponent(typeof(DataContainer))]
-    [ExecuteAlways]
     public class PlayerLevelWrapper : SerializedMonoBehaviour, ISaveLoad
     {
         private readonly string _fileName = "PlayerLevel";
