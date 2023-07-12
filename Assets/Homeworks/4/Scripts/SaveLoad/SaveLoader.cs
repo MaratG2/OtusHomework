@@ -1,8 +1,9 @@
+using UnityEngine;
 using Zenject;
 
 namespace Homeworks.SaveLoad
 {
-    public abstract class SaveLoader<TData, TService> : ISaveLoader
+    public abstract class SaveLoader<TData, TService> : MonoBehaviour, ISaveLoader
     {
         void ISaveLoader.LoadGame(IGameRepository repository, DiContainer container)
         {

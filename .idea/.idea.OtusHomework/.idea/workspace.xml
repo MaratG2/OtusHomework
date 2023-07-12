@@ -5,22 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/GameRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/GameRepository.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/IGameRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/IGameRepository.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/ISaveLoader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/ISaveLoader.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/LoadGameData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/LoadGameData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/PlayerResourcesData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/PlayerResourcesData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/SaveLoadManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/SaveLoadManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/SaveLoader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/SaveLoader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Resources/SaveData.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/PlayerResourceSaveLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/PlayerResourceSaveLoader.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/4/Database.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/4/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/4/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/Installers/Scene/GameSceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/Installers/Scene/GameSceneInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/PlayerResources.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/PlayerResources.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/GameRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/GameRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/SaveLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/SaveLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/4/Textures.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +130,7 @@
       <workItem from="1684408757228" duration="8421000" />
       <workItem from="1684667551182" duration="1263000" />
       <workItem from="1684745531623" duration="3740000" />
-      <workItem from="1689145597077" duration="4445000" />
+      <workItem from="1689145597077" duration="10197000" />
     </task>
     <servers />
   </component>

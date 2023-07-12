@@ -25,5 +25,15 @@ namespace Homeworks.SaveLoad
         {
             return _resources[resourceType];
         }
+
+        public void SetAllResources(Dictionary<ResourceType, int> resources)
+        {
+            _resources = resources;
+        }
+
+        public Dictionary<ResourceType, int> GetAllResources()
+        {
+            return _resources;
+        }
     }
 }

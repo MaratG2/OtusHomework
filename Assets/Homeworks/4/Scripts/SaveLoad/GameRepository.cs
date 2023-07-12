@@ -1,19 +1,25 @@
 using System.Collections.Generic;
+using System.IO;
 using Newtonsoft.Json;
 using UnityEngine;
 
 namespace Homeworks.SaveLoad
 {
-    public sealed class GameRepository : IGameRepository
+    public sealed class GameRepository : MonoBehaviour, IGameRepository
     {
-        private const string GAME_STATE_KEY = "Lesson/GameState";
+        private const string NAME = "GameState.json";
+        private const string PATH = "Assets/Homeworks/4/Resources/SaveData/";
+        private string RepoPath => PATH + NAME;
         private Dictionary<string, string> _gameState = new();
         
         public void LoadState()
         {
-            if (PlayerPrefs.HasKey(GAME_STATE_KEY))
+            if (File.Exists(RepoPath))
             {
-                var serializedState = PlayerPrefs.GetString(GAME_STATE_KEY);
+                string serializedState = "";
+                using (FileStream fs = new FileStream(RepoPath, FileMode.Open))
+                    using (StreamReader reader = new StreamReader(fs))
+                        serializedState += reader.ReadLine();
                 _gameState = JsonConvert.DeserializeObject<Dictionary<string, string>>(serializedState);
             }
             else
@@ -23,7 +29,9 @@ namespace Homeworks.SaveLoad
         public void SaveState()
         {
             var serializedState = JsonConvert.SerializeObject(_gameState);
-            PlayerPrefs.SetString(GAME_STATE_KEY, serializedState);
+            using (FileStream fs = new FileStream(RepoPath, FileMode.Create))
+                using (StreamWriter writer = new StreamWriter(fs))
+                    writer.Write(serializedState);
         }
 
         public T GetData<T>()
