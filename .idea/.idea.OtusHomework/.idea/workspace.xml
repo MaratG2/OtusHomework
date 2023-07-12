@@ -5,23 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/Repository/Resources/ResourceData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/Repository/Resources/ResourceData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/Repository/Resources/ResourceSaveLoader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/Repository/Resources/ResourceSaveLoader.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/Repository/Units/UnitObjectData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/Repository/Units/UnitObjectData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/Repository/Units/UnitObjectSaveLoader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/Repository/Units/UnitObjectSaveLoader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/AesOperation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/AesOperation.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/4/Resources/SaveData/GameState.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Resources/SaveData/GameState.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/4/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/Installers/Scene/GameSceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/Installers/Scene/GameSceneInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/Repository/Resources/Player/PlayerResourceSaveLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/Repository/Resources/Player/PlayerResourceSaveLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/Repository/Resources/Player/PlayerResourcesData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/Repository/Resources/Player/PlayerResourcesData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/GameRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/GameRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/IGameRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/IGameRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/SaveLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/SaveLoader.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +123,7 @@
       <workItem from="1684408757228" duration="8421000" />
       <workItem from="1684667551182" duration="1263000" />
       <workItem from="1684745531623" duration="3740000" />
-      <workItem from="1689145597077" duration="15357000" />
+      <workItem from="1689145597077" duration="16211000" />
     </task>
     <servers />
   </component>

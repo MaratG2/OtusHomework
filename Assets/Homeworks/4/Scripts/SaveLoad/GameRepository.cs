@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
+using EncryptionDecryptionUsingSymmetricKey;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -7,7 +9,8 @@ namespace Homeworks.SaveLoad
 {
     public sealed class GameRepository : MonoBehaviour, IGameRepository
     {
-        private const string NAME = "GameState.json";
+        private const string CRYPT_KEY = "b14ca5898a4e4133bbce2ea2315a1916";
+        private const string NAME = "GameState.save";
         private const string PATH = "Assets/Homeworks/4/Resources/SaveData/";
         private string RepoPath => PATH + NAME;
         private Dictionary<string, string> _gameState = new();
@@ -16,10 +19,9 @@ namespace Homeworks.SaveLoad
         {
             if (File.Exists(RepoPath))
             {
-                string serializedState = "";
-                using (FileStream fs = new FileStream(RepoPath, FileMode.Open))
-                    using (StreamReader reader = new StreamReader(fs))
-                        serializedState += reader.ReadLine();
+                byte[] bytesFile = File.ReadAllBytes(RepoPath);
+                string serializedState = Convert.ToBase64String(bytesFile);
+                serializedState = AesOperation.DecryptString(CRYPT_KEY, serializedState);
                 _gameState = JsonConvert.DeserializeObject<Dictionary<string, string>>(serializedState);
             }
             else
@@ -29,11 +31,10 @@ namespace Homeworks.SaveLoad
         public void SaveState()
         {
             var serializedState = JsonConvert.SerializeObject(_gameState);
-            using (FileStream fs = new FileStream(RepoPath, FileMode.Create))
-                using (StreamWriter writer = new StreamWriter(fs))
-                    writer.Write(serializedState);
+            serializedState = AesOperation.EncryptString(CRYPT_KEY, serializedState);
+            byte[] bytesFile = Convert.FromBase64String(serializedState);
+            File.WriteAllBytes(RepoPath, bytesFile);
         }
-
         public T GetData<T>(string key)
         {
             var serializedData = _gameState[typeof(T).Name+key];
@@ -57,7 +58,6 @@ namespace Homeworks.SaveLoad
             var serializedData = JsonConvert.SerializeObject
                 (
                     value,
-                    Formatting.Indented,
                     new JsonSerializerSettings
                     {
                         ReferenceLoopHandling = ReferenceLoopHandling.Ignore  
