@@ -34,15 +34,15 @@ namespace Homeworks.SaveLoad
                     writer.Write(serializedState);
         }
 
-        public T GetData<T>()
+        public T GetData<T>(string key)
         {
-            var serializedData = _gameState[typeof(T).Name];
+            var serializedData = _gameState[typeof(T).Name+key];
             return JsonConvert.DeserializeObject<T>(serializedData);
         }
 
-        public bool TryGetData<T>(out T value)
+        public bool TryGetData<T>(out T value, string key)
         {
-            if (_gameState.TryGetValue(typeof(T).Name, out var serializedData))
+            if (_gameState.TryGetValue(typeof(T).Name+key, out var serializedData))
             {
                 value = JsonConvert.DeserializeObject<T>(serializedData);
                 return true;
@@ -52,10 +52,18 @@ namespace Homeworks.SaveLoad
             return false;
         }
 
-        public void SetData<T>(T value)
+        public void SetData<T>(T value, string key)
         {
-            var serializedData = JsonConvert.SerializeObject(value);
-            _gameState[typeof(T).Name] = serializedData;
+            var serializedData = JsonConvert.SerializeObject
+                (
+                    value,
+                    Formatting.Indented,
+                    new JsonSerializerSettings
+                    {
+                        ReferenceLoopHandling = ReferenceLoopHandling.Ignore  
+                    }
+                );
+            _gameState[typeof(T).Name+key] = serializedData;
         }
     }
 }

@@ -5,9 +5,8 @@ using UnityEngine;
 namespace Homeworks.SaveLoad
 {
     [Serializable]
-    public class PlayerResourcesData
+    public struct PlayerResourcesData
     {
-        [SerializeField]
-        public Dictionary<ResourceType, int> _resources = new();
+        [SerializeField] public Dictionary<ResourceType, int> _resources;
     }
 }
