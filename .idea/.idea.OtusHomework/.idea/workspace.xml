@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/GameRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/GameRepository.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/IGameRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/IGameRepository.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/ISaveLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/ISaveLoader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/LoadGameData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/LoadGameData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/PlayerResourcesData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/PlayerResourcesData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/SaveLoadManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/SaveLoadManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/SaveLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/SaveLoader.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/PlayerResources.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/4/Scripts/PlayerResources.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +32,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/4/Scripts/Installers/Scene/GameSceneInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/LoadGameData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/4/Scripts/SaveLoad/PlayerResourcesData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Otus_UnityProfessional/Assets/Lessons/I.Architecture/Lesson_MVO/Scripts/MoneyStorage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Otus_UnityProfessional/Assets/Lessons/I.Architecture/Lesson_SaveLoad/Scripts/MoneyData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Otus_UnityProfessional/Assets/Lessons/I.Architecture/Lesson_SaveLoad/Scripts/MoneySaveLoader.cs" root0="SKIP_HIGHLIGHTING" />
@@ -34,12 +50,16 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2PxpmqeYXLghpptNMV9yjjIcYAI" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Discover.Launch.Via.Unity": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -113,13 +133,14 @@
       <workItem from="1684408757228" duration="8421000" />
       <workItem from="1684667551182" duration="1263000" />
       <workItem from="1684745531623" duration="3740000" />
-      <workItem from="1689145597077" duration="2139000" />
+      <workItem from="1689145597077" duration="4445000" />
     </task>
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>
