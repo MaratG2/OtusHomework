@@ -1,6 +1,8 @@
 using System;
 using Atomic;
 using Declarative;
+using Homeworks5.Custom;
+using Homeworks5.Custom.Wrappers;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -68,16 +70,40 @@ namespace Homeworks5.Hero
         [Serializable]
         public class Mover
         {
+            [SerializeField]
+            private MoveEngine _moveEngine = new();
+
+            [SerializeField] 
+            private FixedUpdateWrapper _fixedUpdate = new();
+            
+            [SerializeField] 
+            private Transform _transform;
+
             [SerializeField] 
             public AtomicVariable<float> maxSpeed;
 
+            [SerializeField] 
+            public AtomicVariable<bool> moveRequired;
+
             [ShowInInspector] 
             public AtomicEvent<Vector3> onMove;
-            
+
             [Construct]
             public void Init()
             {
-                
+                onMove += dir =>
+                {
+                    _moveEngine.Cache(_transform, dir, maxSpeed.Value);
+                    moveRequired.Value = true;
+                };
+                _fixedUpdate.onUpdate += deltaTime =>
+                {
+                    if (moveRequired.Value)
+                    {
+                        _moveEngine.Move(deltaTime);
+                        moveRequired.Value = false;
+                    }
+                };
             }
         }
     }

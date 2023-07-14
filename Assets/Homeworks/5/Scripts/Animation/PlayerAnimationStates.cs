@@ -1,4 +1,4 @@
-namespace Homeworks._5.Scripts.Animation
+namespace Homeworks5.Hero
 {
     public enum PlayerAnimationStates
     {

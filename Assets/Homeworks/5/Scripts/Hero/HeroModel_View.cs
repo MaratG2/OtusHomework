@@ -1,7 +1,6 @@
 using System;
 using Atomic;
 using Declarative;
-using Homeworks._5.Scripts.Animation;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
