@@ -3195,18 +3195,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   core:
-    health:
-      value: 5
-    isDeath:
-      value: 0
-    maxBullets:
-      value: 10
-    currentBullets:
-      value: 10
-    canShoot:
-      value: 1
-    maxSpeed:
-      value: 3
+    life:
+      health:
+        value: 5
+      isDead:
+        value: 0
+    shooter:
+      maxBullets:
+        value: 10
+      currentBullets:
+        value: 10
+      canShoot:
+        value: 1
+      reloadCooldown:
+        value: 2
+    mover:
+      maxSpeed:
+        value: 2
   view:
     _animator: {fileID: 0}
 --- !u!1 &1192262375

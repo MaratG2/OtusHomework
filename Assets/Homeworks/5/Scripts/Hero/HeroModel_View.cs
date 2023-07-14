@@ -11,24 +11,36 @@ namespace Homeworks5.Hero
     {
         [SerializeField] 
         private Animator _animator;
-        private HeroModel_Core _core;
+        private HeroModel_Core.Life _life;
+        private HeroModel_Core.Mover _mover;
         
         [ShowInInspector]
         public AtomicEvent<Vector3> onRotate;
 
         [Construct]
-        public void Construct(HeroModel_Core core)
+        public void Construct(HeroModel_Core.Life life, HeroModel_Core.Mover mover)
         {
-            this._core = core;
+            this._life = life;
+            this._mover = mover;
         }
 
         [Construct]
         public void Init()
         {
-            _core.onDeath += () =>  
+            _life.health.OnChanged += _ =>
             {
-                if (_core.isDeath.Value)
+                if (!_life.isDead.Value)
+                    Debug.Log("TAKE DAMAGE ANIMATION");
+            };
+            _life.isDead.OnChanged += isDead =>  
+            {
+                if (isDead)
                     Debug.Log("DEATH ANIMATION");
+            };
+            _mover.onMove += _ =>
+            {
+                if (!_life.isDead.Value)
+                    Debug.Log("MOVE ANIMATION");
             };
         }
     }

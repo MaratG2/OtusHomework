@@ -9,44 +9,76 @@ namespace Homeworks5.Hero
     [Serializable]
     public class HeroModel_Core
     {
-        [SerializeField]
-        public AtomicVariable<int> health;
-        [SerializeField]
-        public AtomicVariable<bool> isDeath;
-        [SerializeField]
-        public AtomicVariable<int> maxBullets;
-        [SerializeField]
-        public AtomicVariable<int> currentBullets;
-        [SerializeField]
-        public AtomicVariable<bool> canShoot;
-        [SerializeField]
-        public AtomicVariable<float> maxSpeed;
+        [Section] 
+        [SerializeField] 
+        public Life life = new();
 
-        [ShowInInspector]
-        public AtomicEvent onDeath;
-        [ShowInInspector]
-        public AtomicEvent<Vector3> onMove;
+        [Section] 
+        [SerializeField] 
+        public Shooter shooter = new();
 
-        [Construct]
-        public void Init()
+        [Section] 
+        [SerializeField] 
+        public Mover mover = new();
+
+        [Serializable]
+        public class Life
         {
-            health.OnChanged += newHealth =>
+            [SerializeField] public AtomicVariable<int> health;
+            [SerializeField] public AtomicVariable<bool> isDead;
+            [SerializeField] public AtomicEvent<int> onTakeDamage;
+
+            [Construct]
+            public void Init()
             {
-                if (newHealth <= 0 && !isDeath.Value)
-                    isDeath.Value = true;
-            };
-            isDeath.OnChanged += isDead =>
+                health.OnChanged += newHealth =>
+                {
+                    if (newHealth <= 0 && !isDead.Value)
+                        isDead.Value = true;
+                };
+                onTakeDamage += damage =>
+                {
+                    if (!isDead.Value)
+                        health.Value -= damage;
+                };
+            }
+        }
+
+        [Serializable]
+        public class Shooter
+        {
+            [SerializeField] public AtomicVariable<int> maxBullets;
+            [SerializeField] public AtomicVariable<int> currentBullets;
+            [SerializeField] public AtomicVariable<bool> canShoot;
+            [SerializeField] public AtomicVariable<int> reloadCooldown;
+
+            [Construct]
+            public void Init()
             {
-                if (isDead)
-                    onDeath?.Invoke();
-            };
-            currentBullets.OnChanged += newBullets =>
+                currentBullets.OnChanged += newBullets =>
+                {
+                    if (newBullets <= 0)
+                        canShoot.Value = false;
+                    if (newBullets > maxBullets.Value)
+                        currentBullets.Value = maxBullets.Value;
+                };
+            }
+        }
+
+        [Serializable]
+        public class Mover
+        {
+            [SerializeField] 
+            public AtomicVariable<float> maxSpeed;
+
+            [ShowInInspector] 
+            public AtomicEvent<Vector3> onMove;
+            
+            [Construct]
+            public void Init()
             {
-                if (newBullets <= 0)
-                    canShoot.Value = false;
-                if (newBullets > maxBullets.Value)
-                    currentBullets.Value = maxBullets.Value;
-            };
+                
+            }
         }
     }
 }
