@@ -12,10 +12,10 @@ namespace Homeworks5.Custom
 
         private bool _isReady;
 
-        public void Cache(Transform transform, Vector3 direction, float speed)
+        public void Cache(Transform transform, Vector2 direction, float speed)
         {
             this._transform = transform;
-            this._direction = direction;
+            this._direction = new Vector3(direction.x, 0f, direction.y).normalized;
             this._speed = speed;
             this._isReady = true;
         }
@@ -25,7 +25,7 @@ namespace Homeworks5.Custom
             if (!_isReady)
                 throw new NullReferenceException("MoveEngine is not ready!");
             
-            _transform.position += _direction.normalized * (_speed * deltaTime);
+            _transform.position += _direction * (_speed * deltaTime);
         }
     }
 }

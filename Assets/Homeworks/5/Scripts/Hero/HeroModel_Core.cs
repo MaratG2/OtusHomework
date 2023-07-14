@@ -86,7 +86,7 @@ namespace Homeworks5.Hero
             public AtomicVariable<bool> moveRequired;
 
             [ShowInInspector] 
-            public AtomicEvent<Vector3> onMove;
+            public AtomicEvent<Vector2> onMove;
 
             [Construct]
             public void Init()
