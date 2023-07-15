@@ -1,14 +1,21 @@
 using Homeworks5.Hero;
 using UnityEngine;
+using Zenject;
 
 namespace Homeworks5.Input
 {
     public class PlayerLookInputObserver : MonoBehaviour
     {
-        //TODO: DI
-        [SerializeField] private PlayerLookInput _playerLookInput;
-        [SerializeField] private HeroModel _heroModel;
+        private PlayerLookInput _playerLookInput;
+        private HeroModel _heroModel;
 
+        [Inject]
+        private void Construct(PlayerLookInput input, HeroModel heroModel)
+        {
+            this._playerLookInput = input;
+            this._heroModel = heroModel;
+        }
+        
         private void OnEnable()
         {
             _playerLookInput.onLook += Look;

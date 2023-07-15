@@ -1,22 +1,29 @@
 using Homeworks5.Hero;
 using UnityEngine;
+using Zenject;
 
 namespace Homeworks5.Input
 {
     public class PlayerShootInputObserver : MonoBehaviour
     {
-        //TODO: DI
-        [SerializeField] private PlayerShootInput _playerShootnput;
-        [SerializeField] private HeroModel _heroModel;
+        private PlayerShootInput _playerShootInput;
+        private HeroModel _heroModel;
 
+        [Inject]
+        private void Construct(PlayerShootInput input, HeroModel heroModel)
+        {
+            this._playerShootInput = input;
+            this._heroModel = heroModel;
+        }
+        
         private void OnEnable()
         {
-            _playerShootnput.onShoot += Shoot;
+            _playerShootInput.onShoot += Shoot;
         }
         
         private void OnDisable()
         {
-            _playerShootnput.onShoot -= Shoot;
+            _playerShootInput.onShoot -= Shoot;
         }
 
         private void Shoot()

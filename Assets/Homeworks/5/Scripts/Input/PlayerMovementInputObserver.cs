@@ -1,14 +1,21 @@
 using Homeworks5.Hero;
 using UnityEngine;
+using Zenject;
 
 namespace Homeworks5.Input
 {
     public class PlayerMovementInputObserver : MonoBehaviour
     {
-        //TODO: DI
-        [SerializeField] private PlayerMovementInput _playerMovementInput;
-        [SerializeField] private HeroModel _heroModel;
+        private PlayerMovementInput _playerMovementInput;
+        private HeroModel _heroModel;
 
+        [Inject]
+        private void Construct(PlayerMovementInput input, HeroModel heroModel)
+        {
+            this._playerMovementInput = input;
+            this._heroModel = heroModel;
+        }
+        
         private void OnEnable()
         {
             _playerMovementInput.onMove += Move;
