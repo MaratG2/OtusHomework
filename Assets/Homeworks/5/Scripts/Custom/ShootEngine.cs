@@ -10,9 +10,9 @@ namespace Homeworks5.Custom
             var newBullet = GameObject.Instantiate
                 (prefab, origin.position, Quaternion.identity);
             
-            var model = newBullet.GetComponent<BulletModel>();
-            if (model != null)
-                model.core.mover.direction.Value = direction;
+            var directionProvider = newBullet.GetComponentInChildren<IDirection>();
+            if (directionProvider != null)
+                directionProvider.Direction.Value = direction;
         }
     }
 }

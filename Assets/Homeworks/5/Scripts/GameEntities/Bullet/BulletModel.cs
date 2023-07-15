@@ -1,9 +1,10 @@
+using Atomic;
 using Declarative;
 using UnityEngine;
 
 namespace Homeworks5.Bullet
 {
-    public class BulletModel : DeclarativeModel
+    public class BulletModel : DeclarativeModel, IDirection
     {
         [Section] 
         [SerializeField] 
@@ -12,5 +13,7 @@ namespace Homeworks5.Bullet
         [Section] 
         [SerializeField] 
         public BulletModel_View view = new();
+
+        public AtomicVariable<Vector3> Direction => core.mover.direction;
     }
 }

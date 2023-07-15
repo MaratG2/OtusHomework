@@ -5,35 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Prefabs/Bullet.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Prefabs/Bullet.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Custom/ShootEngine.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Custom/ShootEngine.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/BulletModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/BulletModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/BulletModel_Core.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/BulletModel_Core.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/BulletModel_View.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/BulletModel_View.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/IDirectionContainer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/IDirectionContainer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Enemy.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerShootInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerShootInput.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerShootInputObserver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerShootInputObserver.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/IDirection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/IDirection.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Custom/MoveEngine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Custom/MoveEngine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Hero.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Hero/HeroModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Hero/HeroModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Hero/HeroModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModel_Core.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Hero/HeroModel_Core.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModel_Core.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Hero/HeroModel_View.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModel_View.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Hero/HeroModel_View.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModel_View.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Custom/ShootEngine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Custom/ShootEngine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/BulletModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/BulletModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +116,7 @@
       <workItem from="1684745531623" duration="3740000" />
       <workItem from="1689321189621" duration="476000" />
       <workItem from="1689321769361" duration="15190000" />
-      <workItem from="1689400516587" duration="5727000" />
+      <workItem from="1689400516587" duration="6577000" />
     </task>
     <servers />
   </component>
