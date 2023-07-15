@@ -14,6 +14,7 @@ namespace Homeworks5.Installers.Scene
             Container.Bind<PlayerLookInput>().FromComponentInHierarchy().AsSingle();
             Container.Bind<PlayerShootInput>().FromComponentInHierarchy().AsSingle();
             Container.Bind<IStatsView>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<HeroModelStatsProvider>().FromNew().AsSingle();
         }
     }
 }

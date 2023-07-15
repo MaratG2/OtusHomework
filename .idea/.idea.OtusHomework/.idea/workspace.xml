@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModel_Core.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModelStatsProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModelStatsProvider.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Installers/Scene/GameSceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Installers/Scene/GameSceneInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/UI/StatsPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/UI/StatsPresenter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +116,7 @@
       <workItem from="1689321769361" duration="15190000" />
       <workItem from="1689400516587" duration="6577000" />
       <workItem from="1689409769421" duration="1814000" />
-      <workItem from="1689413397098" duration="1325000" />
+      <workItem from="1689413397098" duration="1686000" />
     </task>
     <servers />
   </component>
