@@ -51,11 +51,14 @@ namespace Homeworks5.Hero
             [SerializeField] private Transform _shootPoint;
             [SerializeField] private GameObject _bulletPrefab;
             [SerializeField] public AtomicVariable<int> maxBullets;
-            [SerializeField] public AtomicVariable<float> reloadCooldown;
+            [SerializeField] public AtomicVariable<float> bulletRestoreCooldown;
+            [SerializeField] public AtomicVariable<float> cooldownTime;
             [HideInInspector] public AtomicVariable<int> kills;
             [HideInInspector] public AtomicVariable<int> currentBullets;
+            [HideInInspector] public AtomicVariable<bool> isReadyShoot;
             [HideInInspector] public AtomicVariable<bool> canShoot;
-            [HideInInspector] public AtomicVariable<float> reloadTimer;
+            [HideInInspector] public AtomicVariable<float> bulletRestoreTimer;
+            [HideInInspector] public AtomicVariable<float> cooldownTimer;
             [HideInInspector] public AtomicEvent onShoot;
             private UpdateWrapper _updateWrapper = new();
             private ShootEngine _shooter = new();
@@ -64,7 +67,8 @@ namespace Homeworks5.Hero
             public void Init()
             {
                 currentBullets.Value = maxBullets.Value;
-                reloadTimer.Value = reloadCooldown.Value;
+                bulletRestoreTimer.Value = bulletRestoreCooldown.Value;
+                cooldownTimer.Value = cooldownTime.Value;
                 currentBullets.OnChanged += newBullets =>
                 {
                     if (newBullets <= 0)
@@ -76,18 +80,25 @@ namespace Homeworks5.Hero
                 };
                 _updateWrapper.onUpdate += deltaTime =>
                 {
-                    if (reloadTimer.Value < reloadCooldown.Value)
-                        reloadTimer.Value += deltaTime;
+                    if (bulletRestoreTimer.Value < bulletRestoreCooldown.Value)
+                        bulletRestoreTimer.Value += deltaTime;
                     else
                     {
                         currentBullets.Value++;
-                        reloadTimer.Value = 0f;
+                        bulletRestoreTimer.Value = 0f;
                     }
+                    
+                    if (cooldownTimer.Value < cooldownTime.Value)
+                        cooldownTimer.Value += deltaTime;
+                    else
+                        isReadyShoot.Value = true;
                 };
                 onShoot += () =>
                 {
-                    if(canShoot.Value)
+                    if(canShoot.Value && isReadyShoot.Value)
                     {
+                        isReadyShoot.Value = false;
+                        cooldownTimer.Value = 0f;
                         currentBullets.Value--;
                         _shooter.Shoot(_bulletPrefab, _shootPoint, _shootPoint.forward);
                     }

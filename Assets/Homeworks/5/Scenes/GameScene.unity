@@ -3430,15 +3430,21 @@ MonoBehaviour:
         type: 3}
       maxBullets:
         value: 10
-      reloadCooldown:
+      bulletRestoreCooldown:
         value: 2
+      cooldownTime:
+        value: 0.5
       kills:
         value: 0
       currentBullets:
         value: 10
+      isReadyShoot:
+        value: 0
       canShoot:
         value: 1
-      reloadTimer:
+      bulletRestoreTimer:
+        value: 0
+      cooldownTimer:
         value: 0
     mover:
       _transform: {fileID: 1189594281}
