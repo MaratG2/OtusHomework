@@ -1,5 +1,6 @@
 using Homeworks5.Hero;
 using Homeworks5.Input;
+using Homeworks5.Spawner;
 using Homeworks5.UI;
 using Zenject;
 
@@ -15,6 +16,7 @@ namespace Homeworks5.Installers.Scene
             Container.Bind<PlayerShootInput>().FromComponentInHierarchy().AsSingle();
             Container.Bind<IStatsView>().FromComponentInHierarchy().AsSingle();
             Container.Bind<HeroModelStatsProvider>().FromNew().AsSingle();
+            Container.Bind<SpawnerPosition>().FromComponentInHierarchy().AsSingle();
         }
     }
 }
