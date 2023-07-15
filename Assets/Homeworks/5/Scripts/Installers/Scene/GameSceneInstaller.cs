@@ -1,5 +1,6 @@
 using Homeworks5.Hero;
 using Homeworks5.Input;
+using Homeworks5.UI;
 using Zenject;
 
 namespace Homeworks5.Installers.Scene
@@ -12,6 +13,7 @@ namespace Homeworks5.Installers.Scene
             Container.Bind<PlayerMovementInput>().FromComponentInHierarchy().AsSingle();
             Container.Bind<PlayerLookInput>().FromComponentInHierarchy().AsSingle();
             Container.Bind<PlayerShootInput>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<IStatsView>().FromComponentInHierarchy().AsSingle();
         }
     }
 }

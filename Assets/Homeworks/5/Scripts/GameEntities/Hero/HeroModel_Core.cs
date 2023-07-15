@@ -52,6 +52,7 @@ namespace Homeworks5.Hero
             [SerializeField] private GameObject _bulletPrefab;
             [SerializeField] public AtomicVariable<int> maxBullets;
             [SerializeField] public AtomicVariable<float> reloadCooldown;
+            [HideInInspector] public AtomicVariable<int> kills;
             [HideInInspector] public AtomicVariable<int> currentBullets;
             [HideInInspector] public AtomicVariable<bool> canShoot;
             [HideInInspector] public AtomicVariable<float> reloadTimer;
