@@ -42,6 +42,14 @@ namespace Homeworks5.Hero
                     if (!isDead.Value)
                         health.Value -= damage;
                 };
+                isDead.OnChanged += dead =>
+                {
+                    if (dead)
+                    {
+                        Debug.Log("ИГРА ЗАВЕРШЕНА");
+                        Time.timeScale = 0f;
+                    }
+                };
             }
         }
 
@@ -64,7 +72,7 @@ namespace Homeworks5.Hero
             private ShootEngine _shooter = new();
 
             [Construct]
-            public void Init()
+            public void Init(Life life)
             {
                 currentBullets.Value = maxBullets.Value;
                 bulletRestoreTimer.Value = bulletRestoreCooldown.Value;
@@ -95,7 +103,7 @@ namespace Homeworks5.Hero
                 };
                 onShoot += () =>
                 {
-                    if(canShoot.Value && isReadyShoot.Value)
+                    if(canShoot.Value && isReadyShoot.Value && !life.isDead.Value)
                     {
                         isReadyShoot.Value = false;
                         cooldownTimer.Value = 0f;

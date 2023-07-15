@@ -3,6 +3,7 @@ using Atomic;
 using Declarative;
 using Homeworks5.Custom;
 using Homeworks5.Custom.Wrappers;
+using Homeworks5.Interfaces;
 using UnityEngine;
 
 namespace Homeworks5.Bullet
@@ -18,6 +19,10 @@ namespace Homeworks5.Bullet
         [SerializeField] 
         public Mover mover = new();
 
+        [Section] 
+        [SerializeField] 
+        public Bullet bullet = new();
+        
         [Serializable]
         public class Life
         {
@@ -61,6 +66,28 @@ namespace Homeworks5.Bullet
                 _fixedUpdateWrapper.onUpdate += deltaTime =>
                 {
                     _moveEngine.Move(deltaTime);
+                };
+            }
+        }
+
+        [Serializable]
+        public class Bullet
+        {
+            [SerializeField] private Transform _transform;
+            [SerializeField] public AtomicVariable<int> damage;
+            [SerializeField] public CollisionEngine collisionEngine;
+            
+            [Construct]
+            public void Init()
+            {
+                collisionEngine.onCollisionEnter += collisionObj =>
+                {
+                    var damageable = collisionObj.gameObject.GetComponent<IDamageable>();
+                    if (damageable != null)
+                    {
+                        damageable.TakeDamage(damage.Value);
+                        GameObject.Destroy(_transform.gameObject);
+                    }
                 };
             }
         }

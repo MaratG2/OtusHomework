@@ -56,7 +56,8 @@ namespace Homeworks5.Hero
             };
             onRotate += forward =>
             {
-                _transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
+                if(!_life.isDead.Value)
+                    _transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
             };
         }
     }

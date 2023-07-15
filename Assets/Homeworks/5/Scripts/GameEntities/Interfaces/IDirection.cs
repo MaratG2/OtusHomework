@@ -1,7 +1,7 @@
 using Atomic;
 using UnityEngine;
 
-namespace Homeworks5.Bullet
+namespace Homeworks5.Interfaces
 {
     public interface IDirection
     {

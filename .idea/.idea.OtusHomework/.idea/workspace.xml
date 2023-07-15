@@ -5,9 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Prefabs/Bullet Player.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Prefabs/Bullet Player.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Custom/CollisionEngine.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Custom/CollisionEngine.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Interfaces.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Interfaces/IDamageable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Interfaces/IDamageable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Interfaces/IPlayerDamageable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Interfaces/IPlayerDamageable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Interfaces/IScores.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Interfaces/IScores.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Prefabs/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Prefabs/Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Custom/ShootEngine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Custom/ShootEngine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/BulletModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/BulletModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/BulletModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/BulletModel_Core.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/IDirection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Interfaces/IDirection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Bullet/IDirection.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Interfaces/IDirection.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModel_Core.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModel_View.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModel_View.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Zombie/ZombieModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Zombie/ZombieModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Zombie/ZombieModel_View.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Zombie/ZombieModel_View.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Installers/Scene/GameSceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Installers/Scene/GameSceneInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +144,8 @@
       <workItem from="1689321769361" duration="15190000" />
       <workItem from="1689400516587" duration="6577000" />
       <workItem from="1689409769421" duration="1814000" />
-      <workItem from="1689413397098" duration="6682000" />
+      <workItem from="1689413397098" duration="6867000" />
+      <workItem from="1689429723470" duration="5357000" />
     </task>
     <servers />
   </component>

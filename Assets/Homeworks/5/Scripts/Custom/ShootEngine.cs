@@ -1,4 +1,4 @@
-using Homeworks5.Bullet;
+using Homeworks5.Interfaces;
 using UnityEngine;
 
 namespace Homeworks5.Custom

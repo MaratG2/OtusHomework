@@ -1,5 +1,6 @@
 using Atomic;
 using Declarative;
+using Homeworks5.Interfaces;
 using UnityEngine;
 
 namespace Homeworks5.Bullet
