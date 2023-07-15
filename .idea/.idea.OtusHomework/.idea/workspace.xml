@@ -5,7 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/DefaultInputActions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/DefaultInputActions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/DefaultInputActions.inputactions" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/DefaultInputActions.inputactions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerLookInput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerLookInput.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerLookInputObserver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerLookInputObserver.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Kevin Iglesias/Soldier Animations/AnimatorControllers/AssaultRifle/SoldierAssaultRifle - CombatIdle.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetPacks/Kevin Iglesias/Soldier Animations/AnimatorControllers/AssaultRifle/SoldierAssaultRifle - CombatIdle.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scenes/GameScene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scenes/GameScene/DefaultInputActions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scenes/GameScene/DefaultInputActions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scenes/GameScene/DefaultInputActions.inputactions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scenes/GameScene/DefaultInputActions.inputactions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Hero/HeroModel_View.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Hero/HeroModel_View.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerMovementInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerMovementInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerInputObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerMovementInputObserver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerInputObserver.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerMovementInputObserver.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,35 +36,42 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Hero/HeroModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerLookInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Otus_UnityProfessional/Assets/Lessons/II.Gameplay/Lesson_Declarative/Scripts/HeroModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../nb/Assets/UnityScripts/Controllers/CheatsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2PxpmqeYXLghpptNMV9yjjIcYAI" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "homework5",
-    "ignore.virus.scanning.warn.message": "true",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;homework5&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\DecompilerCache",
-      "C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\SourcesCache",
-      "C:\\Users\\god79\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\DecompilerCache&quot;,
+      &quot;C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\SourcesCache&quot;,
+      &quot;C:\\Users\\god79\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files (x86)\Unity_Editors\2021.3.7f1\Editor\Unity.exe" />
@@ -103,12 +130,15 @@
       <workItem from="1684667551182" duration="1263000" />
       <workItem from="1684745531623" duration="3740000" />
       <workItem from="1689321189621" duration="476000" />
+      <workItem from="1689321769361" duration="15190000" />
+      <workItem from="1689400516587" duration="1940000" />
     </task>
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

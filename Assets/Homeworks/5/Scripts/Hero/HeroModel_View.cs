@@ -11,6 +11,8 @@ namespace Homeworks5.Hero
     {
         [SerializeField] 
         private Animator _animator;
+        [SerializeField] 
+        private Transform _transform;
         private HeroModel_Core.Life _life;
         private HeroModel_Core.Mover _mover;
         
@@ -34,24 +36,17 @@ namespace Homeworks5.Hero
             _life.health.OnChanged += _ =>
             {
                 if (!_life.isDead.Value)
-                {
-                    Debug.Log("TAKE DAMAGE ANIMATION");
                     _animator.SetInteger(_commonState, (int)PlayerAnimationStates.Hit);
-                }
             };
             _life.isDead.OnChanged += isDead =>  
             {
                 if (isDead)
-                {
-                    Debug.Log("DEATH ANIMATION");
                     _animator.SetInteger(_commonState, (int)PlayerAnimationStates.Death);
-                }
             };
             _mover.onMove += dir =>
             {
                 if (!_life.isDead.Value)
                 {
-                    Debug.Log("MOVE ANIMATION");
                     if(dir == Vector2.zero && _animator.GetBool(_movingState))
                     {
                         _animator.SetBool(_movingState, false);
@@ -63,6 +58,10 @@ namespace Homeworks5.Hero
                         _animator.SetInteger(_commonState, (int)PlayerAnimationStates.Run);
                     }
                 }
+            };
+            onRotate += forward =>
+            {
+                _transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
             };
         }
     }

@@ -5,10 +5,9 @@ using DefaultInputActions = UnityEngine.InputSystem5.DefaultInputActions;
 
 namespace Homeworks5.Input
 {
-    public class PlayerInput : MonoBehaviour
+    public class PlayerMovementInput : MonoBehaviour
     {
         private DefaultInputActions _inputActions;
-
         public event Action<Vector2> onMove;
         private bool _isMoving;
         private Vector2 _direction;
@@ -31,7 +30,7 @@ namespace Homeworks5.Input
             _inputActions.Player.Move.performed -= OnMoveBegin;
             _inputActions.Player.Move.canceled -= OnMoveEnd;
         }
-
+        
         private void OnMoveBegin(InputAction.CallbackContext ctx)
         {
             _isMoving = true;
@@ -41,15 +40,14 @@ namespace Homeworks5.Input
         private void OnMoveEnd(InputAction.CallbackContext ctx)
         {
             _isMoving = false;
-        } 
+        }
 
         private void Update()
         {
-            if (_isMoving)
-            {
-                Debug.Log(_direction);
-                onMove?.Invoke(_direction);
-            }
+            if (!_isMoving)
+                return;
+            
+            onMove?.Invoke(_direction);
         }
     }
 }

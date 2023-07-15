@@ -3,20 +3,20 @@ using UnityEngine;
 
 namespace Homeworks5.Input
 {
-    public class PlayerInputObserver : MonoBehaviour
+    public class PlayerMovementInputObserver : MonoBehaviour
     {
         //TODO: DI
-        [SerializeField] private PlayerInput _playerInput;
+        [SerializeField] private PlayerMovementInput _playerMovementInput;
         [SerializeField] private HeroModel _heroModel;
 
         private void OnEnable()
         {
-            _playerInput.onMove += Move;
+            _playerMovementInput.onMove += Move;
         }
         
         private void OnDisable()
         {
-            _playerInput.onMove -= Move;
+            _playerMovementInput.onMove -= Move;
         }
 
         private void Move(Vector2 direciton)
