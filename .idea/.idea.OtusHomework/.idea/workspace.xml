@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModelStatsProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Hero/HeroModelStatsProvider.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Installers/Scene/GameSceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Installers/Scene/GameSceneInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/UI/StatsPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/UI/StatsPresenter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Prefabs/Enemy.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Prefabs/Enemy.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Zombie.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Zombie/ZombieModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Zombie/ZombieModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Zombie/ZombieModel_Core.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Zombie/ZombieModel_View.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Zombie/ZombieModel_View.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/5/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Enemy.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +27,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Zombie/ZombieModel_View.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerLookInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/5/Scripts/UI/StatsView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Otus_UnityProfessional/Assets/Lessons/II.Gameplay/Lesson_Declarative/Scripts/HeroModel.cs" root0="SKIP_HIGHLIGHTING" />
@@ -116,7 +125,7 @@
       <workItem from="1689321769361" duration="15190000" />
       <workItem from="1689400516587" duration="6577000" />
       <workItem from="1689409769421" duration="1814000" />
-      <workItem from="1689413397098" duration="1686000" />
+      <workItem from="1689413397098" duration="3805000" />
     </task>
     <servers />
   </component>
