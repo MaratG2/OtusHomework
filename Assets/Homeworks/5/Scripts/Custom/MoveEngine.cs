@@ -23,7 +23,7 @@ namespace Homeworks5.Custom
         public void Move(float deltaTime)
         {
             if (!_isReady)
-                throw new NullReferenceException("MoveEngine is not ready!");
+                return;
             
             _transform.position += _direction * (_speed * deltaTime);
         }

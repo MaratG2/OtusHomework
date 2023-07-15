@@ -271,6 +271,8 @@ GameObject:
   - component: {fileID: 159812682}
   - component: {fileID: 159812684}
   - component: {fileID: 159812685}
+  - component: {fileID: 159812687}
+  - component: {fileID: 159812686}
   m_Layer: 0
   m_Name: Input
   m_TagString: Untagged
@@ -345,6 +347,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerLookInput: {fileID: 159812684}
   _heroModel: {fileID: 1189594282}
+--- !u!114 &159812686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159812680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d43dd09d548403fb793353987ac53d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerShootnput: {fileID: 159812687}
+  _heroModel: {fileID: 1189594282}
+--- !u!114 &159812687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159812680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21920009d55745bb9eda4399e41766ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &423799140
 GameObject:
   m_ObjectHideFlags: 3
@@ -450,7 +478,7 @@ PrefabInstance:
     - target: {fileID: 3587277423659650105, guid: 4754efaa13741644aa1a61e4869e2c0d,
         type: 3}
       propertyPath: m_Name
-      value: Player
+      value: 3D Model
       objectReference: {fileID: 0}
     - target: {fileID: 3587277423659749415, guid: 4754efaa13741644aa1a61e4869e2c0d,
         type: 3}
@@ -2630,6 +2658,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 433075504}
+  - {fileID: 1173874404}
   m_Father: {fileID: 1189594281}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3144,6 +3173,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1173874403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1173874404}
+  m_Layer: 0
+  m_Name: Shoot Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1173874404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173874403}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.192, y: 1.232, z: 0.734}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 455644941}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1185288759
 GameObject:
   m_ObjectHideFlags: 0
@@ -3294,14 +3354,19 @@ MonoBehaviour:
       isDead:
         value: 0
     shooter:
+      _shootPoint: {fileID: 1173874404}
+      _bulletPrefab: {fileID: 8832910663881041884, guid: 957f43147a72ac345802ba276a76406b,
+        type: 3}
       maxBullets:
         value: 10
+      reloadCooldown:
+        value: 2
       currentBullets:
         value: 10
       canShoot:
         value: 1
-      reloadCooldown:
-        value: 2
+      reloadTimer:
+        value: 0
     mover:
       _transform: {fileID: 1189594281}
       maxSpeed:

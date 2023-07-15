@@ -3,7 +3,6 @@ using Atomic;
 using Declarative;
 using Homeworks5.Custom;
 using Homeworks5.Custom.Wrappers;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Homeworks5.Hero
@@ -27,8 +26,8 @@ namespace Homeworks5.Hero
         public class Life
         {
             [SerializeField] public AtomicVariable<int> health;
-            [SerializeField] public AtomicVariable<bool> isDead;
-            [SerializeField] public AtomicEvent<int> onTakeDamage;
+            [HideInInspector] public AtomicVariable<bool> isDead;
+            [HideInInspector] public AtomicEvent<int> onTakeDamage;
 
             [Construct]
             public void Init()
@@ -49,20 +48,48 @@ namespace Homeworks5.Hero
         [Serializable]
         public class Shooter
         {
+            [SerializeField] private Transform _shootPoint;
+            [SerializeField] private GameObject _bulletPrefab;
             [SerializeField] public AtomicVariable<int> maxBullets;
-            [SerializeField] public AtomicVariable<int> currentBullets;
-            [SerializeField] public AtomicVariable<bool> canShoot;
-            [SerializeField] public AtomicVariable<int> reloadCooldown;
+            [SerializeField] public AtomicVariable<float> reloadCooldown;
+            [HideInInspector] public AtomicVariable<int> currentBullets;
+            [HideInInspector] public AtomicVariable<bool> canShoot;
+            [HideInInspector] public AtomicVariable<float> reloadTimer;
+            [HideInInspector] public AtomicEvent onShoot;
+            private UpdateWrapper _updateWrapper = new();
+            private ShootEngine _shooter = new();
 
             [Construct]
             public void Init()
             {
+                currentBullets.Value = maxBullets.Value;
+                reloadTimer.Value = reloadCooldown.Value;
                 currentBullets.OnChanged += newBullets =>
                 {
                     if (newBullets <= 0)
                         canShoot.Value = false;
+                    else
+                        canShoot.Value = true;
                     if (newBullets > maxBullets.Value)
                         currentBullets.Value = maxBullets.Value;
+                };
+                _updateWrapper.onUpdate += deltaTime =>
+                {
+                    if (reloadTimer.Value < reloadCooldown.Value)
+                        reloadTimer.Value += deltaTime;
+                    else
+                    {
+                        currentBullets.Value++;
+                        reloadTimer.Value = 0f;
+                    }
+                };
+                onShoot += () =>
+                {
+                    if(canShoot.Value)
+                    {
+                        currentBullets.Value--;
+                        _shooter.Shoot(_bulletPrefab, _shootPoint, _shootPoint.forward);
+                    }
                 };
             }
         }
@@ -70,23 +97,12 @@ namespace Homeworks5.Hero
         [Serializable]
         public class Mover
         {
-            [SerializeField]
+            [SerializeField] private Transform _transform;
+            [SerializeField] public AtomicVariable<float> maxSpeed;
+            [HideInInspector] public AtomicVariable<bool> moveRequired;
+            [HideInInspector] public AtomicEvent<Vector2> onMove;
             private MoveEngine _moveEngine = new();
-
-            [SerializeField] 
             private FixedUpdateWrapper _fixedUpdate = new();
-            
-            [SerializeField] 
-            private Transform _transform;
-
-            [SerializeField] 
-            public AtomicVariable<float> maxSpeed;
-
-            [SerializeField] 
-            public AtomicVariable<bool> moveRequired;
-
-            [ShowInInspector] 
-            public AtomicEvent<Vector2> onMove;
 
             [Construct]
             public void Init()

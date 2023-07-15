@@ -1,7 +1,6 @@
 using System;
 using Atomic;
 using Declarative;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Homeworks5.Hero
@@ -9,18 +8,14 @@ namespace Homeworks5.Hero
     [Serializable]
     public class HeroModel_View
     {
-        [SerializeField] 
-        private Animator _animator;
-        [SerializeField] 
-        private Transform _transform;
+        [SerializeField] private Animator _animator;
+        [SerializeField] private Transform _transform;
+        [HideInInspector] public AtomicEvent<Vector3> onRotate;
         private HeroModel_Core.Life _life;
         private HeroModel_Core.Mover _mover;
         
         private readonly int _commonState = Animator.StringToHash("STATE");
         private readonly int _movingState = Animator.StringToHash("IS_MOVING");
-        
-        [ShowInInspector]
-        public AtomicEvent<Vector3> onRotate;
 
         [Construct]
         public void Construct(HeroModel_Core.Life life, HeroModel_Core.Mover mover)
