@@ -7,18 +7,15 @@ namespace ShootEmUp.Enemies
 {
     public sealed class EnemySystem : MonoBehaviour
     {
+        private EnemySetuper _enemySetuper;
         private PoolSettings _poolSettings;
-        private EnemyPositions _enemyPositions;
-        private GameObject _character;
         private PoolFacade<Enemy> _poolFacade;
         
         [Inject]
-        private void Construct(PoolSettings poolSettings, EnemyPositions enemyPositions,
-            MoveComponent moveComponent)
+        private void Construct(PoolSettings poolSettings, EnemySetuper enemySetuper)
         {
             this._poolSettings = poolSettings;
-            this._enemyPositions = enemyPositions;
-            this._character = moveComponent.gameObject;
+            this._enemySetuper = enemySetuper;
         }
         
         private void Awake()
@@ -34,11 +31,7 @@ namespace ShootEmUp.Enemies
             if (!enemy)
                 return;
 
-            var spawnPosition = _enemyPositions.RandomSpawnPosition();
-            enemy.transform.position = spawnPosition.position;
-            var attackPosition = _enemyPositions.RandomAttackPosition();
-            enemy.GetComponent<EnemyMoveAgent>().SetDestination(attackPosition.position);
-            enemy.GetComponent<EnemyWeaponController>().SetTarget(_character);
+            _enemySetuper.SetupEnemy(enemy);
         }
 
         public void UnspawnEnemy(GameObject enemy)
