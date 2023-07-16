@@ -454,8 +454,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bdcdf257e0242258e7a67fe13d80e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPositions: {fileID: 7166351703523243261}
-  character: {fileID: 4414282821800802397}
 --- !u!114 &562298208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,7 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerMovement: {fileID: 4414282821800802398}
-  _playerWeaponController: {fileID: 4414282821800802404}
+  _playerWeaponController: {fileID: 4414282821800802402}
 --- !u!1 &1134805359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1533,31 +1531,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3926786964592264468}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4414282821800802397 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 809540891661548873, guid: 9699e7e809fd44b2bbf3d30c951ecbd2,
-    type: 3}
-  m_PrefabInstance: {fileID: 3926786964592264468}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4414282821800802398 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3926786963732877808, guid: 9699e7e809fd44b2bbf3d30c951ecbd2,
     type: 3}
   m_PrefabInstance: {fileID: 3926786964592264468}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4414282821800802397}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce88fee201654f6e8064002ed15de594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4414282821800802404 stripped
+--- !u!114 &4414282821800802402 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4414282821800802404, guid: 9699e7e809fd44b2bbf3d30c951ecbd2,
+  m_CorrespondingSourceObject: {fileID: 3450984059894533033, guid: 9699e7e809fd44b2bbf3d30c951ecbd2,
     type: 3}
   m_PrefabInstance: {fileID: 3926786964592264468}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4414282821800802397}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b604ab15941542cba101f631357ee4bd, type: 3}
@@ -1845,8 +1837,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a94380673bed40d7aff42c7cee30b556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnPositions: {fileID: 4914023371208914564}
-  _attackPositions: {fileID: 9048567252472711236}
 --- !u!114 &7166351703523243262
 MonoBehaviour:
   m_ObjectHideFlags: 0
