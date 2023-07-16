@@ -29,7 +29,7 @@ namespace ShootEmUp.Enemies
             var direction = (Vector2) _target.transform.position - startPosition;
             var directionNormalized = direction.normalized;
        
-            _bulletSystem.Fire(new BulletSystem.Args
+            _bulletSystem.Fire(new BulletArgs
             {
                 physicsLayer = (int)_bulletConfig.PhysicsLayer,
                 color = _bulletConfig.Color,

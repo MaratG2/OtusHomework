@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Inputs/PlayerShootController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletsOutOfBounds.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/2/Scripts/Bullets/BulletsOutOfBounds.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

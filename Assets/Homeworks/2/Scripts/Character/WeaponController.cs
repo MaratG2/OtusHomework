@@ -19,7 +19,7 @@ namespace ShootEmUp.Character
         
         public void Fire()
         {
-            _bulletSystem.Fire(new BulletSystem.Args
+            _bulletSystem.Fire(new BulletArgs
             {
                 physicsLayer = (int)_bulletConfig.PhysicsLayer,
                 color = _bulletConfig.Color,

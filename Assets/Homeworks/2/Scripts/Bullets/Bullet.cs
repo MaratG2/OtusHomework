@@ -18,7 +18,7 @@ namespace ShootEmUp.Bullets
             this._spriteRenderer = spriteRenderer;
         }
 
-        public void Init(BulletSystem.Args args, PoolObject<Bullet> poolObject)
+        public void Init(BulletArgs args, PoolObject<Bullet> poolObject)
         {
             this._poolObject = poolObject;
             transform.position = args.position;
