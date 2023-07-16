@@ -6,6 +6,7 @@ namespace ShootEmUp.Enemies
 {
     public sealed class EnemyManager : MonoBehaviour
     {
+        [SerializeField] private int _enemyCount;
         private EnemySystem _enemySystem;
 
         [Inject]
@@ -21,7 +22,7 @@ namespace ShootEmUp.Enemies
 
         private IEnumerator SpawnAllEnemies()
         {
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < _enemyCount; i++)
             {
                 yield return new WaitForSeconds(1);
                 _enemySystem.SpawnEnemy();
