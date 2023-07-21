@@ -20,9 +20,8 @@ namespace Homeworks5.Zombie
         [Section]
         [SerializeField]
         public ZombieModel_View view = new();
- 
-        [Inject]
-        private void Construct(HeroModel heroModel, IScores scoresHolder)
+  
+        public void Construct(HeroModel heroModel, IScores scoresHolder)
         {
             this._target = heroModel.transform;
             this.scoresHolder = scoresHolder;

@@ -378,6 +378,7 @@ GameObject:
   - component: {fileID: 242901969}
   - component: {fileID: 242901970}
   - component: {fileID: 242901971}
+  - component: {fileID: 242901972}
   m_Layer: 0
   m_Name: ZombieSpawner
   m_TagString: Untagged
@@ -432,6 +433,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 952301272622457054, guid: 7f069d558f9bce34eb155c2b52b4973c, type: 3}
   _spawnTime: 2
+--- !u!114 &242901972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242901968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 674493462f6f65e478f7d900c96ae862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &423799140
 GameObject:
   m_ObjectHideFlags: 3
@@ -3361,8 +3374,10 @@ MonoBehaviour:
       _transform: {fileID: 1189594281}
       maxSpeed:
         value: 5
-      moveRequired:
-        value: 0
+      Direction:
+        value: {x: 0, y: 0, z: 0}
+    moveRequired:
+      value: 0
   view:
     _animator: {fileID: 433075505}
     _transform: {fileID: 1189594281}

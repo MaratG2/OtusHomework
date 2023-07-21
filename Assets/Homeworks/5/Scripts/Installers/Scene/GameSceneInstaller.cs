@@ -19,6 +19,7 @@ namespace Homeworks5.Installers.Scene
             Container.Bind<HeroModelStatsProvider>().FromNew().AsSingle();
             Container.Bind<SpawnerPosition>().FromComponentInHierarchy().AsSingle();
             Container.Bind<IScores>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<GameObjectSpawner>().FromComponentInHierarchy().AsSingle();
         }
     }
 }

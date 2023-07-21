@@ -1,41 +1,44 @@
-using Homeworks5.Spawner;
+using System;
 using UnityEngine;
 using Zenject;
 
-public class GameObjectSpawner : MonoBehaviour
+namespace Homeworks5.Spawner
 {
-    [SerializeField] private GameObject _prefab;
-    [SerializeField] private float _spawnTime;
-    private SpawnerPosition _spawnerPosition;
-    private DiContainer _diContainer;
-    private float _spawnTimer;
+    public class GameObjectSpawner : MonoBehaviour
+    {
+        public event Action<GameObject> onSpawned;
+        [SerializeField] private GameObject _prefab;
+        [SerializeField] private float _spawnTime;
+        private SpawnerPosition _spawnerPosition;
+        private float _spawnTimer;
 
-    [Inject]
-    private void Construct(SpawnerPosition spawnerPosition, DiContainer diContainer)
-    {
-        this._spawnerPosition = spawnerPosition;
-        this._diContainer = diContainer;
-    }
-    
-    private void Update()
-    {
-        if(_spawnTimer < _spawnTime)
-            _spawnTimer += Time.deltaTime;
-        else
+        [Inject]
+        private void Construct(SpawnerPosition spawnerPosition)
         {
-            Spawn();
-            _spawnTimer -= _spawnTime;
+            this._spawnerPosition = spawnerPosition;
         }
-    }
 
-    private void Spawn()
-    {
-        _diContainer.InstantiatePrefab
-        (
-            _prefab,
-            _spawnerPosition.GetRandomPosition(),
-            Quaternion.identity,
-            transform
-        );
+        private void Update()
+        {
+            if (_spawnTimer < _spawnTime)
+                _spawnTimer += Time.deltaTime;
+            else
+            {
+                Spawn();
+                _spawnTimer -= _spawnTime;
+            }
+        }
+
+        private void Spawn()
+        {
+            var newGameObject = Instantiate
+            (
+                _prefab,
+                _spawnerPosition.GetRandomPosition(),
+                Quaternion.identity,
+                transform
+            );
+            onSpawned?.Invoke(newGameObject);
+        }
     }
 }
