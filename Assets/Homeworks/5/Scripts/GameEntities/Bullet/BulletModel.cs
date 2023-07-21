@@ -15,6 +15,6 @@ namespace Homeworks5.Bullet
         [SerializeField] 
         public BulletModel_View view = new();
 
-        public AtomicVariable<Vector3> Direction => core.mover.direction;
+        public AtomicVariable<Vector3> Direction => core.mover.Direction;
     }
 }

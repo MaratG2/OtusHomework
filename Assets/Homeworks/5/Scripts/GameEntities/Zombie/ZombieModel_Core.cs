@@ -39,7 +39,7 @@ namespace Homeworks5.Zombie
             mover.onUpdated += deltaTime =>
             {
                 if (!life.isDead.Value)
-                    mover.moveEngine.Move(deltaTime);
+                    mover.onMoveEvent.Invoke(deltaTime);
             };
         }
         

@@ -89,9 +89,9 @@ MonoBehaviour:
         value: 0
     mover:
       _transform: {fileID: 8832910663881041885}
-      speed:
-        value: 10
-      direction:
+      maxSpeed:
+        value: 5
+      Direction:
         value: {x: 0, y: 0, z: 0}
     bullet:
       _transform: {fileID: 8832910663881041885}

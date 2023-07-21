@@ -12,9 +12,10 @@ namespace Homeworks5
     {
         [SerializeField] private Transform _transform;
         [SerializeField] public AtomicVariable<float> maxSpeed;
+        [HideInInspector] public AtomicVariable<Vector3> Direction;
         [HideInInspector] public AtomicEvent<Vector2> onMove;
+        [HideInInspector] public AtomicEvent<float> onMoveEvent;
         [HideInInspector] public event Action<float> onUpdated;
-        [HideInInspector] public MoveEngine moveEngine = new();
         private FixedUpdateWrapper _fixedUpdate = new();
 
         [Construct]
@@ -22,12 +23,16 @@ namespace Homeworks5
         {
             onMove += dir =>
             {
-                moveEngine.Cache(_transform, dir, maxSpeed.Value);
+                Direction.Value = new Vector3(dir.x, 0f, dir.y).normalized;
             };
             _fixedUpdate.onUpdate += deltaTime =>
             {
                 onUpdated?.Invoke(deltaTime);
             };
+            onMoveEvent.AddListener(deltaTime => 
+            { 
+                _transform.position += Direction.Value * (maxSpeed.Value * deltaTime); 
+            });
         }
     }
 }

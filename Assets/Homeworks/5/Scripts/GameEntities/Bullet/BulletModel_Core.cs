@@ -17,11 +17,20 @@ namespace Homeworks5.Bullet
         
         [Section] 
         [SerializeField] 
-        public Mover mover = new();
+        public MoveSection mover = new();
 
         [Section] 
         [SerializeField] 
         public Bullet bullet = new();
+
+        [Construct]
+        public void Init()
+        {
+            mover.onUpdated += deltaTime =>
+            {
+                mover.onMoveEvent.Invoke(deltaTime);
+            };
+        }
         
         [Serializable]
         public class Life
@@ -41,31 +50,6 @@ namespace Homeworks5.Bullet
                         lifeTimer.Value += deltaTime;
                     else
                         GameObject.Destroy(_gameObject);
-                };
-            }
-        }
-
-        [Serializable]
-        public class Mover
-        {
-            [SerializeField] private Transform _transform;
-            [SerializeField] public AtomicVariable<float> speed;
-            [SerializeField] public AtomicVariable<Vector3> direction;
-            private MoveEngine _moveEngine = new();
-            private FixedUpdateWrapper _fixedUpdateWrapper = new();
-            
-            [Construct]
-            public void Init()
-            {
-                direction.OnChanged += newDirection =>
-                {
-                    _moveEngine.Cache(_transform,
-                        new Vector2(newDirection.x, newDirection.z),
-                        speed.Value);
-                };
-                _fixedUpdateWrapper.onUpdate += deltaTime =>
-                {
-                    _moveEngine.Move(deltaTime);
                 };
             }
         }

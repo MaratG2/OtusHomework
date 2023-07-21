@@ -39,7 +39,7 @@ namespace Homeworks5.Hero
             {
                 if (moveRequired.Value)
                 {
-                    mover.moveEngine.Move(deltaTime);
+                    mover.onMoveEvent.Invoke(deltaTime);
                     moveRequired.Value = false;
                 }
             };
