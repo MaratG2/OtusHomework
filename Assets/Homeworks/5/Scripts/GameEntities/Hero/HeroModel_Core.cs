@@ -20,7 +20,8 @@ namespace Homeworks5.Hero
 
         [Section] 
         [SerializeField] 
-        public Mover mover = new();
+        public MoveSection mover = new();
+        [HideInInspector] public AtomicVariable<bool> moveRequired;
 
         [Construct]
         public void Init()
@@ -29,6 +30,18 @@ namespace Homeworks5.Hero
             {
                 Debug.Log("ИГРА ЗАВЕРШЕНА");
                 Time.timeScale = 0f;
+            };
+            mover.onMove += dir =>
+            {
+                moveRequired.Value = true;
+            };
+            mover.onUpdated += deltaTime =>
+            {
+                if (moveRequired.Value)
+                {
+                    mover.moveEngine.Move(deltaTime);
+                    moveRequired.Value = false;
+                }
             };
         }
 
@@ -91,35 +104,6 @@ namespace Homeworks5.Hero
                     }
                 };
             }
-        }
-
-        [Serializable]
-        public class Mover
-        {
-            [SerializeField] private Transform _transform;
-            [SerializeField] public AtomicVariable<float> maxSpeed;
-            [HideInInspector] public AtomicVariable<bool> moveRequired;
-            [HideInInspector] public AtomicEvent<Vector2> onMove;
-            private MoveEngine _moveEngine = new();
-            private FixedUpdateWrapper _fixedUpdate = new();
-
-            [Construct]
-            public void Init()
-            {
-                onMove += dir =>
-                {
-                    _moveEngine.Cache(_transform, dir, maxSpeed.Value);
-                    moveRequired.Value = true;
-                };
-                _fixedUpdate.onUpdate += deltaTime =>
-                {
-                    if (moveRequired.Value)
-                    {
-                        _moveEngine.Move(deltaTime);
-                        moveRequired.Value = false;
-                    }
-                };
-            }
-        }
+        } 
     }
 }

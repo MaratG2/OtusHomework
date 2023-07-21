@@ -18,7 +18,7 @@ namespace Homeworks5.Zombie
         
         [Section] 
         [SerializeField] 
-        public Mover mover = new();
+        public MoveSection mover = new();
         
         [Section] 
         [SerializeField] 
@@ -36,30 +36,11 @@ namespace Homeworks5.Zombie
                 model.scoresHolder.Kills.Value++;
                 GameObject.Destroy(life.Transform.gameObject);
             };
-        }
-        
-        [Serializable]
-        public class Mover
-        {
-            [SerializeField] private Transform _transform;
-            [SerializeField] public AtomicVariable<float> maxSpeed;
-            [HideInInspector] public AtomicEvent<Vector2> onMove;
-            private MoveEngine _moveEngine = new();
-            private FixedUpdateWrapper _fixedUpdate = new();
-
-            [Construct] 
-            public void Init(LifeSection life)
+            mover.onUpdated += deltaTime =>
             {
-                onMove += dir =>
-                {
-                    _moveEngine.Cache(_transform, dir, maxSpeed.Value);
-                };
-                _fixedUpdate.onUpdate += deltaTime =>
-                {
-                    if (!life.isDead.Value)
-                        _moveEngine.Move(deltaTime);
-                };
-            }
+                if (!life.isDead.Value)
+                    mover.moveEngine.Move(deltaTime);
+            };
         }
         
         [Serializable]
@@ -120,7 +101,7 @@ namespace Homeworks5.Zombie
             private UpdateWrapper _updateWrapper = new();
 
             [Construct]
-            public void Init(ZombieModel model, Mover mover, LifeSection life)
+            public void Init(ZombieModel model, MoveSection mover, LifeSection life)
             {
                 _updateWrapper.onUpdate += _ =>
                 {
@@ -130,7 +111,7 @@ namespace Homeworks5.Zombie
                 targetDirection.OnChanged += dir =>
                 {
                     if (!life.isDead.Value)
-                        mover.onMove.Invoke(dir);
+                        mover.onMove?.Invoke(dir);
                 };
             }
         }
