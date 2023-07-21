@@ -1,3 +1,4 @@
+using Homeworks5.Components;
 using Homeworks5.Hero;
 using UnityEngine;
 using Zenject;
@@ -7,13 +8,13 @@ namespace Homeworks5.Input
     public class PlayerMovementInputObserver : MonoBehaviour
     {
         private PlayerMovementInput _playerMovementInput;
-        private HeroModel _heroModel;
+        private HeroEntity _heroEntity;
 
         [Inject]
-        private void Construct(PlayerMovementInput input, HeroModel heroModel)
+        private void Construct(PlayerMovementInput input, HeroEntity heroEntity)
         {
             this._playerMovementInput = input;
-            this._heroModel = heroModel;
+            this._heroEntity = heroEntity;
         }
         
         private void OnEnable()
@@ -28,7 +29,7 @@ namespace Homeworks5.Input
 
         private void Move(Vector2 direciton)
         {
-            _heroModel.core.mover.onMove?.Invoke(direciton);
+            _heroEntity.Get<IMoveComponent>().Move(direciton);
         }
     }
 }

@@ -7,29 +7,35 @@ namespace Homeworks5.UI
     public class StatsPresenter : MonoBehaviour
     {
         private IStatsView _statsView;
-        private HeroModelStatsProvider _statsProvider;
+        private HeroEntity _heroEntity;
+        private IHeroStatsComponent _heroStatsComponent;
 
         [Inject]
-        private void Construct(IStatsView statsView, HeroModelStatsProvider statsProvider)
+        private void Construct(IStatsView statsView, HeroEntity heroEntity)
         {
             this._statsView = statsView;
-            this._statsProvider = statsProvider;
+            this._heroEntity = heroEntity;
+        }
+
+        private void Start()
+        {
+            this._heroStatsComponent = _heroEntity.Get<IHeroStatsComponent>();
             Init();
             InitDraw();
         }
 
         private void Init()
         {
-            _statsProvider.HP.OnChanged += hp =>
+            _heroStatsComponent.HP().OnChanged += hp =>
             {
                 _statsView.SetHPText($"HP: {hp}");
             };
-            _statsProvider.CurrentBullets.OnChanged += bullets =>
+            _heroStatsComponent.CurrentBullets().OnChanged += bullets =>
             {
                 _statsView.SetBulletsText($"Bullets: {bullets}/" +
-                                          $"{_statsProvider.MaxBullets.Value}");
+                                          $"{_heroStatsComponent.MaxBullets().Value}");
             };
-            _statsProvider.Kills.OnChanged += kills =>
+            _heroStatsComponent.Kills().OnChanged += kills =>
             {
                 _statsView.SetKillsText($"Kills: {kills}");
             };
@@ -37,10 +43,10 @@ namespace Homeworks5.UI
 
         private void InitDraw()
         {
-            _statsView.SetHPText($"HP: {_statsProvider.HP.Value}");
-            _statsView.SetBulletsText($"Bullets: {_statsProvider.CurrentBullets.Value}/" +
-                                      $"{_statsProvider.MaxBullets.Value}");
-            _statsView.SetKillsText($"Kills: {_statsProvider.Kills.Value}");
+            _statsView.SetHPText($"HP: {_heroStatsComponent.HP().Value}");
+            _statsView.SetBulletsText($"Bullets: {_heroStatsComponent.CurrentBullets().Value}/" +
+                                      $"{_heroStatsComponent.MaxBullets().Value}");
+            _statsView.SetKillsText($"Kills: {_heroStatsComponent.Kills().Value}");
         }
     }
 }

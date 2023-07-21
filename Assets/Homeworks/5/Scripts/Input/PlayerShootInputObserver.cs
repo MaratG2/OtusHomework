@@ -1,3 +1,4 @@
+using Homeworks5.Components;
 using Homeworks5.Hero;
 using UnityEngine;
 using Zenject;
@@ -7,13 +8,13 @@ namespace Homeworks5.Input
     public class PlayerShootInputObserver : MonoBehaviour
     {
         private PlayerShootInput _playerShootInput;
-        private HeroModel _heroModel;
+        private HeroEntity _heroEntity;
 
         [Inject]
-        private void Construct(PlayerShootInput input, HeroModel heroModel)
+        private void Construct(PlayerShootInput input, HeroEntity heroEntity)
         {
             this._playerShootInput = input;
-            this._heroModel = heroModel;
+            this._heroEntity = heroEntity;
         }
         
         private void OnEnable()
@@ -28,7 +29,7 @@ namespace Homeworks5.Input
 
         private void Shoot()
         {
-            _heroModel.core.shooter.onShoot?.Invoke();
+            _heroEntity.Get<IShootComponent>().Shoot();
         }
     }
 }

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 952301272622457055}
+  - component: {fileID: 2598488209837152778}
   - component: {fileID: 952301272622457056}
   - component: {fileID: 482262286338416463}
   - component: {fileID: 5851862060089276080}
@@ -36,6 +37,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2598488209837152778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952301272622457054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5706fb151ef11764ab2dc7f5b60f26d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &952301272622457056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,6 +72,8 @@ MonoBehaviour:
       _transform: {fileID: 952301272622457055}
       maxSpeed:
         value: 2
+      Direction:
+        value: {x: 0, y: 0, z: 0}
     attacker:
       _collisionEngine: {fileID: 1371853490751125811}
       damage:

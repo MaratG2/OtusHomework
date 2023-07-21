@@ -1,17 +1,13 @@
 using Declarative;
 using Homeworks5.Hero;
-using Homeworks5.Interfaces;
 using UnityEngine;
 using Zenject;
 
 namespace Homeworks5.Zombie
 {
-    public class ZombieModel : DeclarativeModel, IDamageable
+    public class ZombieModel : DeclarativeModel
     {
-        private Transform _target;
-        public IScores scoresHolder;
-        
-        public Transform Target => _target;
+        public Transform Target { get; private set; }
         
         [Section]
         [SerializeField]
@@ -21,15 +17,10 @@ namespace Homeworks5.Zombie
         [SerializeField]
         public ZombieModel_View view = new();
   
-        public void Construct(HeroModel heroModel, IScores scoresHolder)
+        public void Construct(HeroEntity heroEntity)
         {
-            this._target = heroModel.transform;
-            this.scoresHolder = scoresHolder;
-        }
-
-        public void TakeDamage(int damage)
-        {
-            core.life.onTakeDamage?.Invoke(damage);
+            this.Target = heroEntity.transform;
+            core.OuterInit(heroEntity);
         }
     }
 }

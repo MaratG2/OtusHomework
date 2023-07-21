@@ -1,3 +1,4 @@
+using Homeworks5.Components;
 using Homeworks5.Hero;
 using UnityEngine;
 using Zenject;
@@ -7,13 +8,13 @@ namespace Homeworks5.Input
     public class PlayerLookInputObserver : MonoBehaviour
     {
         private PlayerLookInput _playerLookInput;
-        private HeroModel _heroModel;
+        private HeroEntity _heroEntity;
 
         [Inject]
-        private void Construct(PlayerLookInput input, HeroModel heroModel)
+        private void Construct(PlayerLookInput input, HeroEntity heroEntity)
         {
             this._playerLookInput = input;
-            this._heroModel = heroModel;
+            this._heroEntity = heroEntity;
         }
         
         private void OnEnable()
@@ -30,7 +31,7 @@ namespace Homeworks5.Input
         {
             pos = ConvertToCenterPos(pos);
             Vector3 forward = new(pos.x, 0f, pos.y);
-            _heroModel.view.onRotate?.Invoke(forward.normalized);
+            _heroEntity.Get<IRotateComponent>().Rotate(forward.normalized);
         }
 
         private Vector2 ConvertToCenterPos(Vector2 leftBottomPos)

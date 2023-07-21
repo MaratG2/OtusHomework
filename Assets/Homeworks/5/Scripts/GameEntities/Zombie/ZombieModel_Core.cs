@@ -1,9 +1,10 @@
 using System;
 using Atomic;
 using Declarative;
+using Homeworks5.Components;
 using Homeworks5.Custom;
 using Homeworks5.Custom.Wrappers;
-using Homeworks5.Interfaces;
+using Homeworks5.Hero;
 using UnityEngine;
 using Zenject;
 
@@ -28,14 +29,13 @@ namespace Homeworks5.Zombie
         [SerializeField] 
         public EnemyAI enemyAI = new();
 
-        [Construct]
-        public void Init(ZombieModel model)
+        public void OuterInit(HeroEntity heroEntity)
         {
-            life.onDeath += () =>
+            life.onDeath.AddListener(() =>
             {
-                model.scoresHolder.Kills.Value++;
+                heroEntity.Get<IScoresComponent>().AddScore();
                 GameObject.Destroy(life.Transform.gameObject);
-            };
+            });
             mover.onUpdated += deltaTime =>
             {
                 if (!life.isDead.Value)
@@ -51,27 +51,27 @@ namespace Homeworks5.Zombie
             [SerializeField] public AtomicVariable<float> attackCooldown;
             private AtomicVariable<bool> _isChargingAttack = new();
             private AtomicVariable<float> _attackTimer = new();
-            private AtomicVariable<IDamageable> _player = new();
+            private HeroEntity _heroEntity;
             private UpdateWrapper _updateWrapper = new();
-
+            
             [Construct]
             public void Init()
             {
                 _collisionEngine.onCollisionEnter += other =>
                 {
-                    var damageable = other.gameObject.GetComponent<IPlayerDamageable>();
-                    if (damageable != null)
+                    var heroEntity = other.gameObject.GetComponent<HeroEntity>();
+                    if (heroEntity != null)
                     {
-                        _player.Value = damageable;
+                        _heroEntity = heroEntity;
                         _isChargingAttack.Value = true;
                     }
                 };
                 _collisionEngine.onCollisionExit += other =>
                 {
-                    var damageable = other.gameObject.GetComponent<IPlayerDamageable>();
-                    if (damageable != null)
+                    var heroEntity = other.gameObject.GetComponent<HeroEntity>();
+                    if (heroEntity != null)
                     {
-                        _player.Value = null;
+                        _heroEntity = null;
                         _isChargingAttack.Value = false;
                     }
                 };
@@ -84,7 +84,7 @@ namespace Homeworks5.Zombie
                         else
                         {
                             _attackTimer.Value -= attackCooldown.Value;
-                            _player.Value.TakeDamage(damage.Value);
+                            _heroEntity.Get<ITakeDamageComponent>().TakeDamage(damage.Value);
                         }
                     }
                     else

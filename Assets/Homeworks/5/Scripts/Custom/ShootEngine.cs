@@ -1,4 +1,5 @@
-using Homeworks5.Interfaces;
+using Homeworks5.Bullet;
+using Homeworks5.Components;
 using UnityEngine;
 
 namespace Homeworks5.Custom
@@ -10,9 +11,10 @@ namespace Homeworks5.Custom
             var newBullet = GameObject.Instantiate
                 (prefab, origin.position, Quaternion.identity);
             
-            var directionProvider = newBullet.GetComponentInChildren<IDirection>();
-            if (directionProvider != null)
-                directionProvider.Direction.Value = direction;
+            var bulletEntity = newBullet.GetComponentInChildren<BulletEntity>();
+            if (bulletEntity != null)
+                if(bulletEntity.TryGet<IDirectionComponent>(out var directionComponent))
+                    directionComponent.SetDirection(direction);
         }
     }
 }

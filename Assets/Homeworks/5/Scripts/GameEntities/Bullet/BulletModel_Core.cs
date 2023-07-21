@@ -1,9 +1,10 @@
 using System;
 using Atomic;
 using Declarative;
+using Homeworks5.Components;
 using Homeworks5.Custom;
 using Homeworks5.Custom.Wrappers;
-using Homeworks5.Interfaces;
+using Homeworks5.Zombie;
 using UnityEngine;
 
 namespace Homeworks5.Bullet
@@ -66,10 +67,10 @@ namespace Homeworks5.Bullet
             {
                 collisionEngine.onCollisionEnter += collisionObj =>
                 {
-                    var damageable = collisionObj.gameObject.GetComponent<IDamageable>();
-                    if (damageable != null)
+                    var zombieEntity = collisionObj.gameObject.GetComponent<ZombieEntity>();
+                    if (zombieEntity != null)
                     {
-                        damageable.TakeDamage(damage.Value);
+                        zombieEntity.Get<ITakeDamageComponent>().TakeDamage(damage.Value);
                         GameObject.Destroy(_transform.gameObject);
                     }
                 };

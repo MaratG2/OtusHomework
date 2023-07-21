@@ -60,6 +60,7 @@ namespace Homeworks5.Hero
             [HideInInspector] public AtomicVariable<float> cooldownTimer;
             [HideInInspector] public AtomicEvent onShoot;
             [HideInInspector] public AtomicEvent onShootPerformed;
+            [HideInInspector] public AtomicEvent onKilled;
             private UpdateWrapper _updateWrapper = new();
             private ShootEngine _shooter = new();
 
@@ -84,6 +85,10 @@ namespace Homeworks5.Hero
                         onShootPerformed?.Invoke();
                     }
                 });
+                onKilled += () =>
+                {
+                    kills.Value++;
+                };
             }
         }
 
@@ -108,8 +113,6 @@ namespace Homeworks5.Hero
                         hasBullets.Value = false;
                     else
                         hasBullets.Value = true;
-                    if (newBullets > maxBullets.Value)
-                        currentBullets.Value = maxBullets.Value;
                 };
                 _updateWrapper.onUpdate += deltaTime =>
                 {
@@ -117,7 +120,8 @@ namespace Homeworks5.Hero
                         bulletRestoreTimer.Value += deltaTime;
                     else
                     {
-                        currentBullets.Value++;
+                        if(currentBullets.Value < maxBullets.Value)
+                            currentBullets.Value++;
                         bulletRestoreTimer.Value = 0f;
                     }
                 };
