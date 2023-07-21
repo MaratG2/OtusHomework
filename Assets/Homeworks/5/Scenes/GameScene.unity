@@ -3330,6 +3330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   core:
     life:
+      _transform: {fileID: 1189594281}
       health:
         value: 5
       isDead:

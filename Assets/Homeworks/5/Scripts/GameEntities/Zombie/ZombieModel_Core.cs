@@ -14,7 +14,7 @@ namespace Homeworks5.Zombie
     {
         [Section] 
         [SerializeField] 
-        public Life life = new();
+        public LifeSection life = new();
         
         [Section] 
         [SerializeField] 
@@ -27,34 +27,15 @@ namespace Homeworks5.Zombie
         [Section] 
         [SerializeField] 
         public EnemyAI enemyAI = new();
-        
-        [Serializable]
-        public class Life
+
+        [Construct]
+        public void Init(ZombieModel model)
         {
-            [SerializeField] private Transform _transform;
-            [SerializeField] public AtomicVariable<int> health;
-            [HideInInspector] public AtomicVariable<bool> isDead;
-            [HideInInspector] public AtomicEvent<int> onTakeDamage;
-      
-            
-            [Construct]
-            public void Init(ZombieModel model)
+            life.onDeath += () =>
             {
-                health.OnChanged += newHealth =>
-                {
-                    if (newHealth <= 0 && !isDead.Value)
-                    {
-                        isDead.Value = true;
-                        model.scoresHolder.Kills.Value++;
-                        GameObject.Destroy(_transform.gameObject);
-                    }
-                };
-                onTakeDamage += damage =>
-                {
-                    if (!isDead.Value)
-                        health.Value -= damage;
-                };
-            }
+                model.scoresHolder.Kills.Value++;
+                GameObject.Destroy(life.Transform.gameObject);
+            };
         }
         
         [Serializable]
@@ -67,7 +48,7 @@ namespace Homeworks5.Zombie
             private FixedUpdateWrapper _fixedUpdate = new();
 
             [Construct] 
-            public void Init(Life life)
+            public void Init(LifeSection life)
             {
                 onMove += dir =>
                 {
@@ -139,7 +120,7 @@ namespace Homeworks5.Zombie
             private UpdateWrapper _updateWrapper = new();
 
             [Construct]
-            public void Init(ZombieModel model, Mover mover, Life life)
+            public void Init(ZombieModel model, Mover mover, LifeSection life)
             {
                 _updateWrapper.onUpdate += _ =>
                 {
