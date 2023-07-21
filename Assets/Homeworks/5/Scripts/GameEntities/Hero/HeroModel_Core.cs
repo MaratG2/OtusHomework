@@ -12,7 +12,7 @@ namespace Homeworks5.Hero
     {
         [Section] 
         [SerializeField] 
-        public Life life = new();
+        public LifeSection life = new();
 
         [Section] 
         [SerializeField] 
@@ -22,35 +22,14 @@ namespace Homeworks5.Hero
         [SerializeField] 
         public Mover mover = new();
 
-        [Serializable]
-        public class Life
+        [Construct]
+        public void Init()
         {
-            [SerializeField] public AtomicVariable<int> health;
-            [HideInInspector] public AtomicVariable<bool> isDead;
-            [HideInInspector] public AtomicEvent<int> onTakeDamage;
-
-            [Construct]
-            public void Init()
+            life.onDeath += () =>
             {
-                health.OnChanged += newHealth =>
-                {
-                    if (newHealth <= 0 && !isDead.Value)
-                        isDead.Value = true;
-                };
-                onTakeDamage += damage =>
-                {
-                    if (!isDead.Value)
-                        health.Value -= damage;
-                };
-                isDead.OnChanged += dead =>
-                {
-                    if (dead)
-                    {
-                        Debug.Log("ИГРА ЗАВЕРШЕНА");
-                        Time.timeScale = 0f;
-                    }
-                };
-            }
+                Debug.Log("ИГРА ЗАВЕРШЕНА");
+                Time.timeScale = 0f;
+            };
         }
 
         [Serializable]
@@ -72,7 +51,7 @@ namespace Homeworks5.Hero
             private ShootEngine _shooter = new();
 
             [Construct]
-            public void Init(Life life)
+            public void Init(LifeSection life)
             {
                 currentBullets.Value = maxBullets.Value;
                 bulletRestoreTimer.Value = bulletRestoreCooldown.Value;

@@ -11,14 +11,14 @@ namespace Homeworks5.Hero
         [SerializeField] private Animator _animator;
         [SerializeField] private Transform _transform;
         [HideInInspector] public AtomicEvent<Vector3> onRotate;
-        private HeroModel_Core.Life _life;
+        private LifeSection _life;
         private HeroModel_Core.Mover _mover;
         
         private readonly int _commonState = Animator.StringToHash("STATE");
         private readonly int _movingState = Animator.StringToHash("IS_MOVING");
 
         [Construct]
-        public void Construct(HeroModel_Core.Life life, HeroModel_Core.Mover mover)
+        public void Construct(LifeSection life, HeroModel_Core.Mover mover)
         {
             this._life = life;
             this._mover = mover;
