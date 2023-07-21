@@ -36,12 +36,12 @@ namespace Homeworks5.Hero
                 Debug.Log("ИГРА ЗАВЕРШЕНА");
                 Time.timeScale = 0f;
             };
-            
+
             move.onMove += dir =>
             {
                 moveRequired.Value = true;
             };
-            move.onUpdated += deltaTime =>
+            model.onFixedUpdate += deltaTime =>
             {
                 if (moveRequired.Value)
                 {
@@ -59,28 +59,23 @@ namespace Homeworks5.Hero
             [SerializeField] public AtomicVariable<float> cooldownTime;
             [HideInInspector] public AtomicVariable<int> kills;  
             [HideInInspector] public AtomicVariable<bool> isReadyShoot;
-            [HideInInspector] public AtomicVariable<float> cooldownTimer;
             [HideInInspector] public AtomicEvent onShoot;
             [HideInInspector] public AtomicEvent onShootPerformed;
             [HideInInspector] public AtomicEvent onKilled;
             private ShootEngine _shooter = new();
+            private Timer _timer;
 
             [Construct]
             public void Init(LifeSection life, ShootReload shootReloader, HeroModel model)
             {
-                model.onUpdate += deltaTime =>
-                {
-                    if (cooldownTimer.Value < cooldownTime.Value)
-                        cooldownTimer.Value += deltaTime;
-                    else
-                        isReadyShoot.Value = true;
-                };
+                _timer = new Timer(cooldownTime.Value, model, true);
+                _timer.onEnd += () => isReadyShoot.Value = true;
                 onShoot.AddListener(() =>
                 {
                     if (shootReloader.hasBullets.Value && isReadyShoot.Value && !life.isDead.Value)
                     {
                         isReadyShoot.Value = false;
-                        cooldownTimer.Value = 0f;
+                        _timer.ResetTimer();
                         _shooter.Shoot(_bulletPrefab, _shootPoint, _shootPoint.forward);
                         onShootPerformed?.Invoke();
                     }
@@ -89,7 +84,6 @@ namespace Homeworks5.Hero
                 {
                     kills.Value++;
                 };
-                cooldownTimer.Value = cooldownTime.Value;
             }
         }
 
@@ -98,13 +92,14 @@ namespace Homeworks5.Hero
         {
             [SerializeField] public AtomicVariable<int> maxBullets;
             [SerializeField] public AtomicVariable<float> bulletRestoreCooldown;
-            [HideInInspector] public AtomicVariable<float> bulletRestoreTimer;
             [HideInInspector] public AtomicVariable<int> currentBullets;
             [HideInInspector] public AtomicVariable<bool> hasBullets;
+            private AutoTimer _timer;
 
             [Construct]
             public void Init(Shoot shooter, HeroModel model)
             {
+                _timer = new AutoTimer(bulletRestoreCooldown.Value, model);
                 currentBullets.OnChanged += newBullets =>
                 {
                     if (newBullets <= 0)
@@ -112,23 +107,16 @@ namespace Homeworks5.Hero
                     else
                         hasBullets.Value = true;
                 };
-                model.onUpdate += deltaTime =>
+                _timer.onEnd += () =>
                 {
-                    if (bulletRestoreTimer.Value < bulletRestoreCooldown.Value)
-                        bulletRestoreTimer.Value += deltaTime;
-                    else
-                    {
-                        if(currentBullets.Value < maxBullets.Value)
-                            currentBullets.Value++;
-                        bulletRestoreTimer.Value = 0f;
-                    }
+                    if (currentBullets.Value < maxBullets.Value)
+                        currentBullets.Value++;
                 };
                 shooter.onShootPerformed += () =>
                 {
                     currentBullets.Value--;
                 };
                 currentBullets.Value = maxBullets.Value;
-                bulletRestoreTimer.Value = bulletRestoreCooldown.Value;
             }
         }
     }

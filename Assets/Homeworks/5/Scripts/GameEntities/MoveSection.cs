@@ -14,17 +14,12 @@ namespace Homeworks5
         [HideInInspector] public AtomicVariable<Vector3> Direction;
         [HideInInspector] public AtomicEvent<Vector2> onMove;
         [HideInInspector] public AtomicEvent<float> onMoveEvent;
-        [HideInInspector] public event Action<float> onUpdated;
 
         public void Init(DeclarativeModel model)
         {
             onMove += dir =>
             {
                 Direction.Value = new Vector3(dir.x, 0f, dir.y).normalized;
-            };
-            model.onFixedUpdate += deltaTime =>
-            {
-                onUpdated?.Invoke(deltaTime);
             };
             onMoveEvent.AddListener(deltaTime => 
             { 

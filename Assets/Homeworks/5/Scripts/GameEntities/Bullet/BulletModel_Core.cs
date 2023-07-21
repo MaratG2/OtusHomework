@@ -27,7 +27,7 @@ namespace Homeworks5.Bullet
         public void Init(BulletModel model)
         {
             move.Init(model);
-            move.onUpdated += deltaTime =>
+            model.onFixedUpdate += deltaTime =>
             {
                 move.onMoveEvent.Invoke(deltaTime);
             };
@@ -38,18 +38,17 @@ namespace Homeworks5.Bullet
         {
             [SerializeField] private GameObject _gameObject;
             [SerializeField] public AtomicVariable<float> lifeTime;
-            [HideInInspector] public AtomicVariable<float> lifeTimer;
-            
+            private Timer _timer;
+
             [Construct]
             public void Init(BulletModel model)
             {
-                lifeTimer.Value = 0f;
-                model.onUpdate += deltaTime =>
+                _timer = new Timer(lifeTime.Value, model);
+                _timer.onEnd += () => 
                 {
-                    if (lifeTimer.Value < lifeTime.Value)
-                        lifeTimer.Value += deltaTime;
-                    else
-                        GameObject.Destroy(_gameObject);
+                    GameObject.Destroy(_gameObject);
+                    _timer.Dispose();
+                    _timer = null;
                 };
             }
         }

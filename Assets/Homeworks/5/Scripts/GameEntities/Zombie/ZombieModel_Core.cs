@@ -31,6 +31,11 @@ namespace Homeworks5.Zombie
         public void Init(ZombieModel model)
         {
             move.Init(model);
+            model.onUpdate += deltaTime =>
+            {
+                if (!life.isDead.Value)
+                    move.onMoveEvent.Invoke(deltaTime);
+            };
         }
 
         public void OuterInit(HeroEntity heroEntity)
@@ -40,11 +45,6 @@ namespace Homeworks5.Zombie
                 heroEntity.Get<IScoresComponent>().AddScore();
                 GameObject.Destroy(life.Transform.gameObject);
             });
-            move.onUpdated += deltaTime =>
-            {
-                if (!life.isDead.Value)
-                    move.onMoveEvent.Invoke(deltaTime);
-            };
         }
 
         [Serializable]
@@ -54,12 +54,13 @@ namespace Homeworks5.Zombie
             [SerializeField] public AtomicVariable<int> damage;
             [SerializeField] public AtomicVariable<float> attackCooldown;
             private AtomicVariable<bool> _isChargingAttack = new();
-            private AtomicVariable<float> _attackTimer = new();
             private HeroEntity _heroEntity;
+            private Timer _timer;
 
             [Construct]
             public void Init(ZombieModel model)
             {
+                _timer = new Timer(attackCooldown.Value, model);
                 _collisionEngine.onCollisionEnter += other =>
                 {
                     var heroEntity = other.gameObject.GetComponent<HeroEntity>();
@@ -78,20 +79,11 @@ namespace Homeworks5.Zombie
                         _isChargingAttack.Value = false;
                     }
                 };
-                model.onUpdate += timeDelta =>
+                _isChargingAttack.OnChanged += _ => _timer.ResetTimer();
+                _timer.onEnd += () =>
                 {
                     if (_isChargingAttack.Value)
-                    {
-                        if (_attackTimer.Value < attackCooldown.Value)
-                            _attackTimer.Value += timeDelta;
-                        else
-                        {
-                            _attackTimer.Value -= attackCooldown.Value;
-                            _heroEntity.Get<ITakeDamageComponent>().TakeDamage(damage.Value);
-                        }
-                    }
-                    else
-                        _attackTimer.Value = 0f;
+                        _heroEntity.Get<ITakeDamageComponent>().TakeDamage(damage.Value);
                 };
             }
         }
