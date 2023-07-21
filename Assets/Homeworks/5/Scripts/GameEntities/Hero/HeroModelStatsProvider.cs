@@ -9,8 +9,8 @@ namespace Homeworks5.Hero
         private HeroModel _heroModel;
         
         public AtomicVariable<int> HP => _heroModel.core.life.health;
-        public AtomicVariable<int> CurrentBullets => _heroModel.core.shooter.currentBullets;
-        public AtomicVariable<int> MaxBullets => _heroModel.core.shooter.maxBullets;
+        public AtomicVariable<int> CurrentBullets => _heroModel.core.shootReloader.currentBullets;
+        public AtomicVariable<int> MaxBullets => _heroModel.core.shootReloader.maxBullets;
         public AtomicVariable<int> Kills => _heroModel.core.shooter.kills;
 
         [Inject]

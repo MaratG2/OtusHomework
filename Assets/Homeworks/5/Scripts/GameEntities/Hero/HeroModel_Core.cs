@@ -10,16 +10,20 @@ namespace Homeworks5.Hero
     [Serializable]
     public class HeroModel_Core
     {
-        [Section] 
-        [SerializeField] 
+        [Section]
+        [SerializeField]
         public LifeSection life = new();
 
-        [Section] 
-        [SerializeField] 
+        [Section]
+        [SerializeField]
         public Shooter shooter = new();
 
-        [Section] 
-        [SerializeField] 
+        [Section]
+        [SerializeField]
+        public ShootReloader shootReloader = new();
+
+        [Section]
+        [SerializeField]
         public MoveSection mover = new();
         [HideInInspector] public AtomicVariable<bool> moveRequired;
 
@@ -50,31 +54,60 @@ namespace Homeworks5.Hero
         {
             [SerializeField] private Transform _shootPoint;
             [SerializeField] private GameObject _bulletPrefab;
-            [SerializeField] public AtomicVariable<int> maxBullets;
-            [SerializeField] public AtomicVariable<float> bulletRestoreCooldown;
             [SerializeField] public AtomicVariable<float> cooldownTime;
-            [HideInInspector] public AtomicVariable<int> kills;
-            [HideInInspector] public AtomicVariable<int> currentBullets;
+            [HideInInspector] public AtomicVariable<int> kills;  
             [HideInInspector] public AtomicVariable<bool> isReadyShoot;
-            [HideInInspector] public AtomicVariable<bool> canShoot;
-            [HideInInspector] public AtomicVariable<float> bulletRestoreTimer;
             [HideInInspector] public AtomicVariable<float> cooldownTimer;
             [HideInInspector] public AtomicEvent onShoot;
+            [HideInInspector] public AtomicEvent onShootPerformed;
             private UpdateWrapper _updateWrapper = new();
             private ShootEngine _shooter = new();
 
             [Construct]
-            public void Init(LifeSection life)
+            public void Init(LifeSection life, ShootReloader shootReloader)
+            {  
+                cooldownTimer.Value = cooldownTime.Value;
+                _updateWrapper.onUpdate += deltaTime =>
+                {
+                    if (cooldownTimer.Value < cooldownTime.Value)
+                        cooldownTimer.Value += deltaTime;
+                    else
+                        isReadyShoot.Value = true;
+                };
+                onShoot.AddListener(() =>
+                {
+                    if (shootReloader.hasBullets.Value && isReadyShoot.Value && !life.isDead.Value)
+                    {
+                        isReadyShoot.Value = false;
+                        cooldownTimer.Value = 0f;
+                        _shooter.Shoot(_bulletPrefab, _shootPoint, _shootPoint.forward);
+                        onShootPerformed?.Invoke();
+                    }
+                });
+            }
+        }
+
+        [Serializable]
+        public class ShootReloader
+        {
+            [SerializeField] public AtomicVariable<int> maxBullets;
+            [SerializeField] public AtomicVariable<float> bulletRestoreCooldown;
+            [HideInInspector] public AtomicVariable<float> bulletRestoreTimer;
+            [HideInInspector] public AtomicVariable<int> currentBullets;
+            [HideInInspector] public AtomicVariable<bool> hasBullets;
+            private UpdateWrapper _updateWrapper = new();
+
+            [Construct]
+            public void Init(Shooter shooter)
             {
                 currentBullets.Value = maxBullets.Value;
                 bulletRestoreTimer.Value = bulletRestoreCooldown.Value;
-                cooldownTimer.Value = cooldownTime.Value;
                 currentBullets.OnChanged += newBullets =>
                 {
                     if (newBullets <= 0)
-                        canShoot.Value = false;
+                        hasBullets.Value = false;
                     else
-                        canShoot.Value = true;
+                        hasBullets.Value = true;
                     if (newBullets > maxBullets.Value)
                         currentBullets.Value = maxBullets.Value;
                 };
@@ -87,23 +120,12 @@ namespace Homeworks5.Hero
                         currentBullets.Value++;
                         bulletRestoreTimer.Value = 0f;
                     }
-                    
-                    if (cooldownTimer.Value < cooldownTime.Value)
-                        cooldownTimer.Value += deltaTime;
-                    else
-                        isReadyShoot.Value = true;
                 };
-                onShoot += () =>
+                shooter.onShootPerformed += () =>
                 {
-                    if(canShoot.Value && isReadyShoot.Value && !life.isDead.Value)
-                    {
-                        isReadyShoot.Value = false;
-                        cooldownTimer.Value = 0f;
-                        currentBullets.Value--;
-                        _shooter.Shoot(_bulletPrefab, _shootPoint, _shootPoint.forward);
-                    }
+                    currentBullets.Value--;
                 };
             }
-        } 
+        }
     }
 }
