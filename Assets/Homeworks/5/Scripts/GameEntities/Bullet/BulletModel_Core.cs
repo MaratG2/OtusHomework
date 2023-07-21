@@ -58,7 +58,7 @@ namespace Homeworks5.Bullet
         {
             [SerializeField] private Transform _transform;
             [SerializeField] public AtomicVariable<int> damage;
-            [SerializeField] public CollisionEngine collisionEngine;
+            [SerializeField] public CollisionObserver collisionEngine;
             
             [Construct]
             public void Init()

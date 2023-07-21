@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Homeworks5.Custom
 {
-    public class ShootEngine
+    public class BulletShooter
     {
         public void Shoot(GameObject prefab, Transform origin, Vector3 direction)
         {

@@ -62,7 +62,7 @@ namespace Homeworks5.Hero
             [HideInInspector] public AtomicEvent onShoot;
             [HideInInspector] public AtomicEvent onShootPerformed;
             [HideInInspector] public AtomicEvent onKilled;
-            private ShootEngine _shooter = new();
+            private BulletShooter _shooter = new();
             private Timer _timer;
 
             [Construct]

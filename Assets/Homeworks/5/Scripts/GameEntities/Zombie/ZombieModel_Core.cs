@@ -50,7 +50,7 @@ namespace Homeworks5.Zombie
         [Serializable]
         public class Attack
         {
-            [SerializeField] private CollisionEngine _collisionEngine;
+            [SerializeField] private CollisionObserver _collisionEngine;
             [SerializeField] public AtomicVariable<int> damage;
             [SerializeField] public AtomicVariable<float> attackCooldown;
             private AtomicVariable<bool> _isChargingAttack = new();

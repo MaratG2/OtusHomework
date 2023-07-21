@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Homeworks5.Custom
 {
-    public class CollisionEngine : MonoBehaviour
+    public class CollisionObserver : MonoBehaviour
     {
         public event Action<Collision> onCollisionEnter;
         public event Action<Collision> onCollisionStay;
