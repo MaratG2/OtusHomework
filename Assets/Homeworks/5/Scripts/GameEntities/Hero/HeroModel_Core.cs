@@ -67,7 +67,6 @@ namespace Homeworks5.Hero
             [Construct]
             public void Init(LifeSection life, ShootReloader shootReloader)
             {  
-                cooldownTimer.Value = cooldownTime.Value;
                 _updateWrapper.onUpdate += deltaTime =>
                 {
                     if (cooldownTimer.Value < cooldownTime.Value)
@@ -89,6 +88,7 @@ namespace Homeworks5.Hero
                 {
                     kills.Value++;
                 };
+                cooldownTimer.Value = cooldownTime.Value;
             }
         }
 
@@ -105,8 +105,6 @@ namespace Homeworks5.Hero
             [Construct]
             public void Init(Shooter shooter)
             {
-                currentBullets.Value = maxBullets.Value;
-                bulletRestoreTimer.Value = bulletRestoreCooldown.Value;
                 currentBullets.OnChanged += newBullets =>
                 {
                     if (newBullets <= 0)
@@ -129,6 +127,8 @@ namespace Homeworks5.Hero
                 {
                     currentBullets.Value--;
                 };
+                currentBullets.Value = maxBullets.Value;
+                bulletRestoreTimer.Value = bulletRestoreCooldown.Value;
             }
         }
     }
