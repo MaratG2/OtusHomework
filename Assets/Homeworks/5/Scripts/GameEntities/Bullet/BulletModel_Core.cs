@@ -3,7 +3,6 @@ using Atomic;
 using Declarative;
 using Homeworks5.Components;
 using Homeworks5.Custom;
-using Homeworks5.Custom.Wrappers;
 using Homeworks5.Zombie;
 using UnityEngine;
 
@@ -25,8 +24,9 @@ namespace Homeworks5.Bullet
         public Bullet bullet = new();
 
         [Construct]
-        public void Init()
+        public void Init(BulletModel model)
         {
+            move.Init(model);
             move.onUpdated += deltaTime =>
             {
                 move.onMoveEvent.Invoke(deltaTime);
@@ -39,13 +39,12 @@ namespace Homeworks5.Bullet
             [SerializeField] private GameObject _gameObject;
             [SerializeField] public AtomicVariable<float> lifeTime;
             [HideInInspector] public AtomicVariable<float> lifeTimer;
-            private UpdateWrapper _updateWrapper = new();
             
             [Construct]
-            public void Init()
+            public void Init(BulletModel model)
             {
                 lifeTimer.Value = 0f;
-                _updateWrapper.onUpdate += deltaTime =>
+                model.onUpdate += deltaTime =>
                 {
                     if (lifeTimer.Value < lifeTime.Value)
                         lifeTimer.Value += deltaTime;

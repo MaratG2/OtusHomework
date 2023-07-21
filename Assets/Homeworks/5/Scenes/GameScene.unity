@@ -3349,7 +3349,7 @@ MonoBehaviour:
         value: 5
       isDead:
         value: 0
-    shooter:
+    shoot:
       _shootPoint: {fileID: 1173874404}
       _bulletPrefab: {fileID: 8023279473210597656, guid: 474f0e223979fca43bba87e0b000a663,
         type: 3}
@@ -3361,7 +3361,7 @@ MonoBehaviour:
         value: 0
       cooldownTimer:
         value: 0
-    shootReloader:
+    shootReload:
       maxBullets:
         value: 10
       bulletRestoreCooldown:
@@ -3372,7 +3372,7 @@ MonoBehaviour:
         value: 0
       hasBullets:
         value: 0
-    mover:
+    move:
       _transform: {fileID: 1189594281}
       maxSpeed:
         value: 5

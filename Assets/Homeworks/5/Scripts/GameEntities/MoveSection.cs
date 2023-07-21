@@ -1,7 +1,6 @@
 ﻿using Atomic;
 using Declarative;
 using Homeworks5.Custom;
-using Homeworks5.Custom.Wrappers;
 using System;
 using UnityEngine;
 
@@ -16,16 +15,14 @@ namespace Homeworks5
         [HideInInspector] public AtomicEvent<Vector2> onMove;
         [HideInInspector] public AtomicEvent<float> onMoveEvent;
         [HideInInspector] public event Action<float> onUpdated;
-        private FixedUpdateWrapper _fixedUpdate = new();
 
-        [Construct]
-        public void Init()
+        public void Init(DeclarativeModel model)
         {
             onMove += dir =>
             {
                 Direction.Value = new Vector3(dir.x, 0f, dir.y).normalized;
             };
-            _fixedUpdate.onUpdate += deltaTime =>
+            model.onFixedUpdate += deltaTime =>
             {
                 onUpdated?.Invoke(deltaTime);
             };

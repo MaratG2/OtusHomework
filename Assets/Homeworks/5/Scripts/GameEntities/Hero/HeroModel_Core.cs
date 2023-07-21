@@ -2,7 +2,6 @@ using System;
 using Atomic;
 using Declarative;
 using Homeworks5.Custom;
-using Homeworks5.Custom.Wrappers;
 using UnityEngine;
 
 namespace Homeworks5.Hero
@@ -28,13 +27,16 @@ namespace Homeworks5.Hero
         [HideInInspector] public AtomicVariable<bool> moveRequired;
 
         [Construct]
-        public void Init()
+        public void Init(HeroModel model)
         {
+            move.Init(model);
+
             life.onDeath += () =>
             {
                 Debug.Log("ИГРА ЗАВЕРШЕНА");
                 Time.timeScale = 0f;
             };
+            
             move.onMove += dir =>
             {
                 moveRequired.Value = true;
@@ -61,13 +63,12 @@ namespace Homeworks5.Hero
             [HideInInspector] public AtomicEvent onShoot;
             [HideInInspector] public AtomicEvent onShootPerformed;
             [HideInInspector] public AtomicEvent onKilled;
-            private UpdateWrapper _updateWrapper = new();
             private ShootEngine _shooter = new();
 
             [Construct]
-            public void Init(LifeSection life, ShootReload shootReloader)
-            {  
-                _updateWrapper.onUpdate += deltaTime =>
+            public void Init(LifeSection life, ShootReload shootReloader, HeroModel model)
+            {
+                model.onUpdate += deltaTime =>
                 {
                     if (cooldownTimer.Value < cooldownTime.Value)
                         cooldownTimer.Value += deltaTime;
@@ -100,10 +101,9 @@ namespace Homeworks5.Hero
             [HideInInspector] public AtomicVariable<float> bulletRestoreTimer;
             [HideInInspector] public AtomicVariable<int> currentBullets;
             [HideInInspector] public AtomicVariable<bool> hasBullets;
-            private UpdateWrapper _updateWrapper = new();
 
             [Construct]
-            public void Init(Shoot shooter)
+            public void Init(Shoot shooter, HeroModel model)
             {
                 currentBullets.OnChanged += newBullets =>
                 {
@@ -112,7 +112,7 @@ namespace Homeworks5.Hero
                     else
                         hasBullets.Value = true;
                 };
-                _updateWrapper.onUpdate += deltaTime =>
+                model.onUpdate += deltaTime =>
                 {
                     if (bulletRestoreTimer.Value < bulletRestoreCooldown.Value)
                         bulletRestoreTimer.Value += deltaTime;

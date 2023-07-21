@@ -97,13 +97,13 @@ MonoBehaviour:
     life:
       _gameObject: {fileID: 8832910663881041884}
       lifeTime:
-        value: 10
+        value: 7
       lifeTimer:
         value: 0
-    mover:
+    move:
       _transform: {fileID: 8832910663881041885}
       maxSpeed:
-        value: 5
+        value: 10
       Direction:
         value: {x: 0, y: 0, z: 0}
     bullet:

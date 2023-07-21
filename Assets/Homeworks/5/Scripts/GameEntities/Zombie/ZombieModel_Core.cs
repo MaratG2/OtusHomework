@@ -3,10 +3,8 @@ using Atomic;
 using Declarative;
 using Homeworks5.Components;
 using Homeworks5.Custom;
-using Homeworks5.Custom.Wrappers;
 using Homeworks5.Hero;
 using UnityEngine;
-using Zenject;
 
 namespace Homeworks5.Zombie
 {
@@ -29,6 +27,12 @@ namespace Homeworks5.Zombie
         [SerializeField] 
         public EnemyAI enemyAI = new();
 
+        [Construct]
+        public void Init(ZombieModel model)
+        {
+            move.Init(model);
+        }
+
         public void OuterInit(HeroEntity heroEntity)
         {
             life.onDeath.AddListener(() =>
@@ -42,7 +46,7 @@ namespace Homeworks5.Zombie
                     move.onMoveEvent.Invoke(deltaTime);
             };
         }
-        
+
         [Serializable]
         public class Attack
         {
@@ -52,10 +56,9 @@ namespace Homeworks5.Zombie
             private AtomicVariable<bool> _isChargingAttack = new();
             private AtomicVariable<float> _attackTimer = new();
             private HeroEntity _heroEntity;
-            private UpdateWrapper _updateWrapper = new();
-            
+
             [Construct]
-            public void Init()
+            public void Init(ZombieModel model)
             {
                 _collisionEngine.onCollisionEnter += other =>
                 {
@@ -75,7 +78,7 @@ namespace Homeworks5.Zombie
                         _isChargingAttack.Value = false;
                     }
                 };
-                _updateWrapper.onUpdate += timeDelta =>
+                model.onUpdate += timeDelta =>
                 {
                     if (_isChargingAttack.Value)
                     {
@@ -98,12 +101,11 @@ namespace Homeworks5.Zombie
         {
             [SerializeField] private Transform _transform;
             [HideInInspector] public AtomicVariable<Vector2> targetDirection = new();
-            private UpdateWrapper _updateWrapper = new();
 
             [Construct]
             public void Init(ZombieModel model, MoveSection mover, LifeSection life)
             {
-                _updateWrapper.onUpdate += _ =>
+                model.onUpdate += _ =>
                 {
                     Vector3 dir3D = model.Target.position - _transform.position;
                     targetDirection.Value = new Vector2(dir3D.x, dir3D.z);

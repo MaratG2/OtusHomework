@@ -68,13 +68,13 @@ MonoBehaviour:
         value: 1
       isDead:
         value: 0
-    mover:
+    move:
       _transform: {fileID: 952301272622457055}
       maxSpeed:
         value: 2
       Direction:
         value: {x: 0, y: 0, z: 0}
-    attacker:
+    attack:
       _collisionEngine: {fileID: 1371853490751125811}
       damage:
         value: 1
