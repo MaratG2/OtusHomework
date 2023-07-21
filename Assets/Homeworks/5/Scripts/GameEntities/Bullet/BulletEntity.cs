@@ -13,7 +13,7 @@ namespace Homeworks5.Bullet
         {
             _model = GetComponent<BulletModel>();
 
-            this.Add(new DirectionComponent(_model.core.mover.Direction));
+            this.Add(new DirectionComponent(_model.core.move.Direction));
         }
     }
 }

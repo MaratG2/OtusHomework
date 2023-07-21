@@ -18,7 +18,7 @@ namespace Homeworks5.Bullet
         
         [Section] 
         [SerializeField] 
-        public MoveSection mover = new();
+        public MoveSection move = new();
 
         [Section] 
         [SerializeField] 
@@ -27,9 +27,9 @@ namespace Homeworks5.Bullet
         [Construct]
         public void Init()
         {
-            mover.onUpdated += deltaTime =>
+            move.onUpdated += deltaTime =>
             {
-                mover.onMoveEvent.Invoke(deltaTime);
+                move.onMoveEvent.Invoke(deltaTime);
             };
         }
         

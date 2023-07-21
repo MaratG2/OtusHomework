@@ -16,15 +16,15 @@ namespace Homeworks5.Hero
 
         [Section]
         [SerializeField]
-        public Shooter shooter = new();
+        public Shoot shoot = new();
 
         [Section]
         [SerializeField]
-        public ShootReloader shootReloader = new();
+        public ShootReload shootReload = new();
 
         [Section]
         [SerializeField]
-        public MoveSection mover = new();
+        public MoveSection move = new();
         [HideInInspector] public AtomicVariable<bool> moveRequired;
 
         [Construct]
@@ -35,22 +35,22 @@ namespace Homeworks5.Hero
                 Debug.Log("ИГРА ЗАВЕРШЕНА");
                 Time.timeScale = 0f;
             };
-            mover.onMove += dir =>
+            move.onMove += dir =>
             {
                 moveRequired.Value = true;
             };
-            mover.onUpdated += deltaTime =>
+            move.onUpdated += deltaTime =>
             {
                 if (moveRequired.Value)
                 {
-                    mover.onMoveEvent.Invoke(deltaTime);
+                    move.onMoveEvent.Invoke(deltaTime);
                     moveRequired.Value = false;
                 }
             };
         }
 
         [Serializable]
-        public class Shooter
+        public class Shoot
         {
             [SerializeField] private Transform _shootPoint;
             [SerializeField] private GameObject _bulletPrefab;
@@ -65,7 +65,7 @@ namespace Homeworks5.Hero
             private ShootEngine _shooter = new();
 
             [Construct]
-            public void Init(LifeSection life, ShootReloader shootReloader)
+            public void Init(LifeSection life, ShootReload shootReloader)
             {  
                 _updateWrapper.onUpdate += deltaTime =>
                 {
@@ -93,7 +93,7 @@ namespace Homeworks5.Hero
         }
 
         [Serializable]
-        public class ShootReloader
+        public class ShootReload
         {
             [SerializeField] public AtomicVariable<int> maxBullets;
             [SerializeField] public AtomicVariable<float> bulletRestoreCooldown;
@@ -103,7 +103,7 @@ namespace Homeworks5.Hero
             private UpdateWrapper _updateWrapper = new();
 
             [Construct]
-            public void Init(Shooter shooter)
+            public void Init(Shoot shooter)
             {
                 currentBullets.OnChanged += newBullets =>
                 {

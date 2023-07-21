@@ -19,11 +19,11 @@ namespace Homeworks5.Zombie
         
         [Section] 
         [SerializeField] 
-        public MoveSection mover = new();
+        public MoveSection move = new();
         
         [Section] 
         [SerializeField] 
-        public Attacker attacker = new();
+        public Attack attack = new();
         
         [Section] 
         [SerializeField] 
@@ -36,15 +36,15 @@ namespace Homeworks5.Zombie
                 heroEntity.Get<IScoresComponent>().AddScore();
                 GameObject.Destroy(life.Transform.gameObject);
             });
-            mover.onUpdated += deltaTime =>
+            move.onUpdated += deltaTime =>
             {
                 if (!life.isDead.Value)
-                    mover.onMoveEvent.Invoke(deltaTime);
+                    move.onMoveEvent.Invoke(deltaTime);
             };
         }
         
         [Serializable]
-        public class Attacker
+        public class Attack
         {
             [SerializeField] private CollisionEngine _collisionEngine;
             [SerializeField] public AtomicVariable<int> damage;
