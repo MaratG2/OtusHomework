@@ -98,8 +98,6 @@ MonoBehaviour:
       _gameObject: {fileID: 8832910663881041884}
       lifeTime:
         value: 7
-      lifeTimer:
-        value: 0
     move:
       _transform: {fileID: 8832910663881041885}
       maxSpeed:
@@ -120,7 +118,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8832910663881041884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9578089a1c674b86a8efa122e13e24ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 78b4ca5bc061ddb4c8880a47c63ba800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!135 &4239588321446027637
