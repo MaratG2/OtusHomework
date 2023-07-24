@@ -8,10 +8,10 @@ namespace Homeworks5.Hero
     {
         [Section] 
         [SerializeField] 
-        public HeroModel_Core core = new();
+        public HeroModel_Core core = new HeroModel_Core();
 
         [Section] 
         [SerializeField] 
-        public HeroModel_View view = new();
+        public HeroModel_View view = new HeroModel_View();
     }
 }

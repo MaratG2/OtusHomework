@@ -30,7 +30,7 @@ namespace Homeworks5.Input
         private void Look(Vector2 pos)
         {
             pos = ConvertToCenterPos(pos);
-            Vector3 forward = new(pos.x, 0f, pos.y);
+            Vector3 forward = new Vector3(pos.x, 0f, pos.y);
             _heroEntity.Get<IRotateComponent>().Rotate(forward.normalized);
         }
 

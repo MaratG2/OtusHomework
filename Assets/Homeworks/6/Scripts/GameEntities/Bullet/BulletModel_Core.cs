@@ -13,15 +13,15 @@ namespace Homeworks5.Bullet
     {
         [Section] 
         [SerializeField] 
-        public Life life = new();
+        public Life life = new Life();
         
         [Section] 
         [SerializeField] 
-        public MoveSection move = new();
+        public MoveSection move = new MoveSection();
 
         [Section] 
         [SerializeField] 
-        public Bullet bullet = new();
+        public Bullet bullet = new Bullet();
 
         [Construct]
         public void Init(BulletModel model)

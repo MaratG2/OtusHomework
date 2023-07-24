@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="" />
+    <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/Actions/AtomicActionComposite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/Actions/AtomicActionComposite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/States/FSM/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/States/FSM/StateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/States/FSM/TransitionableStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/States/FSM/TransitionableStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Declarative/Scripts/Internal/MonoContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Declarative/Scripts/Internal/MonoContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_Core.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerLookInputObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerLookInputObserver.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,14 +28,26 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/5/Scripts/GameEntities/Zombie/ZombieModel_View.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Input/PlayerLookInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Spawner/GameObjectSpawner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/5/Scripts/Spawner/SpawnerPosition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/5/Scripts/UI/StatsView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Otus_UnityProfessional/Assets/Lessons/II.Gameplay/Lesson_Declarative/Scripts/HeroModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../nb/Assets/UnityScripts/Controllers/CheatsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/Actions/AtomicActionComposite.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/States/FSM/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/States/FSM/TransitionableStateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Declarative/Scripts/Internal/MonoContext.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_Core.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerLookInputObserver.cs" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -34,25 +60,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;homework5&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\DecompilerCache&quot;,
-      &quot;C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\SourcesCache&quot;,
-      &quot;C:\\Users\\god79\\AppData\\Local\\Symbols\\src&quot;
-    ]
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files (x86)\Unity_Editors\2021.3.7f1\Editor\Unity.exe" />
@@ -82,9 +95,8 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
-      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <list />
+        <set />
       </option>
       <method v="2" />
     </configuration>
@@ -92,9 +104,8 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
-      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <list />
+        <set />
       </option>
       <method v="2" />
     </configuration>
@@ -117,6 +128,8 @@
       <workItem from="1689413397098" duration="6867000" />
       <workItem from="1689429723470" duration="5357000" />
       <workItem from="1689914881848" duration="13000" />
+      <workItem from="1690220765213" duration="95000" />
+      <workItem from="1690220990402" duration="460000" />
     </task>
     <servers />
   </component>
@@ -125,5 +138,11 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="491" y="161" key="SettingsEditor" timestamp="1690220860786">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="491" y="161" key="SettingsEditor/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1690220860786" />
   </component>
 </project>

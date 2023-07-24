@@ -7,14 +7,14 @@ namespace Declarative
     {
         private readonly MonoBehaviour root;
         
-        private readonly List<IAwakeListener> awakeComponents = new();
-        private readonly List<IEnableListener> enableComponents = new();
-        private readonly List<IStartListener> startComponents = new();
-        private readonly List<IFixedUpdateListener> fixedUpdateComponents = new();
-        private readonly List<IUpdateListener> updateComponents = new();
-        private readonly List<ILateUpdateListener> lateUpdateComponents = new();
-        private readonly List<IDisableListener> disableComponents = new();
-        private readonly List<IDestroyListener> destroyComponents = new();
+        private readonly List<IAwakeListener> awakeComponents = new List<IAwakeListener>();
+        private readonly List<IEnableListener> enableComponents = new List<IEnableListener>();
+        private readonly List<IStartListener> startComponents = new List<IStartListener>();
+        private readonly List<IFixedUpdateListener> fixedUpdateComponents = new List<IFixedUpdateListener>();
+        private readonly List<IUpdateListener> updateComponents = new List<IUpdateListener>();
+        private readonly List<ILateUpdateListener> lateUpdateComponents = new List<ILateUpdateListener>();
+        private readonly List<IDisableListener> disableComponents = new List<IDisableListener>();
+        private readonly List<IDestroyListener> destroyComponents = new List<IDestroyListener>();
 
         public MonoContext(MonoBehaviour root)
         {

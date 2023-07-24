@@ -7,7 +7,7 @@ namespace Atomic
     [Serializable]
     public class TransitionableStateMachine<TKey> : StateMachine<TKey>, IUpdateListener
     {
-        private List<(TKey, Func<bool>)> orderedTransitions = new();
+        private List<(TKey, Func<bool>)> orderedTransitions = new List<(TKey, Func<bool>)>();
 
         public void SetupTransitions(params (TKey, Func<bool>)[] transitions)
         {

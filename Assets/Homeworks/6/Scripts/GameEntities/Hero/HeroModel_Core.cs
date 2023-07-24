@@ -11,19 +11,19 @@ namespace Homeworks5.Hero
     {
         [Section]
         [SerializeField]
-        public LifeSection life = new();
+        public LifeSection life = new LifeSection();
 
         [Section]
         [SerializeField]
-        public Shoot shoot = new();
+        public Shoot shoot = new Shoot();
 
         [Section]
         [SerializeField]
-        public ShootReload shootReload = new();
+        public ShootReload shootReload = new ShootReload();
 
         [Section]
         [SerializeField]
-        public MoveSection move = new();
+        public MoveSection move = new MoveSection();
         [HideInInspector] public AtomicVariable<bool> moveRequired;
 
         [Construct]
@@ -62,7 +62,7 @@ namespace Homeworks5.Hero
             [HideInInspector] public AtomicEvent onShoot;
             [HideInInspector] public AtomicEvent onShootPerformed;
             [HideInInspector] public AtomicEvent onKilled;
-            private BulletShooter _shooter = new();
+            private BulletShooter _shooter = new BulletShooter();
             private Timer _timer;
 
             [Construct]
