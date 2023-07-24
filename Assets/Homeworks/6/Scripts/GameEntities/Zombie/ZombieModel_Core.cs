@@ -83,7 +83,10 @@ namespace Homeworks6.Zombie
                 _timer.onEnd += () =>
                 {
                     if (_isChargingAttack.Value)
+                    {
                         _heroEntity.Get<ITakeDamageComponent>().TakeDamage(damage.Value);
+                        _timer.ResetTimer();
+                    }
                 };
             }
         }
