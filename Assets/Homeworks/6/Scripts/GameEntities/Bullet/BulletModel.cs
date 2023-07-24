@@ -1,8 +1,7 @@
-using Atomic;
 using Declarative;
 using UnityEngine;
 
-namespace Homeworks5.Bullet
+namespace Homeworks6.Bullet
 {
     public class BulletModel : DeclarativeModel
     {

@@ -1,9 +1,8 @@
 using Declarative;
-using Homeworks5.Hero;
+using Homeworks6.Hero;
 using UnityEngine;
-using Zenject;
 
-namespace Homeworks5.Zombie
+namespace Homeworks6.Zombie
 {
     public class ZombieModel : DeclarativeModel
     {

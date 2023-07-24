@@ -1,12 +1,12 @@
 using System;
 using Atomic;
 using Declarative;
-using Homeworks5.Components;
-using Homeworks5.Custom;
-using Homeworks5.Hero;
+using Homeworks6.Components;
+using Homeworks6.Custom;
+using Homeworks6.Hero;
 using UnityEngine;
 
-namespace Homeworks5.Zombie
+namespace Homeworks6.Zombie
 {
     [Serializable]
     public class ZombieModel_Core

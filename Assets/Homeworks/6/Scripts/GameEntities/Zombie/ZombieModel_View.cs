@@ -2,7 +2,7 @@ using System;
 using Declarative;
 using UnityEngine;
 
-namespace Homeworks5.Zombie
+namespace Homeworks6.Zombie
 {
     [Serializable]
     public class ZombieModel_View

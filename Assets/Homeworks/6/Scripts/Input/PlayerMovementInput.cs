@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using DefaultInputActions = UnityEngine.InputSystem5.DefaultInputActions;
+using DefaultInputActions = UnityEngine.InputSystem6.DefaultInputActions;
 
-namespace Homeworks5.Input
+namespace Homeworks6.Input
 {
     public class PlayerMovementInput : MonoBehaviour
     {

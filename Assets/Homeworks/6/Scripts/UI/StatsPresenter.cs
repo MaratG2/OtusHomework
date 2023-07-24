@@ -1,8 +1,8 @@
-using Homeworks5.Hero;
+using Homeworks6.Hero;
 using UnityEngine;
 using Zenject;
 
-namespace Homeworks5.UI
+namespace Homeworks6.UI
 {
     public class StatsPresenter : MonoBehaviour
     {

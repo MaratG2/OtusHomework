@@ -3,7 +3,7 @@ using Declarative;
 using System;
 using UnityEngine;
 
-namespace Homeworks5
+namespace Homeworks6
 {
     [Serializable]
     public class LifeSection

@@ -1,8 +1,8 @@
-using Homeworks5.Bullet;
-using Homeworks5.Components;
+using Homeworks6.Bullet;
+using Homeworks6.Components;
 using UnityEngine;
 
-namespace Homeworks5.Custom
+namespace Homeworks6.Custom
 {
     public class BulletShooter
     {

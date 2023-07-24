@@ -1,8 +1,6 @@
 ﻿using Atomic;
-using System;
-using UnityEngine;
 
-namespace Homeworks5.Components
+namespace Homeworks6.Components
 {
     public interface IScoresComponent
     {

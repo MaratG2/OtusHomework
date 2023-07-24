@@ -1,10 +1,10 @@
-using Homeworks5.Hero;
-using Homeworks5.Input;
-using Homeworks5.Spawner;
-using Homeworks5.UI;
+using Homeworks6.Hero;
+using Homeworks6.Input;
+using Homeworks6.Spawner;
+using Homeworks6.UI;
 using Zenject;
 
-namespace Homeworks5.Installers.Scene
+namespace Homeworks6.Installers.Scene
 {
     public class GameSceneInstaller : MonoInstaller<GameSceneInstaller>
     {

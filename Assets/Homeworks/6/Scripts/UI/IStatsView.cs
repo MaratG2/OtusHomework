@@ -1,4 +1,4 @@
-namespace Homeworks5.UI
+namespace Homeworks6.UI
 {
     public interface IStatsView
     {

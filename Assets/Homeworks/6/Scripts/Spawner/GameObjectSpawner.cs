@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using Zenject;
 
-namespace Homeworks5.Spawner
+namespace Homeworks6.Spawner
 {
     public class GameObjectSpawner : MonoBehaviour
     {

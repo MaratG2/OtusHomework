@@ -1,10 +1,9 @@
-﻿using Homeworks5.Hero;
-using Homeworks5.Zombie;
-using System;
+﻿using Homeworks6.Hero;
+using Homeworks6.Zombie;
 using UnityEngine;
 using Zenject;
 
-namespace Homeworks5.Spawner
+namespace Homeworks6.Spawner
 {
     public class ZombieInstaller : MonoBehaviour
     {

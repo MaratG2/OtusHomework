@@ -1,10 +1,9 @@
 ﻿using Atomic;
 using Declarative;
-using Homeworks5.Custom;
 using System;
 using UnityEngine;
 
-namespace Homeworks5
+namespace Homeworks6
 {
     [Serializable]
     public class MoveSection

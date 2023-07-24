@@ -1,8 +1,7 @@
-﻿using Homeworks5.Components;
-using System;
+﻿using Homeworks6.Components;
 using UnityEngine;
 
-namespace Homeworks5.Bullet
+namespace Homeworks6.Bullet
 {
     [RequireComponent(typeof(BulletModel))]
     public class BulletEntity : Entity

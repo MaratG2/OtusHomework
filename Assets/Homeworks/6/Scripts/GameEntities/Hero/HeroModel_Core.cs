@@ -1,10 +1,10 @@
 using System;
 using Atomic;
 using Declarative;
-using Homeworks5.Custom;
+using Homeworks6.Custom;
 using UnityEngine;
 
-namespace Homeworks5.Hero
+namespace Homeworks6.Hero
 {
     [Serializable]
     public class HeroModel_Core

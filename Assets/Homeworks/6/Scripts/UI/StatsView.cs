@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace Homeworks5.UI
+namespace Homeworks6.UI
 {
     public class StatsView : MonoBehaviour, IStatsView
     {

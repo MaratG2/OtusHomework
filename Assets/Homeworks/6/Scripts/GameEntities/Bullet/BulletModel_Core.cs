@@ -1,12 +1,12 @@
 using System;
 using Atomic;
 using Declarative;
-using Homeworks5.Components;
-using Homeworks5.Custom;
-using Homeworks5.Zombie;
+using Homeworks6.Components;
+using Homeworks6.Custom;
+using Homeworks6.Zombie;
 using UnityEngine;
 
-namespace Homeworks5.Bullet
+namespace Homeworks6.Bullet
 {
     [Serializable]
     public class BulletModel_Core

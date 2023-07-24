@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Homeworks5.Custom
+namespace Homeworks6.Custom
 {
     public class CollisionObserver : MonoBehaviour
     {

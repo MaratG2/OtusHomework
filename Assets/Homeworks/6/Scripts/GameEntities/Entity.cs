@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Homeworks5
+namespace Homeworks6
 {
     public class Entity : MonoBehaviour
     {

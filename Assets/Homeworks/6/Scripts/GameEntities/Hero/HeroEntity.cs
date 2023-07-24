@@ -1,11 +1,7 @@
-﻿using System;
-using UnityEngine;
-using Atomic;
-using Declarative;
-using Homeworks5.Components;
-using Zenject;
+﻿using UnityEngine;
+using Homeworks6.Components;
 
-namespace Homeworks5.Hero
+namespace Homeworks6.Hero
 {
     [RequireComponent(typeof(HeroModel))]
     public class HeroEntity : Entity

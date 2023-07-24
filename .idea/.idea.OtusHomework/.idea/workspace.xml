@@ -5,19 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/Actions/AtomicActionComposite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/Actions/AtomicActionComposite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/States/FSM/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/States/FSM/StateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/States/FSM/TransitionableStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/States/FSM/TransitionableStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Declarative/Scripts/Internal/MonoContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Declarative/Scripts/Internal/MonoContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Animation/PlayerAnimationStates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Animation/PlayerAnimationStates.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/BulletShooter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/BulletShooter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/CollisionObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/CollisionObserver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_Core.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_View.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_View.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/DirectionComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/DirectionComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/HeroStatsComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/HeroStatsComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/MoveComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/MoveComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/RotateComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/RotateComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/ScoresComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/ScoresComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/ShootComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/ShootComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/TakeDamageComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/TakeDamageComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_View.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_View.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/LifeSection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/LifeSection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/MoveSection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/MoveSection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_View.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_View.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/DefaultInputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/DefaultInputActions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerLookInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerLookInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerLookInputObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerLookInputObserver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerMovementInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerMovementInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerMovementInputObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerMovementInputObserver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerShootInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerShootInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerShootInputObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerShootInputObserver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Installers/Scene/GameSceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Installers/Scene/GameSceneInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Spawner/GameObjectSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Spawner/GameObjectSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Spawner/SpawnerPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Spawner/SpawnerPosition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Spawner/ZombieInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Spawner/ZombieInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/UI/IStatsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/UI/IStatsView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/UI/StatsPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/UI/StatsPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/UI/StatsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/UI/StatsView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,13 +67,46 @@
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/States/FSM/StateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/States/FSM/TransitionableStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Declarative/Scripts/Internal/MonoContext.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_Core.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/UI/IStatsView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/UI/StatsView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Spawner/GameObjectSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Spawner/SpawnerPosition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/DefaultInputActions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerLookInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerMovementInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerShootInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/LifeSection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Entity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_View.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/UI/StatsPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Spawner/ZombieInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Installers/Scene/GameSceneInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerShootInputObserver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerMovementInputObserver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerLookInputObserver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/MoveSection.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerLookInputObserver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_View.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/BulletShooter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/CollisionObserver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/Timer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/DirectionComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/HeroStatsComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/MoveComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/RotateComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/ScoresComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/ShootComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/TakeDamageComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_View.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_Core.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Animation/PlayerAnimationStates.cs" />
       </list>
     </option>
   </component>
@@ -129,7 +190,7 @@
       <workItem from="1689429723470" duration="5357000" />
       <workItem from="1689914881848" duration="13000" />
       <workItem from="1690220765213" duration="95000" />
-      <workItem from="1690220990402" duration="460000" />
+      <workItem from="1690220990402" duration="870000" />
     </task>
     <servers />
   </component>
@@ -140,9 +201,13 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="491" y="161" key="SettingsEditor" timestamp="1690220860786">
+    <state x="491" y="161" key="SettingsEditor" timestamp="1690221200303">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="491" y="161" key="SettingsEditor/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1690220860786" />
+    <state x="491" y="161" key="SettingsEditor/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1690221200303" />
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1690221204732">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1690221204732" />
   </component>
 </project>

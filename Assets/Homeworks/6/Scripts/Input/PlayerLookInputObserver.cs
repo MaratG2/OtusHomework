@@ -1,9 +1,9 @@
-using Homeworks5.Components;
-using Homeworks5.Hero;
+using Homeworks6.Components;
+using Homeworks6.Hero;
 using UnityEngine;
 using Zenject;
 
-namespace Homeworks5.Input
+namespace Homeworks6.Input
 {
     public class PlayerLookInputObserver : MonoBehaviour
     {

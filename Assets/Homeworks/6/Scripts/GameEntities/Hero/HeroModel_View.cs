@@ -3,7 +3,7 @@ using Atomic;
 using Declarative;
 using UnityEngine;
 
-namespace Homeworks5.Hero
+namespace Homeworks6.Hero
 {
     [Serializable]
     public class HeroModel_View

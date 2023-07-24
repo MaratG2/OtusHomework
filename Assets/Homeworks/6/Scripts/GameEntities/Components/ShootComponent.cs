@@ -1,7 +1,6 @@
 ﻿using Atomic;
-using System;
 
-namespace Homeworks5.Components
+namespace Homeworks6.Components
 {
     public interface IShootComponent
     {

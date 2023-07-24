@@ -1,7 +1,6 @@
 ﻿using Atomic;
-using System;
 
-namespace Homeworks5.Hero
+namespace Homeworks6.Hero
 {
     public interface IHeroStatsComponent
     {

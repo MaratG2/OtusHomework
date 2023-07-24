@@ -1,9 +1,7 @@
-using Atomic;
 using Declarative;
 using System;
-using UnityEngine;
 
-namespace Homeworks5.Custom
+namespace Homeworks6.Custom
 {
     [Serializable]
     public class Timer : IDisposable
