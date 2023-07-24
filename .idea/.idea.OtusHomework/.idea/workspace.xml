@@ -35,7 +35,6 @@
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerShootInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/LifeSection.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Entity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_View.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieEntity.cs" />
@@ -65,6 +64,7 @@
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_Core.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Animation/PlayerAnimationStates.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" />
       </list>
     </option>
   </component>
@@ -148,7 +148,7 @@
       <workItem from="1689429723470" duration="5357000" />
       <workItem from="1689914881848" duration="13000" />
       <workItem from="1690220765213" duration="95000" />
-      <workItem from="1690220990402" duration="1213000" />
+      <workItem from="1690220990402" duration="1523000" />
     </task>
     <servers />
   </component>
