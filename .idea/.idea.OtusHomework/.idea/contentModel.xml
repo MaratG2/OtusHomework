@@ -10,6 +10,17 @@
       <e p="Assembly-CSharp.Player.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AssetPacks" t="Include">
+          <e p="ExplosiveLLC" t="Include">
+            <e p="Crafting Mecanim Animation Pack" t="Include">
+              <e p="Code" t="Include">
+                <e p="AnimatorController.cs" t="Include" />
+                <e p="CrafterController.cs" t="Include" />
+                <e p="GUIControls.cs" t="Include" />
+                <e p="IKHands.cs" t="Include" />
+                <e p="SmoothFollow.cs" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="Kevin Iglesias" t="Include">
             <e p="Archer Animations" t="Include">
               <e p="Scripts" t="Include">
@@ -87,6 +98,7 @@
                   <e p="IAtomicProcess.cs" t="Include" />
                 </e>
                 <e p="States" t="Include">
+                  <e p="CompositeState.cs" t="Include" />
                   <e p="FixedUpdateState.cs" t="Include" />
                   <e p="FSM" t="Include">
                     <e p="IStateMachine.cs" t="Include" />
@@ -151,6 +163,13 @@
                   <e p="HeroModel.cs" t="Include" />
                   <e p="HeroModel_Core.cs" t="Include" />
                   <e p="HeroModel_View.cs" t="Include" />
+                  <e p="States" t="Include">
+                    <e p="DeathState.cs" t="Include" />
+                    <e p="HeroStateType.cs" t="Include" />
+                    <e p="IdleState.cs" t="Include" />
+                    <e p="RunState.cs" t="Include" />
+                    <e p="ShootState.cs" t="Include" />
+                  </e>
                 </e>
                 <e p="LifeSection.cs" t="Include" />
                 <e p="MoveSection.cs" t="Include" />

@@ -2,6 +2,7 @@ using System;
 using Atomic;
 using Declarative;
 using Homeworks6.Custom;
+using Homeworks6.Hero.States;
 using UnityEngine;
 
 namespace Homeworks6.Hero
@@ -10,21 +11,20 @@ namespace Homeworks6.Hero
     public class HeroModel_Core
     {
         [Section]
-        [SerializeField]
         public LifeSection life = new LifeSection();
 
         [Section]
-        [SerializeField]
         public Shoot shoot = new Shoot();
 
         [Section]
-        [SerializeField]
         public ShootReload shootReload = new ShootReload();
 
         [Section]
-        [SerializeField]
         public MoveSection move = new MoveSection();
         [HideInInspector] public AtomicVariable<bool> moveRequired;
+        
+        [Section]
+        public HeroStates heroStates = new HeroStates();
 
         [Construct]
         public void Init(HeroModel model)
@@ -117,6 +117,70 @@ namespace Homeworks6.Hero
                     currentBullets.Value--;
                 };
                 currentBullets.Value = maxBullets.Value;
+            }
+        }
+
+        [Serializable]
+        public class HeroStates
+        {
+            public StateMachine<HeroStateType> stateMachine;
+
+            [Section] 
+            public IdleState idleState = new IdleState();
+
+            [Section] 
+            public RunState runState = new RunState();
+            
+            [Section] 
+            public ShootState shootState = new ShootState();
+
+            [Section] 
+            public DeathState deathState = new DeathState();
+
+            [Construct]
+            public void Construct(HeroModel model)
+            {
+                model.onStart += () =>
+                {
+                    stateMachine.Enter();
+                };
+
+                stateMachine.SetupStates(
+                    (HeroStateType.Idle, idleState),
+                    (HeroStateType.Run, runState),
+                    (HeroStateType.Shoot, shootState),
+                    (HeroStateType.Death, deathState)
+                    );
+            }
+
+            [Construct]
+            public void ConstructTransitions(LifeSection life, MoveSection move, Shoot shoot)
+            {
+                life.onDeath += () =>
+                {
+                    stateMachine.SwitchState(HeroStateType.Death);
+                };
+                move.onMoveStart += () =>
+                {
+                    if (!life.isDead.Value)
+                    {
+                        stateMachine.SwitchState(HeroStateType.Run);
+                    }
+                };
+                move.onMoveFinish += () =>
+                {
+                    if (!life.isDead.Value)
+                    {
+                        stateMachine.SwitchState(HeroStateType.Idle);
+                    }
+                };
+                shoot.onShootPerformed += () =>
+                {
+                    if (!life.isDead.Value)
+                    {
+                        stateMachine.SwitchState(HeroStateType.Shoot);
+                    }
+                };
             }
         }
     }

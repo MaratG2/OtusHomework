@@ -13,18 +13,27 @@ namespace Atomic
             add { this.onChanged += value; }
             remove { this.onChanged -= value; }
         }
+        public event Action<T> OnUniqueChanged
+        {
+            add { this.onUniqueChanged += value; }
+            remove { this.onUniqueChanged -= value; }
+        }
 
         public T Value
         {
             get { return this.value; }
             set
             {
+                if (!this.value.Equals(value))
+                    this.onUniqueChanged?.Invoke(value);
+                
                 this.value = value;
                 this.onChanged?.Invoke(value);
             }
         }
 
         private Action<T> onChanged;
+        private Action<T> onUniqueChanged;
 
         [OnValueChanged("OnValueChanged")]
         [SerializeField]

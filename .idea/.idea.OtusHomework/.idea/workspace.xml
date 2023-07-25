@@ -3,8 +3,45 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="" />
+    <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/States/CompositeState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/States/CompositeState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/DeathState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/DeathState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/HeroStateType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/HeroStateType.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/IdleState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/IdleState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/RunState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/RunState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/ShootState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/ShootState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/Values/AtomicVariable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/Values/AtomicVariable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/MoveSection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/MoveSection.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,8 +58,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/Actions/AtomicActionComposite.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/States/FSM/StateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/States/FSM/TransitionableStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Declarative/Scripts/Internal/MonoContext.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/UI/IStatsView.cs" />
@@ -44,9 +79,7 @@
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerShootInputObserver.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerMovementInputObserver.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Input/PlayerLookInputObserver.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/MoveSection.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_View.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/BulletShooter.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/CollisionObserver.cs" />
@@ -66,6 +99,16 @@
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Animation/PlayerAnimationStates.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Noname/JsonHelper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/HeroStateType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/States/CompositeState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/HeroStates.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/IdleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/RunState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/ShootState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/DeathState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/Values/AtomicVariable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/MoveSection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" />
       </list>
     </option>
   </component>
@@ -150,21 +193,44 @@
       <workItem from="1689914881848" duration="13000" />
       <workItem from="1690220765213" duration="95000" />
       <workItem from="1690220990402" duration="1523000" />
-      <workItem from="1690276716980" duration="700000" />
+      <workItem from="1690276716980" duration="4649000" />
     </task>
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1690285898653">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="740" y="271" key="FileChooserDialogImpl/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1690285898653" />
+    <state x="754" y="216" key="RiderGenerateDialog" timestamp="1690287557509">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="754" y="216" key="RiderGenerateDialog/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1690287557509" />
     <state x="491" y="161" key="SettingsEditor" timestamp="1690221200303">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="491" y="161" key="SettingsEditor/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1690221200303" />
+    <state width="498" height="445" key="SwitcherDM" timestamp="1690287981659">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="498" height="445" key="SwitcherDM/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1690287981659" />
     <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1690221204732">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
