@@ -1,19 +1,18 @@
 using System;
 using Atomic;
+using Declarative;
 
 namespace Homeworks6.Hero.States
 {
     [Serializable]
-    public class ShootState : IState
+    public class ShootState : CompositeState
     {
-        void IState.Enter()
+        [Construct]
+        public void Construct(HeroModel_Core.Shoot shoot, HeroModel model)
         {
-            
-        }
-
-        void IState.Exit()
-        {
-            
+            var autoShootState = new AutoShootState(shoot, model);
+            var aimAiState = new AimAIState(model);
+            SetStates(autoShootState, aimAiState);
         }
     }
 }

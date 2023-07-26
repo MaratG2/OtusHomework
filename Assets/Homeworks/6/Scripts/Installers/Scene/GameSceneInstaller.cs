@@ -13,7 +13,6 @@ namespace Homeworks6.Installers.Scene
             Container.Bind<HeroEntity>().FromComponentInHierarchy().AsSingle();
             Container.Bind<PlayerMovementInput>().FromComponentInHierarchy().AsSingle();
             Container.Bind<PlayerLookInput>().FromComponentInHierarchy().AsSingle();
-            Container.Bind<PlayerShootInput>().FromComponentInHierarchy().AsSingle();
             Container.Bind<IStatsView>().FromComponentInHierarchy().AsSingle();
             Container.Bind<SpawnerPosition>().FromComponentInHierarchy().AsSingle();
             Container.Bind<GameObjectSpawner>().FromComponentInHierarchy().AsSingle();

@@ -20,7 +20,7 @@ namespace Homeworks6.Hero
         public ShootReload shootReload = new ShootReload();
 
         [Section]
-        public MoveSection move = new MoveSection();
+        public MoveSection move = new MoveSection(false);
         [HideInInspector] public AtomicVariable<bool> moveRequired;
         
         [Section]
@@ -34,7 +34,6 @@ namespace Homeworks6.Hero
             life.onDeath += () =>
             {
                 Debug.Log("ИГРА ЗАВЕРШЕНА");
-                Time.timeScale = 0f;
             };
 
             move.onMove += dir =>
@@ -94,6 +93,8 @@ namespace Homeworks6.Hero
             [SerializeField] public AtomicVariable<float> bulletRestoreCooldown;
             [HideInInspector] public AtomicVariable<int> currentBullets;
             [HideInInspector] public AtomicVariable<bool> hasBullets;
+            [HideInInspector] public AtomicEvent onReload;
+            
             private AutoTimer _timer;
 
             [Construct]
@@ -110,7 +111,10 @@ namespace Homeworks6.Hero
                 _timer.onEnd += () =>
                 {
                     if (currentBullets.Value < maxBullets.Value)
+                    {
                         currentBullets.Value++;
+                        onReload?.Invoke();
+                    }
                 };
                 shooter.onShootPerformed += () =>
                 {
@@ -142,6 +146,7 @@ namespace Homeworks6.Hero
             {
                 model.onStart += () =>
                 {
+                    stateMachine.SwitchState(HeroStateType.Shoot);
                     stateMachine.Enter();
                 };
 
@@ -154,7 +159,8 @@ namespace Homeworks6.Hero
             }
 
             [Construct]
-            public void ConstructTransitions(LifeSection life, MoveSection move, Shoot shoot)
+            public void ConstructTransitions(LifeSection life, MoveSection move, Shoot shoot,
+                ShootReload reload)
             {
                 life.onDeath += () =>
                 {
@@ -162,21 +168,37 @@ namespace Homeworks6.Hero
                 };
                 move.onMoveStart += () =>
                 {
-                    if (!life.isDead.Value)
+                    if (stateMachine.CurrentState != HeroStateType.Death)
                     {
                         stateMachine.SwitchState(HeroStateType.Run);
                     }
                 };
                 move.onMoveFinish += () =>
                 {
-                    if (!life.isDead.Value)
+                    if (stateMachine.CurrentState != HeroStateType.Death && 
+                        reload.currentBullets.Value > 0)
+                    {
+                        stateMachine.SwitchState(HeroStateType.Shoot);
+                    }
+                    if (stateMachine.CurrentState != HeroStateType.Death && 
+                        reload.currentBullets.Value == 0)
                     {
                         stateMachine.SwitchState(HeroStateType.Idle);
                     }
                 };
                 shoot.onShootPerformed += () =>
                 {
-                    if (!life.isDead.Value)
+                    if (stateMachine.CurrentState != HeroStateType.Death && 
+                        reload.currentBullets.Value == 0)
+                    {
+                        stateMachine.SwitchState(HeroStateType.Idle);
+                    }
+                };
+                reload.onReload += () =>
+                {
+                    if (stateMachine.CurrentState != HeroStateType.Death && 
+                        reload.currentBullets.Value > 0 &&
+                        stateMachine.CurrentState != HeroStateType.Run)
                     {
                         stateMachine.SwitchState(HeroStateType.Shoot);
                     }

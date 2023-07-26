@@ -13,6 +13,8 @@ namespace Homeworks6.Zombie
             _model = GetComponent<ZombieModel>();
 
             this.Add(new TakeDamageComponent(_model.core.life.onTakeDamage));
+            this.Add(new HeroEntityConstructComponent(_model.onConstruct));
+            this.Add(new GetHPComponent(_model.core.life));
         }
     }
 }

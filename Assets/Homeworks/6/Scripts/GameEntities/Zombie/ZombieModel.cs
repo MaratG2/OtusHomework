@@ -1,3 +1,4 @@
+using Atomic;
 using Declarative;
 using Homeworks6.Hero;
 using UnityEngine;
@@ -15,11 +16,17 @@ namespace Homeworks6.Zombie
         [Section]
         [SerializeField]
         public ZombieModel_View view = new ZombieModel_View();
-  
-        public void Construct(HeroEntity heroEntity)
+
+        public AtomicEvent<HeroEntity> onConstruct;
+        
+        [Construct]
+        public void Construct()
         {
-            this.Target = heroEntity.transform;
-            core.OuterInit(heroEntity);
+            onConstruct += heroEntity =>
+            {
+                this.Target = heroEntity.transform;
+                core.OuterInit(heroEntity);
+            };
         }
     }
 }

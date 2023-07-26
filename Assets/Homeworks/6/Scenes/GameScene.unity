@@ -271,8 +271,6 @@ GameObject:
   - component: {fileID: 159812682}
   - component: {fileID: 159812684}
   - component: {fileID: 159812685}
-  - component: {fileID: 159812687}
-  - component: {fileID: 159812686}
   m_Layer: 0
   m_Name: Input
   m_TagString: Untagged
@@ -341,30 +339,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b860193b910d43a99e388fdcbf48eaa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &159812686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 159812680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d43dd09d548403fb793353987ac53d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &159812687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 159812680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21920009d55745bb9eda4399e41766ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &242901968
@@ -3359,20 +3333,17 @@ MonoBehaviour:
         value: 0
       isReadyShoot:
         value: 0
-      cooldownTimer:
-        value: 0
     shootReload:
       maxBullets:
         value: 10
       bulletRestoreCooldown:
         value: 2
-      bulletRestoreTimer:
-        value: 0
       currentBullets:
         value: 0
       hasBullets:
         value: 0
     move:
+      IsEnabled: 0
       _transform: {fileID: 1189594281}
       maxSpeed:
         value: 5
@@ -3380,6 +3351,7 @@ MonoBehaviour:
         value: {x: 0, y: 0, z: 0}
     moveRequired:
       value: 0
+    heroStates: {}
   view:
     _animator: {fileID: 433075505}
     _transform: {fileID: 1189594281}

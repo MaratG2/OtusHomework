@@ -1,6 +1,7 @@
 using System;
 using Atomic;
 using Declarative;
+using Homeworks6.Hero.States;
 using UnityEngine;
 
 namespace Homeworks6.Hero
@@ -13,15 +14,17 @@ namespace Homeworks6.Hero
         [HideInInspector] public AtomicEvent<Vector3> onRotate;
         private LifeSection _life;
         private MoveSection _mover;
+        private HeroModel_Core.HeroStates _heroStates;
         
         private readonly int _commonState = Animator.StringToHash("STATE");
         private readonly int _movingState = Animator.StringToHash("IS_MOVING");
 
         [Construct]
-        public void Construct(LifeSection life, MoveSection mover)
+        public void Construct(LifeSection life, MoveSection mover, HeroModel_Core.HeroStates heroStates)
         {
             this._life = life;
             this._mover = mover;
+            this._heroStates = heroStates;
         }
 
         [Construct]
@@ -56,7 +59,7 @@ namespace Homeworks6.Hero
             };
             onRotate += forward =>
             {
-                if(!_life.isDead.Value)
+                if(_heroStates.stateMachine.CurrentState == HeroStateType.Run)
                     _transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
             };
         }

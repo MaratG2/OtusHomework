@@ -17,7 +17,7 @@ namespace Homeworks6.Bullet
         
         [Section] 
         [SerializeField] 
-        public MoveSection move = new MoveSection();
+        public MoveSection move = new MoveSection(true);
 
         [Section] 
         [SerializeField] 

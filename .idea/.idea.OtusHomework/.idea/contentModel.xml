@@ -150,6 +150,8 @@
                 </e>
                 <e p="Components" t="Include">
                   <e p="DirectionComponent.cs" t="Include" />
+                  <e p="GetHPComponent.cs" t="Include" />
+                  <e p="HeroEntityConstructComponent.cs" t="Include" />
                   <e p="HeroStatsComponent.cs" t="Include" />
                   <e p="MoveComponent.cs" t="Include" />
                   <e p="RotateComponent.cs" t="Include" />
@@ -164,6 +166,8 @@
                   <e p="HeroModel_Core.cs" t="Include" />
                   <e p="HeroModel_View.cs" t="Include" />
                   <e p="States" t="Include">
+                    <e p="AimAIState.cs" t="Include" />
+                    <e p="AutoShootState.cs" t="Include" />
                     <e p="DeathState.cs" t="Include" />
                     <e p="HeroStateType.cs" t="Include" />
                     <e p="IdleState.cs" t="Include" />
@@ -186,8 +190,6 @@
                 <e p="PlayerLookInputObserver.cs" t="Include" />
                 <e p="PlayerMovementInput.cs" t="Include" />
                 <e p="PlayerMovementInputObserver.cs" t="Include" />
-                <e p="PlayerShootInput.cs" t="Include" />
-                <e p="PlayerShootInputObserver.cs" t="Include" />
               </e>
               <e p="Installers" t="Include">
                 <e p="Scene" t="Include">
@@ -197,6 +199,7 @@
               <e p="Spawner" t="Include">
                 <e p="GameObjectSpawner.cs" t="Include" />
                 <e p="SpawnerPosition.cs" t="Include" />
+                <e p="ZombieContainer.cs" t="Include" />
                 <e p="ZombieInstaller.cs" t="Include" />
               </e>
               <e p="UI" t="Include">

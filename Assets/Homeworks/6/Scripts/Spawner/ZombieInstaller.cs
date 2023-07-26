@@ -1,4 +1,5 @@
-﻿using Homeworks6.Hero;
+﻿using Homeworks6.Components;
+using Homeworks6.Hero;
 using Homeworks6.Zombie;
 using UnityEngine;
 using Zenject;
@@ -28,8 +29,11 @@ namespace Homeworks6.Spawner
 
         private void TryToInstallZombie(GameObject go)
         {
-            if(go.TryGetComponent<ZombieModel>(out var model))
-                model.Construct(_heroEntity);
+            if(go.TryGetComponent<ZombieEntity>(out var entity))
+            {
+                entity.Get<IHeroEntityConstructComponent>().Construct(_heroEntity);
+                ZombieContainer.AddZombie(entity);
+            }
         }
     }
 }

@@ -8,6 +8,7 @@ namespace Homeworks6
     [Serializable]
     public class MoveSection
     {
+        public bool IsEnabled;
         [SerializeField] private Transform _transform;
         [SerializeField] public AtomicVariable<float> maxSpeed;
         [HideInInspector] public AtomicVariable<Vector3> Direction;
@@ -18,18 +19,27 @@ namespace Homeworks6
         [HideInInspector] public AtomicEvent onMoveStart;
         [HideInInspector] public AtomicEvent onMoveFinish;
         private bool _wasMoving = false;
+
+        public MoveSection(bool isEnabled)
+        {
+            IsEnabled = isEnabled;
+        }
         
         public void Init(DeclarativeModel model)
         {
             onMove += dir =>
             {
-                Direction.Value = new Vector3(dir.x, 0f, dir.y).normalized;
                 _isMoving.Value = true;
-                _wasMoving = true;
+                if(IsEnabled)
+                {
+                    Direction.Value = new Vector3(dir.x, 0f, dir.y).normalized;
+                    _wasMoving = true;
+                }
             };
             onMoveEvent.AddListener(deltaTime => 
             { 
-                _transform.position += Direction.Value * (maxSpeed.Value * deltaTime); 
+                if(IsEnabled)
+                    _transform.position += Direction.Value * (maxSpeed.Value * deltaTime); 
             });
             _isMoving.OnUniqueChanged += moving =>
             {
@@ -45,7 +55,8 @@ namespace Homeworks6
             };
             model.onLateUpdate += _ =>
             {
-                _wasMoving = false;
+                if(IsEnabled)
+                    _wasMoving = false;
             };
         }
     }
