@@ -40,7 +40,7 @@ namespace Atomic
             
             if (this.states.TryGetValue(this.currentKey, out this.currentState))
             {
-                this.currentState.Enter();
+                currentState?.Enter();
             }
 
             this.onStateSwitched?.Invoke(key);
@@ -61,7 +61,7 @@ namespace Atomic
         {
             if (this.currentState != null)
             {
-                this.currentState.Exit();
+                currentState?.Exit();
                 this.currentState = null;
             }
         }

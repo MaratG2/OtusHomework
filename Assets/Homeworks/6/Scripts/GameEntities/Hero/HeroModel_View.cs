@@ -9,58 +9,58 @@ namespace Homeworks6.Hero
     [Serializable]
     public class HeroModel_View
     {
-        [SerializeField] private Animator _animator;
+        public AnimatorStateMachine<HeroAnimationStateType> animatorMachine;
+        [SerializeField] private ParticleSystem _shootVFX;
+        [SerializeField] private ParticleSystem _deathVFX;
+        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private AudioClip _shootSFX;
+        [SerializeField] private AudioClip _deathSFX;
         [SerializeField] private Transform _transform;
         [HideInInspector] public AtomicEvent<Vector3> onRotate;
-        private LifeSection _life;
-        private MoveSection _mover;
         private HeroModel_Core.HeroStates _heroStates;
-        
-        private readonly int _commonState = Animator.StringToHash("STATE");
-        private readonly int _movingState = Animator.StringToHash("IS_MOVING");
 
         [Construct]
-        public void Construct(LifeSection life, MoveSection mover, HeroModel_Core.HeroStates heroStates)
+        public void Construct(HeroModel_Core.HeroStates heroStates)
         {
-            this._life = life;
-            this._mover = mover;
             this._heroStates = heroStates;
         }
 
         [Construct]
         public void Init()
         {
-            _animator.SetInteger(_commonState, (int)PlayerAnimationStates.Idle);
-            _life.health.OnChanged += _ =>
-            {
-                if (!_life.isDead.Value)
-                    _animator.SetInteger(_commonState, (int)PlayerAnimationStates.Hit);
-            };
-            _life.isDead.OnChanged += isDead =>  
-            {
-                if (isDead)
-                    _animator.SetInteger(_commonState, (int)PlayerAnimationStates.Death);
-            };
-            _mover.onMove += dir =>
-            {
-                if (!_life.isDead.Value)
-                {
-                    if(dir == Vector2.zero && _animator.GetBool(_movingState))
-                    {
-                        _animator.SetBool(_movingState, false);
-                        _animator.SetInteger(_commonState, (int)PlayerAnimationStates.Idle);
-                    }
-                    else
-                    {
-                        _animator.SetBool(_movingState, true);
-                        _animator.SetInteger(_commonState, (int)PlayerAnimationStates.Run);
-                    }
-                }
-            };
             onRotate += forward =>
             {
                 if(_heroStates.stateMachine.CurrentState == HeroStateType.Run)
                     _transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
+            };
+            animatorMachine.OnMessageReceived += msg =>
+            {
+                if (msg == "shoot")
+                {
+                    _shootVFX.Play();
+                    _audioSource.PlayOneShot(_shootSFX);
+                }
+                else if (msg == "death")
+                {
+                    _deathVFX.Play();
+                    _audioSource.PlayOneShot(_deathSFX);
+                }
+            };
+        }
+
+        [Construct]
+        public void ConstructStates()
+        {
+            animatorMachine.SetupStates
+            (
+                (HeroAnimationStateType.Idle, null),
+                (HeroAnimationStateType.Run, null),
+                (HeroAnimationStateType.Shoot, null),
+                (HeroAnimationStateType.Death, null)
+            );
+            _heroStates.stateMachine.OnStateSwitched += newState =>
+            {
+                animatorMachine.SwitchState((HeroAnimationStateType) (int) newState);
             };
         }
     }
