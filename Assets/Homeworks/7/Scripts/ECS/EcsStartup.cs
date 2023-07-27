@@ -17,11 +17,14 @@ namespace Homework7.Ecs
             _systems = new EcsSystems (_world);
             _systems
                 .Add(new CubeInitializer())
+                .Add(new SetSpawnPositionSystem())
+                .Add(new CubeSpawnSystem())
+                .Add(new SetColorSystem())
 #if UNITY_EDITOR
                 .Add (new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem ())
 #endif
                 .Inject(_data)
-                .Init ();
+                .Init();
         }
 
         void Update () 

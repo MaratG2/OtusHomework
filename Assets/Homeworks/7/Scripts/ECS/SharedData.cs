@@ -6,10 +6,16 @@ namespace Homework7.Ecs
     [Serializable]
     public class SharedData
     {
+        public Transform parent;
+        
         public float borderX;
         public float borderY;
+        public float gap;
+        public Vector2 leftPoint;
+        public Vector2 rightPoint;
+        
         public int countSpawn;
-        public string prefabPath;
+        public GameObject prefab;
 
         public int damage;
         public int health;

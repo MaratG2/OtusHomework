@@ -23,19 +23,25 @@
                     <e p="MovementSpeed_C.cs" t="Include" />
                     <e p="ReloadTime_C.cs" t="Include" />
                     <e p="Renderer_C.cs" t="Include" />
+                    <e p="Team_C.cs" t="Include" />
                   </e>
                   <e p="Bullet" t="Include">
                     <e p="BulletHit_C.cs" t="Include" />
                     <e p="BulletView_C.cs" t="Include" />
                   </e>
+                  <e p="Position_C.cs" t="Include" />
                   <e p="View_C.cs" t="Include" />
                 </e>
                 <e p="EcsStartup.cs" t="Include" />
                 <e p="SharedData.cs" t="Include" />
                 <e p="Systems" t="Include">
                   <e p="CubeInitializer.cs" t="Include" />
+                  <e p="CubeSpawnSystem.cs" t="Include" />
+                  <e p="SetColorSystem.cs" t="Include" />
+                  <e p="SetSpawnPositionSystem.cs" t="Include" />
                 </e>
               </e>
+              <e p="Team.cs" t="Include" />
             </e>
           </e>
         </e>
