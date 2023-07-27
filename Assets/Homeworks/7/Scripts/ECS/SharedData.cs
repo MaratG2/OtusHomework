@@ -18,7 +18,7 @@ namespace Homework7.Ecs
         public GameObject prefab;
 
         public int damage;
-        public int health;
+        public Vector2 healthRange;
         public float movementSpeed;
         public float reloadTime;
         public float detectionDistance;

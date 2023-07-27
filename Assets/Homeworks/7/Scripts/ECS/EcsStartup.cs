@@ -11,10 +11,10 @@ namespace Homework7.Ecs
         private IEcsSystems _systems;
         [SerializeField] private SharedData _data;
 
-        private void Start () 
+        private void Start() 
         {
-            _world = new EcsWorld ();
-            _systems = new EcsSystems (_world);
+            _world = new EcsWorld();
+            _systems = new EcsSystems(_world);
             _systems
                 .Add(new CubeInitializer())
                 .Add(new SetSpawnPositionSystem())
@@ -23,30 +23,24 @@ namespace Homework7.Ecs
 #if UNITY_EDITOR
                 .Add (new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem ())
 #endif
+                .Add(new MovementSystem())
                 .Inject(_data)
                 .Init();
         }
 
-        void Update () 
+        void Update() 
         {
-            // process systems here.
-            _systems?.Run ();
+            _systems?.Run();
         }
 
         void OnDestroy () 
         {
             if (_systems != null) 
             {
-                // list of custom worlds will be cleared
-                // during IEcsSystems.Destroy(). so, you
-                // need to save it here if you need.
-                _systems.Destroy ();
+                _systems.Destroy();
                 _systems = null;
             }
             
-            // cleanup custom worlds here.
-            
-            // cleanup default world.
             if (_world != null) 
             {
                 _world.Destroy ();

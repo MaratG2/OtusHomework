@@ -22,9 +22,6 @@
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Resources/Cube.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Resources/Cube.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scenes/GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/EcsStartup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/EcsStartup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/SharedData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/SharedData.cs" afterDir="false" />
@@ -72,12 +69,13 @@
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Block/Team_C.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/Team.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/SetColorSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/EcsStartup.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Position_C.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/SharedData.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeSpawnSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeInitializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/SetSpawnPositionSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/SharedData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeInitializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/MovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/EcsStartup.cs" />
       </list>
     </option>
   </component>
@@ -144,7 +142,7 @@
       <workItem from="1684408757228" duration="8421000" />
       <workItem from="1684667551182" duration="1263000" />
       <workItem from="1684745531623" duration="3740000" />
-      <workItem from="1690439459865" duration="8115000" />
+      <workItem from="1690439459865" duration="9624000" />
     </task>
     <servers />
   </component>

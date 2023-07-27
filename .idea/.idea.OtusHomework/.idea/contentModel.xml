@@ -37,6 +37,7 @@
                 <e p="Systems" t="Include">
                   <e p="CubeInitializer.cs" t="Include" />
                   <e p="CubeSpawnSystem.cs" t="Include" />
+                  <e p="MovementSystem.cs" t="Include" />
                   <e p="SetColorSystem.cs" t="Include" />
                   <e p="SetSpawnPositionSystem.cs" t="Include" />
                 </e>

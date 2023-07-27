@@ -260,14 +260,14 @@ MonoBehaviour:
     borderX: 10
     borderY: 10
     gap: 1.5
-    leftPoint: {x: -4, y: 33}
-    rightPoint: {x: 4, y: 33}
+    leftPoint: {x: -7, y: 33}
+    rightPoint: {x: 7, y: 33}
     countSpawn: 100
     prefab: {fileID: 7156756521814080013, guid: cabde8cbe9effdb4e831ad97c6b56ade,
       type: 3}
     damage: 1
-    health: 1
-    movementSpeed: 5
+    healthRange: {x: 1, y: 5}
+    movementSpeed: 2
     reloadTime: 2
     detectionDistance: 6
     colorBlue: {r: 0, g: 0, b: 1, a: 1}
