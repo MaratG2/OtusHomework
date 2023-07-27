@@ -20,7 +20,7 @@ public static class JsonHelper
     public static string ToJsonString<T>(T[] array)
     {
         WrapperStr wrapper = new WrapperStr();
-        List<string> items = new();
+        List<string> items = new List<string>();
         foreach (var arrEl in array)
             items.Add(arrEl.ToString());
         wrapper.Items = items.ToArray();
