@@ -20,10 +20,14 @@ namespace Homework7.Ecs
                 .Add(new SetSpawnPositionSystem())
                 .Add(new CubeSpawnSystem())
                 .Add(new SetColorSystem())
+                .Add(new MovementSystem())
+                .Add(new FightSystem())
+                .Add(new BulletInitializer())
+                .Add(new BulletSpawnSystem())
+                .Add(new DestroySystem())
 #if UNITY_EDITOR
                 .Add (new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem ())
 #endif
-                .Add(new MovementSystem())
                 .Inject(_data)
                 .Init();
         }

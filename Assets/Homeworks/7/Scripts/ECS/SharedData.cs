@@ -1,4 +1,5 @@
 using System;
+using Homework7.Ecs.Views;
 using UnityEngine;
 
 namespace Homework7.Ecs
@@ -15,13 +16,14 @@ namespace Homework7.Ecs
         public Vector2 rightPoint;
         
         public int countSpawn;
-        public GameObject prefab;
+        public EcsMonoObject prefabCube;
+        
+        public EcsMonoObject prefabBullet;
 
         public int damage;
         public Vector2 healthRange;
         public float movementSpeed;
         public float reloadTime;
-        public float detectionDistance;
         public Color colorBlue;
         public Color colorRed;
     }

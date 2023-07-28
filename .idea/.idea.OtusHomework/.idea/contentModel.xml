@@ -21,12 +21,12 @@
                     <e p="Color_C.cs" t="Include" />
                     <e p="CubeView_C.cs" t="Include" />
                     <e p="Damage_C.cs" t="Include" />
-                    <e p="DetectionDistance_C.cs" t="Include" />
+                    <e p="Fight_C.cs" t="Include" />
                     <e p="Health_C.cs" t="Include" />
-                    <e p="MovementSpeed_C.cs" t="Include" />
-                    <e p="ReloadTime_C.cs" t="Include" />
+                    <e p="Movement_C.cs" t="Include" />
                     <e p="Renderer_C.cs" t="Include" />
                     <e p="Team_C.cs" t="Include" />
+                    <e p="Weapon_C.cs" t="Include" />
                   </e>
                   <e p="Hit_C.cs" t="Include" />
                   <e p="Position_C.cs" t="Include" />
@@ -35,13 +35,18 @@
                 <e p="EcsStartup.cs" t="Include" />
                 <e p="SharedData.cs" t="Include" />
                 <e p="Systems" t="Include">
+                  <e p="BulletInitializer.cs" t="Include" />
+                  <e p="BulletSpawnSystem.cs" t="Include" />
                   <e p="CubeInitializer.cs" t="Include" />
                   <e p="CubeSpawnSystem.cs" t="Include" />
+                  <e p="DestroySystem.cs" t="Include" />
+                  <e p="FightSystem.cs" t="Include" />
                   <e p="MovementSystem.cs" t="Include" />
                   <e p="SetColorSystem.cs" t="Include" />
                   <e p="SetSpawnPositionSystem.cs" t="Include" />
                 </e>
                 <e p="Views" t="Include">
+                  <e p="BulletView.cs" t="Include" />
                   <e p="CubeView.cs" t="Include" />
                   <e p="EcsMonoObject.cs" t="Include" />
                 </e>

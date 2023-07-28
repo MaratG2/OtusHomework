@@ -5,17 +5,17 @@ using UnityEngine;
 
 namespace Homework7.Ecs.Systems
 {
-    public struct SetColorSystem : IEcsInitSystem
+    public struct SetColorSystem : IEcsRunSystem
     {
-        private EcsFilterInject<Inc<Renderer_C, Color_C>> _rendererColorsFilter;
-        public void Init(IEcsSystems systems)
+        private readonly EcsFilterInject<Inc<Renderer_C, Color_C>> _rendererColorsFilter;
+        private readonly EcsPoolInject<Renderer_C> _renderPool;
+        private readonly EcsPoolInject<Color_C> _colorPool;
+        public void Run(IEcsSystems systems)
         {
-            var poolRenderers = _rendererColorsFilter.Pools.Inc1;
-            var poolColors = _rendererColorsFilter.Pools.Inc2;
             foreach (var entity in _rendererColorsFilter.Value)
             {
-                ref Renderer_C rendererC = ref poolRenderers.Get(entity);
-                ref Color_C colorC = ref poolColors.Get(entity);
+                ref Renderer_C rendererC = ref _renderPool.Value.Get(entity);
+                ref Color_C colorC = ref _colorPool.Value.Get(entity);
                 
                 if(rendererC.renderer)
                     rendererC.renderer.material.color = colorC.color;

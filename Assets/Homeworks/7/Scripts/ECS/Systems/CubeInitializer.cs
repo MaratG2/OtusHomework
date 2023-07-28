@@ -16,9 +16,8 @@ namespace Homework7.Ecs.Systems
             
             var poolCubeViews = world.GetPool<CubeView_C>();
             var poolDamage = world.GetPool<Damage_C>();
-            var poolMovementSpeed = world.GetPool<MovementSpeed_C>();
-            var poolReloadTime = world.GetPool<ReloadTime_C>();
-            var poolDetectionDistance = world.GetPool<DetectionDistance_C>();
+            var poolMovement = world.GetPool<Movement_C>();
+            var poolWeapon = world.GetPool<Weapon_C>();
             var poolHealth = world.GetPool<Health_C>();
             var poolRenderers = world.GetPool<Renderer_C>();
             var poolTeam = world.GetPool<Team_C>();
@@ -30,9 +29,12 @@ namespace Homework7.Ecs.Systems
                 int entity = world.NewEntity();
                 poolCubeViews.Add(entity);
                 poolDamage.Add(entity).damage = _data.Value.damage;
-                poolMovementSpeed.Add(entity).movementSpeed = _data.Value.movementSpeed;
-                poolReloadTime.Add(entity).reloadTime = _data.Value.reloadTime;
-                poolDetectionDistance.Add(entity).detectionDistance = _data.Value.detectionDistance;
+                
+                ref var movementC = ref poolMovement.Add(entity);
+                movementC.isMoving = true;
+                movementC.movementSpeed = _data.Value.movementSpeed;
+                
+                poolWeapon.Add(entity).reloadTime = _data.Value.reloadTime;
                 poolHealth.Add(entity).health = Random.Range((int)_data.Value.healthRange.x, (int)_data.Value.healthRange.y);
                 poolRenderers.Add(entity);
                 poolTeam.Add(entity).team = i < _data.Value.countSpawn ? Team.Blue : Team.Red;
