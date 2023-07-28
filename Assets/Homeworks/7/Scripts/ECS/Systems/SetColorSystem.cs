@@ -1,4 +1,4 @@
-using Homework7.Ecs.Components.Block;
+using Homework7.Ecs.Components.Cube;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using UnityEngine;

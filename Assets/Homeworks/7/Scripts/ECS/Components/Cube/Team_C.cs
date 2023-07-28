@@ -1,6 +1,6 @@
-using Homeworks7;
+using Homework7.Enums;
 
-namespace Homework7.Ecs.Components.Block
+namespace Homework7.Ecs.Components.Cube
 {
     public struct Team_C
     {

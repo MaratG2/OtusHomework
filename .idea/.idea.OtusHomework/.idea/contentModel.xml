@@ -14,7 +14,10 @@
             <e p="Scripts" t="Include">
               <e p="ECS" t="Include">
                 <e p="Components" t="Include">
-                  <e p="Block" t="Include">
+                  <e p="Bullet" t="Include">
+                    <e p="BulletView_C.cs" t="Include" />
+                  </e>
+                  <e p="Cube" t="Include">
                     <e p="Color_C.cs" t="Include" />
                     <e p="CubeView_C.cs" t="Include" />
                     <e p="Damage_C.cs" t="Include" />
@@ -25,10 +28,7 @@
                     <e p="Renderer_C.cs" t="Include" />
                     <e p="Team_C.cs" t="Include" />
                   </e>
-                  <e p="Bullet" t="Include">
-                    <e p="BulletHit_C.cs" t="Include" />
-                    <e p="BulletView_C.cs" t="Include" />
-                  </e>
+                  <e p="Hit_C.cs" t="Include" />
                   <e p="Position_C.cs" t="Include" />
                   <e p="View_C.cs" t="Include" />
                 </e>
@@ -41,8 +41,14 @@
                   <e p="SetColorSystem.cs" t="Include" />
                   <e p="SetSpawnPositionSystem.cs" t="Include" />
                 </e>
+                <e p="Views" t="Include">
+                  <e p="CubeView.cs" t="Include" />
+                  <e p="EcsMonoObject.cs" t="Include" />
+                </e>
               </e>
-              <e p="Team.cs" t="Include" />
+              <e p="Enums" t="Include">
+                <e p="Team.cs" t="Include" />
+              </e>
             </e>
           </e>
         </e>

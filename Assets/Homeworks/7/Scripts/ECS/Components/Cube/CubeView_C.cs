@@ -1,4 +1,4 @@
-namespace Homework7.Ecs.Components.Block
+namespace Homework7.Ecs.Components.Cube
 {
     public struct CubeView_C
     {

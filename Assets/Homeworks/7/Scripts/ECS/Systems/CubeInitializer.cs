@@ -1,6 +1,6 @@
 using Homework7.Ecs.Components;
-using Homework7.Ecs.Components.Block;
-using Homeworks7;
+using Homework7.Ecs.Components.Cube;
+using Homework7.Enums;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using UnityEngine;

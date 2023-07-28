@@ -1,4 +1,4 @@
-namespace Homeworks7
+namespace Homework7.Enums
 {
     public enum Team
     {
