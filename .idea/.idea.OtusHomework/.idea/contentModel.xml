@@ -35,10 +35,12 @@
                 <e p="EcsStartup.cs" t="Include" />
                 <e p="SharedData.cs" t="Include" />
                 <e p="Systems" t="Include">
+                  <e p="BorderCheckSystem.cs" t="Include" />
                   <e p="BulletInitializer.cs" t="Include" />
                   <e p="BulletSpawnSystem.cs" t="Include" />
                   <e p="CubeInitializer.cs" t="Include" />
                   <e p="CubeSpawnSystem.cs" t="Include" />
+                  <e p="DamageSystem.cs" t="Include" />
                   <e p="DestroySystem.cs" t="Include" />
                   <e p="FightSystem.cs" t="Include" />
                   <e p="MovementSystem.cs" t="Include" />
@@ -53,6 +55,9 @@
               </e>
               <e p="Enums" t="Include">
                 <e p="Team.cs" t="Include" />
+              </e>
+              <e p="Helpers" t="Include">
+                <e p="CheckOutOfBounds.cs" t="Include" />
               </e>
             </e>
           </e>

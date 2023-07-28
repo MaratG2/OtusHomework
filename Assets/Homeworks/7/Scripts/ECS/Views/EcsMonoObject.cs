@@ -44,5 +44,13 @@ namespace Homework7.Ecs.Views
             hitC.firstCollide = firstCollide;
             hitC.secondCollide = secondCollide;
         }
+
+        public void Delete()
+        {
+            if (GetEntity() == -1)
+                return;
+            _world.DelEntity(GetEntity());
+            DestroyImmediate(gameObject);
+        }
     }
 }

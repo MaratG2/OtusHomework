@@ -1,5 +1,6 @@
+using Homework7.Ecs.Components;
+using Homework7.Ecs.Components.Bullet;
 using Homework7.Ecs.Components.Cube;
-using Homework7.Enums;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using UnityEngine;
@@ -8,27 +9,38 @@ namespace Homework7.Ecs.Systems
 {
     public struct MovementSystem : IEcsRunSystem
     {
-        private readonly EcsFilterInject<Inc<CubeView_C, Movement_C, Team_C>> _cubeFilter;
+        private readonly EcsFilterInject<Inc<CubeView_C, Movement_C>> _movementCubeFilter;
+        private readonly EcsFilterInject<Inc<BulletView_C, Movement_C>> _movementBulletFilter;
         private readonly EcsPoolInject<CubeView_C> _poolCubeView;
+        private readonly EcsPoolInject<BulletView_C> _poolBulletView;
         private readonly EcsPoolInject<Movement_C> _poolMovement;
-        private readonly EcsPoolInject<Team_C> _poolTeam;
         public void Run(IEcsSystems systems)
         {
-            foreach (int entity in _cubeFilter.Value)
+            foreach (int entity in _movementCubeFilter.Value)
             {
-                ref CubeView_C cubeViewC = ref _poolCubeView.Value.Get(entity);
-                ref Movement_C movementC = ref _poolMovement.Value.Get(entity);
-                ref Team_C teamC = ref _poolTeam.Value.Get(entity);
+                ref var cubeViewC = ref _poolCubeView.Value.Get(entity);
+                ref var movementC = ref _poolMovement.Value.Get(entity);
 
-                Vector3 direction;
-                if (teamC.team == Team.Blue)
-                    direction = new Vector3(1f, 0f, 0f);
+                if (movementC.isMoving)
+                {
+                    Vector3 direction = new Vector3(movementC.direction.x, 0f, movementC.direction.y);
+                    cubeViewC.rigidbody.AddForce(direction * Time.deltaTime * movementC.movementSpeed);
+                    cubeViewC.rigidbody.velocity = Vector3.ClampMagnitude(cubeViewC.rigidbody.velocity, 1f);
+                }
                 else
-                    direction = new Vector3(-1f, 0f, 0f);
+                    cubeViewC.rigidbody.velocity = Vector3.zero;
+            }
+            foreach (int entity in _movementBulletFilter.Value)
+            {
+                ref var bulletViewC = ref _poolBulletView.Value.Get(entity);
+                ref var movementC = ref _poolMovement.Value.Get(entity);
 
                 if(movementC.isMoving)
-                    cubeViewC.viewC.view.transform.position += 
+                {
+                    Vector3 direction = new Vector3(movementC.direction.x, 0f, movementC.direction.y);
+                    bulletViewC.viewC.view.transform.position +=
                         direction * Time.deltaTime * movementC.movementSpeed;
+                }
             }
         }
     }

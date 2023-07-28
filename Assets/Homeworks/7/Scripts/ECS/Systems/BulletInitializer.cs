@@ -25,12 +25,12 @@ namespace Homework7.Ecs.Systems
                 if (fightC.shootRequired)
                 {
                     fightC.shootRequired = false;
-                    SpawnBullet(fightC.firstFighter.gameObject);
+                    SpawnBullet(fightC.firstFighter.gameObject, fightC.secondFighter.gameObject);
                 }
             }
         }
 
-        private void SpawnBullet(GameObject origin)
+        private void SpawnBullet(GameObject origin, GameObject target)
         {
             var bulletViewPool = _world.Value.GetPool<BulletView_C>();
             var positionPool = _world.Value.GetPool<Position_C>();
@@ -39,12 +39,17 @@ namespace Homework7.Ecs.Systems
             var colorPool = _world.Value.GetPool<Color_C>();
             
             int entity = _world.Value.NewEntity();
-            
+
             bulletViewPool.Add(entity).isSpawn = true;
             positionPool.Add(entity).position = new Vector2(origin.transform.position.x, origin.transform.position.z);
             Team team = _teamPool.Value.Get(origin.GetComponent<EcsMonoObject>().GetEntity()).team;
             _teamPool.Value.Add(entity).team = team;
-            movementPool.Add(entity);
+            Vector3 direction3D = target.transform.position - origin.transform.position;
+            Vector2 direction = new Vector2(direction3D.x, direction3D.z).normalized;
+            ref var movementC = ref movementPool.Add(entity);
+            movementC.direction = direction;
+            movementC.isMoving = true;
+            movementC.movementSpeed = _data.Value.bulletSpeed;
             rendererPool.Add(entity);
             colorPool.Add(entity).color = team == Team.Blue ? _data.Value.colorBlue : _data.Value.colorRed;;
         }

@@ -23,6 +23,7 @@ namespace Homework7.Ecs
         public int damage;
         public Vector2 healthRange;
         public float movementSpeed;
+        public float bulletSpeed;
         public float reloadTime;
         public Color colorBlue;
         public Color colorRed;

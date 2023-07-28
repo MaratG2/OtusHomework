@@ -23,17 +23,13 @@ namespace Homework7.Ecs.Systems
             var poolTeam = world.GetPool<Team_C>();
             var poolColor = world.GetPool<Color_C>();
             var poolPosition = world.GetPool<Position_C>();
-
+            
             for (int i = 0; i < _data.Value.countSpawn * 2; i++)
             {
                 int entity = world.NewEntity();
                 poolCubeViews.Add(entity);
                 poolDamage.Add(entity).damage = _data.Value.damage;
-                
-                ref var movementC = ref poolMovement.Add(entity);
-                movementC.isMoving = true;
-                movementC.movementSpeed = _data.Value.movementSpeed;
-                
+                poolMovement.Add(entity).movementSpeed = _data.Value.movementSpeed;
                 poolWeapon.Add(entity).reloadTime = _data.Value.reloadTime;
                 poolHealth.Add(entity).health = Random.Range((int)_data.Value.healthRange.x, (int)_data.Value.healthRange.y);
                 poolRenderers.Add(entity);

@@ -24,7 +24,9 @@ namespace Homework7.Ecs
                 .Add(new FightSystem())
                 .Add(new BulletInitializer())
                 .Add(new BulletSpawnSystem())
+                .Add(new DamageSystem())
                 .Add(new DestroySystem())
+                .Add(new BorderCheckSystem())
 #if UNITY_EDITOR
                 .Add (new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem ())
 #endif
