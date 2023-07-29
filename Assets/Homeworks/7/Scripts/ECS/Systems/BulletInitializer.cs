@@ -32,15 +32,21 @@ namespace Homework7.Ecs.Systems
 
         private void SpawnBullet(GameObject origin, GameObject target)
         {
-            var bulletViewPool = _world.Value.GetPool<BulletView_C>();
+            var viewPool = _world.Value.GetPool<View_C>();
+            var bulletTagPool = _world.Value.GetPool<BulletTag_C>();
+            var rigidbodyPool = _world.Value.GetPool<Rigidbody_C>();
             var positionPool = _world.Value.GetPool<Position_C>();
             var movementPool = _world.Value.GetPool<Movement_C>();
             var rendererPool = _world.Value.GetPool<Renderer_C>();
             var colorPool = _world.Value.GetPool<Color_C>();
+            var requireSpawnPool = _world.Value.GetPool<RequireSpawn_C>();
             
             int entity = _world.Value.NewEntity();
 
-            bulletViewPool.Add(entity).isSpawn = true;
+            viewPool.Add(entity);
+            bulletTagPool.Add(entity);
+            rigidbodyPool.Add(entity);
+            requireSpawnPool.Add(entity);
             positionPool.Add(entity).position = new Vector2(origin.transform.position.x, origin.transform.position.z);
             Team team = _teamPool.Value.Get(origin.GetComponent<EcsMonoObject>().GetEntity()).team;
             _teamPool.Value.Add(entity).team = team;

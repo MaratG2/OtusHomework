@@ -9,32 +9,33 @@ namespace Homework7.Ecs.Systems
 {
     public struct BulletSpawnSystem : IEcsRunSystem
     {
-        private readonly EcsFilterInject<Inc<BulletView_C, Position_C, Team_C>> _bulletViewFilter;
-        private readonly EcsPoolInject<BulletView_C> _bulletViewPool;
+        private readonly EcsFilterInject<Inc<BulletTag_C, RequireSpawn_C>> _bulletFilter;
+        private readonly EcsPoolInject<View_C> _viewPool;
+        private readonly EcsPoolInject<RequireSpawn_C> _requireSpawnPool;
         private readonly EcsPoolInject<Position_C> _positionPool;
         private readonly EcsPoolInject<Renderer_C> _rendererPool;
+        private readonly EcsPoolInject<Rigidbody_C> _rigidbodyPool;
         private readonly EcsCustomInject<SharedData> _data;
         
         public void Run(IEcsSystems systems)
         {
-            foreach (int entity in _bulletViewFilter.Value)
+            foreach (int entity in _bulletFilter.Value)
             {
-                ref var bulletViewC = ref _bulletViewPool.Value.Get(entity);
+                ref var viewC = ref _viewPool.Value.Get(entity);
+                ref var rigidbodyC = ref _rigidbodyPool.Value.Get(entity);
                 ref var rendererC = ref _rendererPool.Value.Get(entity);
                 
-                if (bulletViewC.isSpawn)
-                {
-                    bulletViewC.isSpawn = false;
-                    var positionC = _positionPool.Value.Get(entity);
-                    Vector3 spawnPos = new Vector3(positionC.position.x, 0.5f, positionC.position.y);
-                    var bullet = Object.Instantiate
-                        (_data.Value.prefabBullet, spawnPos, Quaternion.identity, _data.Value.parent);
-                    bullet.Init(systems.GetWorld());
-                    bullet.PackEntity(entity);
-                    bulletViewC.viewC.view = bullet.gameObject;
-                    rendererC.renderer = bullet.GetComponent<Renderer>();
-                    _positionPool.Value.Del(entity);
-                }
+                var positionC = _positionPool.Value.Get(entity);
+                Vector3 spawnPos = new Vector3(positionC.position.x, 0.5f, positionC.position.y);
+                var bullet = Object.Instantiate
+                    (_data.Value.prefabBullet, spawnPos, Quaternion.identity, _data.Value.parent);
+                bullet.Init(systems.GetWorld());
+                bullet.PackEntity(entity);
+                viewC.view = bullet.gameObject;
+                rendererC.renderer = bullet.GetComponent<Renderer>();
+                rigidbodyC.rigidbody = bullet.GetComponent<Rigidbody>();
+                _positionPool.Value.Del(entity);
+                _requireSpawnPool.Value.Del(entity);
             }
         }
     }

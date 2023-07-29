@@ -25,6 +25,7 @@ namespace Homework7.Ecs
                 .Add(new BulletInitializer())
                 .Add(new BulletSpawnSystem())
                 .Add(new DamageSystem())
+                .Add(new CheckHealthSystem())
                 .Add(new DestroySystem())
                 .Add(new BorderCheckSystem())
 #if UNITY_EDITOR

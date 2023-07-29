@@ -15,21 +15,23 @@
               <e p="ECS" t="Include">
                 <e p="Components" t="Include">
                   <e p="Bullet" t="Include">
-                    <e p="BulletView_C.cs" t="Include" />
+                    <e p="BulletTag_C.cs" t="Include" />
                   </e>
                   <e p="Cube" t="Include">
                     <e p="Color_C.cs" t="Include" />
-                    <e p="CubeView_C.cs" t="Include" />
                     <e p="Damage_C.cs" t="Include" />
                     <e p="Fight_C.cs" t="Include" />
                     <e p="Health_C.cs" t="Include" />
                     <e p="Movement_C.cs" t="Include" />
                     <e p="Renderer_C.cs" t="Include" />
+                    <e p="Rigidbody_C.cs" t="Include" />
                     <e p="Team_C.cs" t="Include" />
                     <e p="Weapon_C.cs" t="Include" />
                   </e>
                   <e p="Hit_C.cs" t="Include" />
                   <e p="Position_C.cs" t="Include" />
+                  <e p="RequireDeath_C.cs" t="Include" />
+                  <e p="RequireSpawn_C.cs" t="Include" />
                   <e p="View_C.cs" t="Include" />
                 </e>
                 <e p="EcsStartup.cs" t="Include" />
@@ -38,6 +40,7 @@
                   <e p="BorderCheckSystem.cs" t="Include" />
                   <e p="BulletInitializer.cs" t="Include" />
                   <e p="BulletSpawnSystem.cs" t="Include" />
+                  <e p="CheckHealthSystem.cs" t="Include" />
                   <e p="CubeInitializer.cs" t="Include" />
                   <e p="CubeSpawnSystem.cs" t="Include" />
                   <e p="DamageSystem.cs" t="Include" />

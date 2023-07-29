@@ -22,20 +22,20 @@
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Prefabs/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Prefabs/Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Prefabs/Cube.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/Movement_C.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/Movement_C.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Bullet.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Bullet/BulletView_C.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Bullet/BulletView_C.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/CubeView_C.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/CubeView_C.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/EcsStartup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/EcsStartup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/SharedData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/SharedData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BorderCheckSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BorderCheckSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BulletInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BulletInitializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BulletSpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BulletSpawnSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeInitializer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeSpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeSpawnSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/DestroySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/DestroySystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/MovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/MovementSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Views/BulletView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Views/BulletView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Views/EcsMonoObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Views/EcsMonoObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/8.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +46,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeInitializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecslite@a5fc58bdcd/src/systems.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecslite@a5fc58bdcd/src/entities.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeInitializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Views/BulletView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.0.7/Editor/EditorCore/DestroyListener.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/TestFramework/ZenjectTestUtil.cs" root0="SKIP_HIGHLIGHTING" />
@@ -58,13 +58,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/BlockViewComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/BlockView_C.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Health_C.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Damage_C.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/ReloadTime_C.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/MovementSpeed_C.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/DetectionDistance_C.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/HitComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/BulletHit_C.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Block/BlockView_C.cs" />
@@ -87,28 +80,35 @@
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Views/BlockView.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/Color_C.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/MovementSpeed_C.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/DestroySystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/ReloadTime_C.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/Fight_C.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Bullet/BulletView_C.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Spawn_C.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/SetColorSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BulletSpawnSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/Weapon_C.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Views/CubeView.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/FightSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/Movement_C.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeSpawnSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeInitializer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/MovementSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/SharedData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BulletInitializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/Helpers/CheckOutOfBounds.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BorderCheckSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/DamageSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/EcsStartup.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Views/EcsMonoObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Views/BulletView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/RequireDeath_C.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/EcsStartup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CheckHealthSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/DestroySystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BorderCheckSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/CubeView_C.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/Rigidbody_C.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeInitializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeSpawnSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/MovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Bullet/BulletTag_C.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Bullet/Spawn_C.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/RequireSpawn_C.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BulletInitializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BulletSpawnSystem.cs" />
       </list>
     </option>
   </component>
@@ -199,6 +199,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="660" y="340" key="#Notifications" timestamp="1690645894795">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="660" y="340" key="#Notifications/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1690645894795" />
     <state x="488" y="256" width="943" height="520" key="find.popup" timestamp="1690552733017">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
