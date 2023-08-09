@@ -38,12 +38,12 @@ namespace Homeworks6.Zombie
             };
         }
 
-        public void OuterInit(HeroEntity heroEntity)
+        public void OuterInit(HeroEntity heroEntity, ZombieModel model)
         {
             life.onDeath.AddListener(() =>
             {
                 heroEntity.Get<IScoresComponent>().AddScore();
-                GameObject.Destroy(life.Transform.gameObject);
+                GameObject.Destroy(model.gameObject);
             });
         }
 

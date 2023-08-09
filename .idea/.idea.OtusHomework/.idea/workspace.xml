@@ -22,7 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="" />
+    <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Animations/AssaultRifle@Shot01.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Animations/AssaultRifle@Shot01.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

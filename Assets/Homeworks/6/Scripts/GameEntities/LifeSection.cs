@@ -8,12 +8,10 @@ namespace Homeworks6
     [Serializable]
     public class LifeSection
     {
-        [SerializeField] private Transform _transform;
-        [SerializeField] public AtomicVariable<int> health;
+        public AtomicVariable<int> health;
         [HideInInspector] public AtomicVariable<bool> isDead;
         [HideInInspector] public AtomicEvent<int> onTakeDamage;
         [HideInInspector] public AtomicEvent onDeath;
-        public Transform Transform => _transform;
 
         [Construct]
         public void Init()
