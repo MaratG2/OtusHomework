@@ -8,9 +8,9 @@ namespace Homeworks6.Hero.States
     public class ShootState : CompositeState
     {
         [Construct]
-        public void Construct(HeroModel_Core.Shoot shoot, HeroModel model)
+        public void Construct(HeroModel_Core.ShootSection shootSection, HeroModel model)
         {
-            var autoShootState = new AutoShootState(shoot, model);
+            var autoShootState = new AutoShootState(shootSection, model);
             var aimAiState = new AimAIState(model);
             SetStates(autoShootState, aimAiState);
         }

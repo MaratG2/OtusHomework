@@ -1,74 +1,32 @@
-using Declarative;
 using System;
+using System.Threading.Tasks;
+using UnityEngine;
+
+#pragma warning disable 4014
 
 namespace Homeworks6.Custom
 {
     [Serializable]
-    public class Timer : IDisposable
+    public class Timer
     {
+        [SerializeField] private float _maxTime;
+        [SerializeField] private bool _isAuto;
         public event Action onEnd;
-        private DeclarativeModel _model;
-        private float _maxTime;
-        private float _timer = 0f;
-        private bool _canTime = true;
+        public bool IsPlaying { get; private set; } = true;
 
-        public Timer(float maxTime, DeclarativeModel model, bool isReady = false)
+        public void Start()
         {
-            this._maxTime = maxTime;
-            this._model = model;
-            if (isReady)
-                _timer = _maxTime;
-            Init();
+            IsPlaying = true;
+            WaitTimer();
         }
-
-        private void Init()
+        
+        private async Task WaitTimer()
         {
-            _model.onUpdate += deltaTime =>
-            {
-                _timer += deltaTime;
-                if (_timer >= _maxTime && _canTime)
-                {
-                    _canTime = false;
-                    onEnd?.Invoke();
-                }
-            };
-        }
-
-        public void ResetTimer()
-        {
-            _timer = 0f;
-            _canTime = true;
-        }
-
-        public void Dispose()
-        {
-        }
-    }
-    [Serializable]
-    public class AutoTimer : IDisposable
-    {
-        public event Action onEnd;
-        private Timer _timer;
-
-        public AutoTimer(float maxTime, DeclarativeModel model, bool isReady = false)
-        {
-            _timer = new Timer(maxTime, model, isReady);
-            Init();
-        }
-
-        private void Init()
-        {
-            _timer.onEnd += () =>
-            {
-                onEnd?.Invoke();
-                _timer.ResetTimer();
-            };
-        }
-
-        public void Dispose()
-        {
-            _timer.Dispose();
-            _timer = null;
+            await Task.Delay(Mathf.FloorToInt(_maxTime * 1000));
+            IsPlaying = false;
+            onEnd?.Invoke();
+            if(_isAuto)
+                Start();
         }
     }
 }

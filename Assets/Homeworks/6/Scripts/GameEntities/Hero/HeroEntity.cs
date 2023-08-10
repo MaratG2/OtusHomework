@@ -12,18 +12,16 @@ namespace Homeworks6.Hero
         {
             _model = GetComponent<HeroModel>();
 
-            this.Add(new MoveComponent(_model.core.move.onMove));
-            this.Add(new ShootComponent(_model.core.shoot.onShoot));
+            this.Add(new MoveComponent(_model.core.moveSection.onMove));
+            this.Add(new ShootComponent(_model.core.shootSection.onRequestShoot));
             this.Add(new RotateComponent(_model.view.onRotate));
-            this.Add(new TakeDamageComponent(_model.core.life.onTakeDamage));
+            this.Add(new TakeDamageComponent(_model.core.lifeSection.onTakeDamage));
             this.Add(new HeroStatsComponent
                 (
-                    _model.core.life.health,
-                    _model.core.shootReload.currentBullets,
-                    _model.core.shootReload.maxBullets,
-                    _model.core.shoot.kills
+                    _model.core.lifeSection.health,
+                    _model.core.shootReloadSection.currentBullets,
+                    _model.core.shootReloadSection.maxBullets
                 ));
-            this.Add(new ScoresComponent(_model.core.shoot.onKilled));
         }
     }
 }

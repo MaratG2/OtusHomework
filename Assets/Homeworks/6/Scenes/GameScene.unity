@@ -3593,32 +3593,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   core:
-    life:
-      _transform: {fileID: 1189594281}
+    lifeSection:
       health:
         value: 5
       isDead:
         value: 0
-    shoot:
-      _shootPoint: {fileID: 1173874404}
-      _bulletPrefab: {fileID: 8023279473210597656, guid: 474f0e223979fca43bba87e0b000a663,
-        type: 3}
-      cooldownTime:
-        value: 0.5
-      kills:
-        value: 0
-      isReadyShoot:
-        value: 0
-    shootReload:
+    shootSection:
+      _bulletFactory:
+        _bulletPrefab: {fileID: 8023279473210597656, guid: 474f0e223979fca43bba87e0b000a663,
+          type: 3}
+        _origin: {fileID: 1173874404}
+      _shootTimer:
+        rid: 1925732183023026176
+    shootReloadSection:
       maxBullets:
         value: 10
-      bulletRestoreCooldown:
-        value: 2
       currentBullets:
-        value: 0
+        value: 10
       hasBullets:
-        value: 0
-    move:
+        value: 1
+      _timer:
+        rid: 1925732183023026177
+    moveSection:
       IsEnabled: 0
       _transform: {fileID: 1189594281}
       maxSpeed:
@@ -3627,7 +3623,7 @@ MonoBehaviour:
         value: {x: 0, y: 0, z: 0}
     moveRequired:
       value: 0
-    heroStates: {}
+    heroStatesSection: {}
   view:
     animatorMachine:
       animator: {fileID: 433075505}
@@ -3638,6 +3634,19 @@ MonoBehaviour:
     _shootSFX: {fileID: 8300000, guid: 05456ee4868a0114e84cf56b561424f8, type: 3}
     _deathSFX: {fileID: 8300000, guid: 4811a1f8ead61a74ca8c39d8c550686e, type: 3}
     _transform: {fileID: 1189594281}
+  references:
+    version: 2
+    RefIds:
+    - rid: 1925732183023026176
+      type: {class: Timer, ns: Homeworks6.Custom, asm: Assembly-CSharp}
+      data:
+        _maxTime: 0.5
+        _isAuto: 0
+    - rid: 1925732183023026177
+      type: {class: Timer, ns: Homeworks6.Custom, asm: Assembly-CSharp}
+      data:
+        _maxTime: 2
+        _isAuto: 1
 --- !u!136 &1189594283
 CapsuleCollider:
   m_ObjectHideFlags: 0

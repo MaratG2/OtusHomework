@@ -12,16 +12,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 8832910663881041882, guid: 957f43147a72ac345802ba276a76406b,
-        type: 3}
-      propertyPath: core.bullet._transform
-      value: 
-      objectReference: {fileID: 8023279473210597657}
-    - target: {fileID: 8832910663881041882, guid: 957f43147a72ac345802ba276a76406b,
-        type: 3}
-      propertyPath: core.bullet.damage.value
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8832910663881041884, guid: 957f43147a72ac345802ba276a76406b,
         type: 3}
       propertyPath: m_Name
@@ -94,9 +84,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 957f43147a72ac345802ba276a76406b, type: 3}
---- !u!4 &8023279473210597657 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8832910663881041885, guid: 957f43147a72ac345802ba276a76406b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1570814369716307652}
-  m_PrefabAsset: {fileID: 0}

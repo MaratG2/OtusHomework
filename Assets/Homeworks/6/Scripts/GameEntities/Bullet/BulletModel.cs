@@ -8,9 +8,5 @@ namespace Homeworks6.Bullet
         [Section] 
         [SerializeField] 
         public BulletModel_Core core = new BulletModel_Core();
-
-        [Section] 
-        [SerializeField] 
-        public BulletModel_View view = new BulletModel_View();
     }
 }

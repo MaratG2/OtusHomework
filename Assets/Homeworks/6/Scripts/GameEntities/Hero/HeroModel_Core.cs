@@ -11,32 +11,29 @@ namespace Homeworks6.Hero
     public class HeroModel_Core
     {
         [Section]
-        public LifeSection life = new LifeSection();
+        public LifeSection lifeSection = new LifeSection();
 
         [Section]
-        public Shoot shoot = new Shoot();
+        public ShootSection shootSection = new ShootSection();
 
         [Section]
-        public ShootReload shootReload = new ShootReload();
+        public ShootReloadSection shootReloadSection = new ShootReloadSection();
 
         [Section]
-        public MoveSection move = new MoveSection(false);
+        public MoveSection moveSection = new MoveSection(false);
+        
         [HideInInspector] public AtomicVariable<bool> moveRequired;
         
         [Section]
-        public HeroStates heroStates = new HeroStates();
+        public HeroStatesSection heroStatesSection = new HeroStatesSection();
 
         [Construct]
         public void Init(HeroModel model)
         {
-            move.Init(model);
+            moveSection.Init(model);
 
-            life.onDeath += () =>
-            {
-                Debug.Log("ИГРА ЗАВЕРШЕНА");
-            };
-
-            move.onMove += dir =>
+            //TODO: WHY LOGIC IN INIT
+            moveSection.onMove += dir =>
             {
                 moveRequired.Value = true;
             };
@@ -44,63 +41,49 @@ namespace Homeworks6.Hero
             {
                 if (moveRequired.Value)
                 {
-                    move.onMoveEvent.Invoke(deltaTime);
+                    moveSection.onMoveEvent.Invoke(deltaTime);
                     moveRequired.Value = false;
                 }
             };
         }
 
         [Serializable]
-        public class Shoot
+        public class ShootSection
         {
-            [SerializeField] private Transform _shootPoint;
-            [SerializeField] private GameObject _bulletPrefab;
-            [SerializeField] public AtomicVariable<float> cooldownTime;
-            [HideInInspector] public AtomicVariable<int> kills;  
-            [HideInInspector] public AtomicVariable<bool> isReadyShoot;
-            [HideInInspector] public AtomicEvent onShoot;
-            [HideInInspector] public AtomicEvent onShootPerformed;
-            [HideInInspector] public AtomicEvent onKilled;
-            private BulletShooter _shooter = new BulletShooter();
-            private Timer _timer;
-
+            [SerializeField] private BulletFactory _bulletFactory = new BulletFactory();
+            [SerializeReference] private Timer _shootTimer;
+            [HideInInspector] public AtomicEvent onRequestShoot;
+            [HideInInspector] public AtomicEvent onShootEvent;
+            
             [Construct]
-            public void Init(LifeSection life, ShootReload shootReloader, HeroModel model)
+            public void Init(LifeSection life, ShootReloadSection shootReloader, HeroModel model)
             {
-                _timer = new Timer(cooldownTime.Value, model, true);
-                _timer.onEnd += () => isReadyShoot.Value = true;
-                onShoot.AddListener(() =>
+                _shootTimer.Start();
+                onRequestShoot.AddListener(() =>
                 {
-                    if (shootReloader.hasBullets.Value && isReadyShoot.Value && !life.isDead.Value)
+                    if (shootReloader.hasBullets.Value && !_shootTimer.IsPlaying && !life.isDead.Value)
                     {
-                        isReadyShoot.Value = false;
-                        _timer.ResetTimer();
-                        _shooter.Shoot(_bulletPrefab, _shootPoint, _shootPoint.forward);
-                        onShootPerformed?.Invoke();
+                        _shootTimer.Start();
+                        _bulletFactory.Create();
+                        onShootEvent?.Invoke();
                     }
                 });
-                onKilled += () =>
-                {
-                    kills.Value++;
-                };
             }
         }
 
         [Serializable]
-        public class ShootReload
+        public class ShootReloadSection
         {
             [SerializeField] public AtomicVariable<int> maxBullets;
-            [SerializeField] public AtomicVariable<float> bulletRestoreCooldown;
             [HideInInspector] public AtomicVariable<int> currentBullets;
             [HideInInspector] public AtomicVariable<bool> hasBullets;
             [HideInInspector] public AtomicEvent onReload;
-            
-            private AutoTimer _timer;
+            [SerializeReference] private Timer _timer;
 
             [Construct]
-            public void Init(Shoot shooter, HeroModel model)
+            public void Init(ShootSection shooter, HeroModel model)
             {
-                _timer = new AutoTimer(bulletRestoreCooldown.Value, model);
+                _timer.Start();
                 currentBullets.OnChanged += newBullets =>
                 {
                     if (newBullets <= 0)
@@ -116,7 +99,7 @@ namespace Homeworks6.Hero
                         onReload?.Invoke();
                     }
                 };
-                shooter.onShootPerformed += () =>
+                shooter.onShootEvent += () =>
                 {
                     currentBullets.Value--;
                 };
@@ -125,7 +108,7 @@ namespace Homeworks6.Hero
         }
 
         [Serializable]
-        public class HeroStates
+        public class HeroStatesSection
         {
             public StateMachine<HeroStateType> stateMachine;
 
@@ -159,8 +142,8 @@ namespace Homeworks6.Hero
             }
 
             [Construct]
-            public void ConstructTransitions(LifeSection life, MoveSection move, Shoot shoot,
-                ShootReload reload)
+            public void ConstructTransitions(LifeSection life, MoveSection move, ShootSection shootSection,
+                ShootReloadSection shootReloadSection)
             {
                 life.onDeath += () =>
                 {
@@ -176,28 +159,28 @@ namespace Homeworks6.Hero
                 move.onMoveFinish += () =>
                 {
                     if (stateMachine.CurrentState != HeroStateType.Death && 
-                        reload.currentBullets.Value > 0)
+                        shootReloadSection.currentBullets.Value > 0)
                     {
                         stateMachine.SwitchState(HeroStateType.Shoot);
                     }
                     if (stateMachine.CurrentState != HeroStateType.Death && 
-                        reload.currentBullets.Value == 0)
+                        shootReloadSection.currentBullets.Value == 0)
                     {
                         stateMachine.SwitchState(HeroStateType.Idle);
                     }
                 };
-                shoot.onShootPerformed += () =>
+                shootSection.onShootEvent += () =>
                 {
                     if (stateMachine.CurrentState != HeroStateType.Death && 
-                        reload.currentBullets.Value == 0)
+                        shootReloadSection.currentBullets.Value == 0)
                     {
                         stateMachine.SwitchState(HeroStateType.Idle);
                     }
                 };
-                reload.onReload += () =>
+                shootReloadSection.onReload += () =>
                 {
                     if (stateMachine.CurrentState != HeroStateType.Death && 
-                        reload.currentBullets.Value > 0 &&
+                        shootReloadSection.currentBullets.Value > 0 &&
                         stateMachine.CurrentState != HeroStateType.Run)
                     {
                         stateMachine.SwitchState(HeroStateType.Shoot);

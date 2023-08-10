@@ -94,21 +94,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   core:
-    life:
-      _gameObject: {fileID: 8832910663881041884}
-      lifeTime:
-        value: 7
-    move:
+    lifeTimerSection:
+      _timer:
+        rid: 1925732183023026178
+    moveSection:
+      IsEnabled: 1
       _transform: {fileID: 8832910663881041885}
       maxSpeed:
-        value: 10
+        value: 15
       Direction:
         value: {x: 0, y: 0, z: 0}
-    bullet:
+    collisionDamageSection:
       _transform: {fileID: 8832910663881041885}
       damage:
         value: 1
       collisionEngine: {fileID: 4412126421186128226}
+  references:
+    version: 2
+    RefIds:
+    - rid: 1925732183023026178
+      type: {class: Timer, ns: Homeworks6.Custom, asm: Assembly-CSharp}
+      data:
+        _maxTime: 15
+        _isAuto: 0
 --- !u!114 &4412126421186128226
 MonoBehaviour:
   m_ObjectHideFlags: 0

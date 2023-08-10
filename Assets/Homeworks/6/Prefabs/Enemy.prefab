@@ -62,30 +62,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   core:
-    life:
-      _transform: {fileID: 952301272622457055}
+    lifeSection:
       health:
         value: 1
       isDead:
         value: 0
-    move:
+    moveSection:
+      IsEnabled: 1
       _transform: {fileID: 952301272622457055}
       maxSpeed:
-        value: 2
+        value: 4
       Direction:
         value: {x: 0, y: 0, z: 0}
-    attack:
+    attackSection:
       _collisionEngine: {fileID: 1371853490751125811}
       damage:
         value: 1
-      attackCooldown:
-        value: 1
-    enemyAI:
+      _timer:
+        rid: 1925732183023026179
+    enemyAISection:
       _transform: {fileID: 952301272622457055}
       targetDirection:
         value: {x: 0, y: 0}
   view:
     _transform: {fileID: 952301272622457055}
+  references:
+    version: 2
+    RefIds:
+    - rid: 1925732183023026179
+      type: {class: Timer, ns: Homeworks6.Custom, asm: Assembly-CSharp}
+      data:
+        _maxTime: 1
+        _isAuto: 0
 --- !u!54 &482262286338416463
 Rigidbody:
   m_ObjectHideFlags: 0

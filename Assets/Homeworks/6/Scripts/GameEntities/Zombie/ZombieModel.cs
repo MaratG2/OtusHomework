@@ -25,7 +25,6 @@ namespace Homeworks6.Zombie
             onConstruct += heroEntity =>
             {
                 this.Target = heroEntity.transform;
-                core.OuterInit(heroEntity);
             };
         }
     }

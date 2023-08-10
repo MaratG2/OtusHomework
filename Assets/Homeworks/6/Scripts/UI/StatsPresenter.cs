@@ -1,4 +1,5 @@
 using Homeworks6.Hero;
+using Homeworks6.Models;
 using UnityEngine;
 using Zenject;
 
@@ -9,17 +10,19 @@ namespace Homeworks6.UI
         private IStatsView _statsView;
         private HeroEntity _heroEntity;
         private IHeroStatsComponent _heroStatsComponent;
+        private KillsObserver _killsObserver;
 
         [Inject]
-        private void Construct(IStatsView statsView, HeroEntity heroEntity)
+        private void Construct(IStatsView statsView, HeroEntity heroEntity, KillsObserver killsObserver)
         {
-            this._statsView = statsView;
-            this._heroEntity = heroEntity;
+            _statsView = statsView;
+            _heroEntity = heroEntity;
+            _killsObserver = killsObserver;
         }
 
         private void Start()
         {
-            this._heroStatsComponent = _heroEntity.Get<IHeroStatsComponent>();
+            _heroStatsComponent = _heroEntity.Get<IHeroStatsComponent>();
             Init();
             InitDraw();
         }
@@ -35,9 +38,9 @@ namespace Homeworks6.UI
                 _statsView.SetBulletsText($"Bullets: {bullets}/" +
                                           $"{_heroStatsComponent.MaxBullets().Value}");
             };
-            _heroStatsComponent.Kills().OnChanged += kills =>
+            _killsObserver.OnKillsChanged += () =>
             {
-                _statsView.SetKillsText($"Kills: {kills}");
+                _statsView.SetKillsText($"Kills: {_killsObserver.GetKills()}");
             };
         }
 
@@ -46,7 +49,7 @@ namespace Homeworks6.UI
             _statsView.SetHPText($"HP: {_heroStatsComponent.HP().Value}");
             _statsView.SetBulletsText($"Bullets: {_heroStatsComponent.CurrentBullets().Value}/" +
                                       $"{_heroStatsComponent.MaxBullets().Value}");
-            _statsView.SetKillsText($"Kills: {_heroStatsComponent.Kills().Value}");
+            _statsView.SetKillsText($"Kills: {_killsObserver.GetKills()}");
         }
     }
 }

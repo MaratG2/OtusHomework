@@ -7,11 +7,11 @@ namespace Homeworks6.Hero.States
     public class AutoShootState : IState
     {
         private readonly DeclarativeModel _model;
-        private readonly HeroModel_Core.Shoot _shoot;
+        private readonly HeroModel_Core.ShootSection _shootSection;
         
-        public AutoShootState(HeroModel_Core.Shoot shoot, HeroModel model)
+        public AutoShootState(HeroModel_Core.ShootSection shootSection, HeroModel model)
         {
-            _shoot = shoot;
+            _shootSection = shootSection;
             _model = model;
         }
         
@@ -27,7 +27,7 @@ namespace Homeworks6.Hero.States
 
         private void TryToShoot(float dt)
         {
-            _shoot.onShoot?.Invoke();
+            _shootSection.onRequestShoot?.Invoke();
         }
     }
 }

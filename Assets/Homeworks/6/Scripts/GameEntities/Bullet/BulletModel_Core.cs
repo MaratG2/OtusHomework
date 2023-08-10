@@ -13,48 +13,41 @@ namespace Homeworks6.Bullet
     {
         [Section] 
         [SerializeField] 
-        public Life life = new Life();
+        public LifeTimerSection lifeTimerSection = new LifeTimerSection();
         
         [Section] 
         [SerializeField] 
-        public MoveSection move = new MoveSection(true);
+        public MoveSection moveSection = new MoveSection(true);
 
         [Section] 
         [SerializeField] 
-        public Bullet bullet = new Bullet();
+        public CollisionDamageSection collisionDamageSection = new CollisionDamageSection();
 
         [Construct]
         public void Init(BulletModel model)
         {
-            move.Init(model);
+            moveSection.Init(model);
             model.onFixedUpdate += deltaTime =>
             {
-                move.onMoveEvent.Invoke(deltaTime);
+                moveSection.onMoveEvent.Invoke(deltaTime);
             };
         }
         
         [Serializable]
-        public class Life
+        public class LifeTimerSection
         {
-            [SerializeField] private GameObject _gameObject;
-            [SerializeField] public AtomicVariable<float> lifeTime;
-            private Timer _timer;
+            [SerializeReference] private Timer _timer;
 
             [Construct]
             public void Init(BulletModel model)
             {
-                _timer = new Timer(lifeTime.Value, model);
-                _timer.onEnd += () => 
-                {
-                    GameObject.Destroy(_gameObject);
-                    _timer.Dispose();
-                    _timer = null;
-                };
+                _timer.Start();
+                _timer.onEnd += () => GameObject.Destroy(model.gameObject);
             }
         }
 
         [Serializable]
-        public class Bullet
+        public class CollisionDamageSection
         {
             [SerializeField] private Transform _transform;
             [SerializeField] public AtomicVariable<int> damage;

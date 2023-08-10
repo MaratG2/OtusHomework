@@ -153,17 +153,17 @@
                 </e>
               </e>
               <e p="Custom" t="Include">
-                <e p="BulletShooter.cs" t="Include" />
+                <e p="BulletFactory.cs" t="Include" />
                 <e p="CollisionObserver.cs" t="Include" />
                 <e p="Timer.cs" t="Include" />
               </e>
               <e p="Declarative" t="Include">
-                <e p="Declarative.asmdef" t="Include" />
                 <e p="Scripts" t="Include">
                   <e p="Attributes" t="Include">
                     <e p="ConstructAttribute.cs" t="Include" />
                     <e p="SectionAttribute.cs" t="Include" />
                   </e>
+                  <e p="Declarative.asmdef" t="Include" />
                   <e p="DeclarativeModel.cs" t="Include" />
                   <e p="Interfaces.cs" t="Include" />
                   <e p="Internal" t="Include">
@@ -183,9 +183,9 @@
                   <e p="BulletEntity.cs" t="Include" />
                   <e p="BulletModel.cs" t="Include" />
                   <e p="BulletModel_Core.cs" t="Include" />
-                  <e p="BulletModel_View.cs" t="Include" />
                 </e>
                 <e p="Components" t="Include">
+                  <e p="DeathEventComponent.cs" t="Include" />
                   <e p="DirectionComponent.cs" t="Include" />
                   <e p="GetHPComponent.cs" t="Include" />
                   <e p="HeroEntityConstructComponent.cs" t="Include" />
@@ -233,6 +233,10 @@
                 <e p="Scene" t="Include">
                   <e p="GameSceneInstaller.cs" t="Include" />
                 </e>
+              </e>
+              <e p="Models" t="Include">
+                <e p="KillsModel.cs" t="Include" />
+                <e p="KillsObserver.cs" t="Include" />
               </e>
               <e p="Spawner" t="Include">
                 <e p="GameObjectSpawner.cs" t="Include" />

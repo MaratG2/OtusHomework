@@ -1,20 +1,25 @@
+using System;
 using Homeworks6.Bullet;
 using Homeworks6.Components;
 using UnityEngine;
 
 namespace Homeworks6.Custom
 {
-    public class BulletShooter
+    [Serializable]
+    public class BulletFactory
     {
-        public void Shoot(GameObject prefab, Transform origin, Vector3 direction)
+        [SerializeField] private GameObject _bulletPrefab;
+        [SerializeField] private Transform _origin;
+        
+        public void Create()
         {
             var newBullet = GameObject.Instantiate
-                (prefab, origin.position, Quaternion.identity);
+                (_bulletPrefab, _origin.position, Quaternion.identity);
             
             var bulletEntity = newBullet.GetComponentInChildren<BulletEntity>();
             if (bulletEntity != null)
                 if(bulletEntity.TryGet<IDirectionComponent>(out var directionComponent))
-                    directionComponent.SetDirection(direction);
+                    directionComponent.SetDirection(_origin.forward);
         }
     }
 }

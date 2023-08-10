@@ -17,12 +17,12 @@ namespace Homeworks6.Hero
         [SerializeField] private AudioClip _deathSFX;
         [SerializeField] private Transform _transform;
         [HideInInspector] public AtomicEvent<Vector3> onRotate;
-        private HeroModel_Core.HeroStates _heroStates;
+        private HeroModel_Core.HeroStatesSection _heroStatesSection;
 
         [Construct]
-        public void Construct(HeroModel_Core.HeroStates heroStates)
+        public void Construct(HeroModel_Core.HeroStatesSection heroStatesSection)
         {
-            this._heroStates = heroStates;
+            this._heroStatesSection = heroStatesSection;
         }
 
         [Construct]
@@ -30,7 +30,7 @@ namespace Homeworks6.Hero
         {
             onRotate += forward =>
             {
-                if(_heroStates.stateMachine.CurrentState == HeroStateType.Run)
+                if(_heroStatesSection.stateMachine.CurrentState == HeroStateType.Run)
                     _transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
             };
             animatorMachine.OnMessageReceived += msg =>
@@ -58,7 +58,7 @@ namespace Homeworks6.Hero
                 (HeroAnimationStateType.Shoot, null),
                 (HeroAnimationStateType.Death, null)
             );
-            _heroStates.stateMachine.OnStateSwitched += newState =>
+            _heroStatesSection.stateMachine.OnStateSwitched += newState =>
             {
                 animatorMachine.SwitchState((HeroAnimationStateType) (int) newState);
             };

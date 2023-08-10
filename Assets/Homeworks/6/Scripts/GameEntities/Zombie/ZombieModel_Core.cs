@@ -13,54 +13,48 @@ namespace Homeworks6.Zombie
     {
         [Section] 
         [SerializeField] 
-        public LifeSection life = new LifeSection();
+        public LifeSection lifeSection = new LifeSection();
         
         [Section] 
         [SerializeField] 
-        public MoveSection move = new MoveSection(true);
+        public MoveSection moveSection = new MoveSection(true);
         
         [Section] 
         [SerializeField] 
-        public Attack attack = new Attack();
+        public AttackSection attackSection = new AttackSection();
         
         [Section] 
         [SerializeField] 
-        public EnemyAI enemyAI = new EnemyAI();
+        public EnemyAISection enemyAISection = new EnemyAISection();
 
         [Construct]
         public void Init(ZombieModel model)
         {
-            move.Init(model);
+            moveSection.Init(model);
             model.onUpdate += deltaTime =>
             {
-                if (!life.isDead.Value)
-                    move.onMoveEvent.Invoke(deltaTime);
+                if (!lifeSection.isDead.Value)
+                    moveSection.onMoveEvent.Invoke(deltaTime);
             };
-        }
-
-        public void OuterInit(HeroEntity heroEntity, ZombieModel model)
-        {
-            life.onDeath.AddListener(() =>
+            lifeSection.onDeath.AddListener(() =>
             {
-                heroEntity.Get<IScoresComponent>().AddScore();
                 GameObject.Destroy(model.gameObject);
             });
         }
 
         [Serializable]
-        public class Attack
+        public class AttackSection
         {
             [SerializeField] private CollisionObserver _collisionEngine;
             [SerializeField] public AtomicVariable<int> damage;
-            [SerializeField] public AtomicVariable<float> attackCooldown;
             private AtomicVariable<bool> _isChargingAttack = new AtomicVariable<bool>();
             private HeroEntity _heroEntity;
-            private Timer _timer;
+            [SerializeReference] private Timer _timer;
 
             [Construct]
             public void Init(ZombieModel model)
             {
-                _timer = new Timer(attackCooldown.Value, model);
+                _timer.Start();
                 _collisionEngine.onCollisionEnter += other =>
                 {
                     var heroEntity = other.gameObject.GetComponent<HeroEntity>();
@@ -79,20 +73,20 @@ namespace Homeworks6.Zombie
                         _isChargingAttack.Value = false;
                     }
                 };
-                _isChargingAttack.OnChanged += _ => _timer.ResetTimer();
+                _isChargingAttack.OnChanged += _ => _timer.Start();
                 _timer.onEnd += () =>
                 {
                     if (_isChargingAttack.Value)
                     {
                         _heroEntity.Get<ITakeDamageComponent>().TakeDamage(damage.Value);
-                        _timer.ResetTimer();
+                        _timer.Start();
                     }
                 };
             }
         }
 
         [Serializable]
-        public class EnemyAI
+        public class EnemyAISection
         {
             [SerializeField] private Transform _transform;
             [HideInInspector] public AtomicVariable<Vector2> targetDirection = new AtomicVariable<Vector2>();
