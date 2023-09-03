@@ -25,12 +25,6 @@ namespace Homeworks6.Hero
         [Section]
         public HeroStatesSection heroStatesSection = new();
 
-        [Construct]
-        public void Init(HeroModel model)
-        {
-            playerMoveSection.Init(model);
-        }
-
         [Serializable]
         public class ShootSection
         {

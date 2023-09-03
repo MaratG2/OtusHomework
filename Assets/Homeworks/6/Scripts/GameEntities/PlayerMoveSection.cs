@@ -1,6 +1,7 @@
 using System;
 using Atomic;
 using Declarative;
+using Homeworks6.Hero;
 
 namespace Homeworks6
 {
@@ -12,7 +13,8 @@ namespace Homeworks6
         
         private AtomicVariable<bool> _moveRequired = new();
         
-        public void Init(DeclarativeModel model)
+        [Construct]
+        public void Init(HeroModel model)
         {
             moveSection.Init(model);
             moveSection.onMove += _ =>
