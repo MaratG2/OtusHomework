@@ -7,6 +7,6 @@ namespace Homeworks6.Bullet
     {
         [Section] 
         [SerializeField] 
-        public BulletModel_Core core = new BulletModel_Core();
+        public BulletModel_Core core = new();
     }
 }

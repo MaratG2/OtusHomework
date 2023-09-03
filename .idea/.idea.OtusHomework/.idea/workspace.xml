@@ -23,56 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Assembly-CSharp.dir/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Assembly-CSharp.dir/.idea/dictionaries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Assembly-CSharp.dir/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Assembly-CSharp.dir/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Assembly-CSharp.dir/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Assembly-CSharp.dir/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Assembly-CSharp.dir/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Assembly-CSharp.dir/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/DeathEventComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/DeathEventComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Models.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Models/KillsModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Models/KillsModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Models/KillsObserver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Models/KillsObserver.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/ExplosiveLLC.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetPacks/ExplosiveLLC.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/JMO Assets/Cartoon FX/Demo.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetPacks/JMO Assets/Cartoon FX/Demo.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/JMO Assets/Cartoon FX/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetPacks/JMO Assets/Cartoon FX/Scripts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Kevin Iglesias.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetPacks/Kevin Iglesias.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Prefabs/Bullet Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Prefabs/Bullet Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Prefabs/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Prefabs/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/BulletShooter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/BulletFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/BulletShooter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/BulletFactory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/Timer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Declarative/Declarative.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Declarative/Scripts/Declarative.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Declarative/Declarative.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Declarative/Scripts/Declarative.asmdef.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Declarative/Scripts/Utils/DelegateUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Declarative/Scripts/Utils/DelegateUtils.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_Core.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_View.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_View.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/HeroStatsComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/HeroStatsComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/riderModule.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_View.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_View.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/AutoShootState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/AutoShootState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/ShootState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/ShootState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_View.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_View.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Installers/Scene/GameSceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Installers/Scene/GameSceneInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Spawner/ZombieContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Spawner/ZombieContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/UI/StatsPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/UI/StatsPresenter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,16 +97,20 @@
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Spawner/ZombieContainer.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Models/KillsModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Models/KillsObserver.cs" />
-        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_Core.cs" />
         <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/Timer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" />
       </list>
     </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 4
+}]]></component>
   <component name="ProjectId" id="2PxpmqeYXLghpptNMV9yjjIcYAI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -159,12 +119,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Discover.Launch.Via.Unity" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="RiderCodeInspectionGeneratedSettingsId" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "homework6",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\DecompilerCache",
+      "C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\SourcesCache",
+      "C:\\Users\\god79\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files (x86)\Unity_Editors\2021.3.7f1\Editor\Unity.exe" />
@@ -194,8 +162,9 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -203,8 +172,9 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -233,7 +203,9 @@
       <workItem from="1690377879070" duration="10866000" />
       <workItem from="1691580998598" duration="170000" />
       <workItem from="1691581227939" duration="5909000" />
-      <workItem from="1691671637579" duration="1494000" />
+      <workItem from="1691671637579" duration="1592000" />
+      <workItem from="1691734382489" duration="608000" />
+      <workItem from="1693503665641" duration="757000" />
     </task>
     <servers />
   </component>
@@ -249,40 +221,9 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1690285898653">
-      <screen x="0" y="0" width="1920" height="1032" />
-    </state>
-    <state x="740" y="271" key="FileChooserDialogImpl/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1690285898653" />
-    <state x="754" y="216" key="RiderGenerateDialog" timestamp="1690381303184">
-      <screen x="0" y="0" width="1920" height="1032" />
-    </state>
-    <state x="754" y="216" key="RiderGenerateDialog/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1690381303184" />
-    <state x="491" y="161" key="SettingsEditor" timestamp="1691580792254">
-      <screen x="0" y="0" width="1920" height="1032" />
-    </state>
-    <state x="491" y="161" key="SettingsEditor/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1691580792254" />
-    <state width="498" height="445" key="SwitcherDM" timestamp="1690287981659">
-      <screen x="0" y="0" width="1920" height="1032" />
-    </state>
-    <state width="498" height="445" key="SwitcherDM/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1690287981659" />
-    <state x="488" y="256" width="943" height="520" key="find.popup" timestamp="1691583780093">
-      <screen x="0" y="0" width="1920" height="1032" />
-    </state>
-    <state x="488" y="256" width="943" height="520" key="find.popup/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1691583780093" />
-    <state x="601" y="242" width="700" height="530" key="recent.locations.popup" timestamp="1691575963599">
-      <screen x="0" y="0" width="1920" height="1032" />
-    </state>
-    <state x="601" y="242" width="700" height="530" key="recent.locations.popup/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1691575963599" />
-    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1690385876229">
-      <screen x="0" y="0" width="1920" height="1032" />
-    </state>
-    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1690385876229" />
   </component>
 </project>

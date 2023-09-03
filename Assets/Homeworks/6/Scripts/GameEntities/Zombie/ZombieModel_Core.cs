@@ -13,19 +13,19 @@ namespace Homeworks6.Zombie
     {
         [Section] 
         [SerializeField] 
-        public LifeSection lifeSection = new LifeSection();
+        public LifeSection lifeSection = new();
         
         [Section] 
         [SerializeField] 
-        public MoveSection moveSection = new MoveSection(true);
+        public MoveSection moveSection = new(true);
         
         [Section] 
         [SerializeField] 
-        public AttackSection attackSection = new AttackSection();
+        public AttackSection attackSection = new();
         
         [Section] 
         [SerializeField] 
-        public EnemyAISection enemyAISection = new EnemyAISection();
+        public EnemyAISection enemyAISection = new();
 
         [Construct]
         public void Init(ZombieModel model)
@@ -47,7 +47,7 @@ namespace Homeworks6.Zombie
         {
             [SerializeField] private CollisionObserver _collisionEngine;
             [SerializeField] public AtomicVariable<int> damage;
-            private AtomicVariable<bool> _isChargingAttack = new AtomicVariable<bool>();
+            private AtomicVariable<bool> _isChargingAttack = new();
             private HeroEntity _heroEntity;
             [SerializeReference] private Timer _timer;
 
@@ -89,7 +89,7 @@ namespace Homeworks6.Zombie
         public class EnemyAISection
         {
             [SerializeField] private Transform _transform;
-            [HideInInspector] public AtomicVariable<Vector2> targetDirection = new AtomicVariable<Vector2>();
+            [HideInInspector] public AtomicVariable<Vector2> targetDirection = new();
 
             [Construct]
             public void Init(ZombieModel model, MoveSection mover, LifeSection life)

@@ -6,7 +6,7 @@ namespace Homeworks6
 {
     public class Entity : MonoBehaviour
     {
-        private readonly List<object> components = new List<object>();
+        private readonly List<object> components = new();
         
         public T Get<T>()
         {

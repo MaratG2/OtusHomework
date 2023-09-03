@@ -11,21 +11,22 @@ namespace Homeworks6.Hero
     public class HeroModel_Core
     {
         [Section]
-        public LifeSection lifeSection = new LifeSection();
+        public LifeSection lifeSection = new();
 
         [Section]
-        public ShootSection shootSection = new ShootSection();
+        public ShootSection shootSection = new();
 
         [Section]
-        public ShootReloadSection shootReloadSection = new ShootReloadSection();
+        public ShootReloadSection shootReloadSection = new();
 
         [Section]
-        public MoveSection moveSection = new MoveSection(false);
+        public MoveSection moveSection = new(false);
         
+        //TODO: WHY VAR THERE
         [HideInInspector] public AtomicVariable<bool> moveRequired;
         
         [Section]
-        public HeroStatesSection heroStatesSection = new HeroStatesSection();
+        public HeroStatesSection heroStatesSection = new();
 
         [Construct]
         public void Init(HeroModel model)
@@ -50,7 +51,7 @@ namespace Homeworks6.Hero
         [Serializable]
         public class ShootSection
         {
-            [SerializeField] private BulletFactory _bulletFactory = new BulletFactory();
+            [SerializeField] private BulletFactory _bulletFactory = new();
             [SerializeReference] private Timer _shootTimer;
             [HideInInspector] public AtomicEvent onRequestShoot;
             [HideInInspector] public AtomicEvent onShootEvent;
@@ -106,23 +107,23 @@ namespace Homeworks6.Hero
                 currentBullets.Value = maxBullets.Value;
             }
         }
-
+        
         [Serializable]
         public class HeroStatesSection
         {
             public StateMachine<HeroStateType> stateMachine;
 
             [Section] 
-            public IdleState idleState = new IdleState();
+            public IdleState idleState = new();
 
             [Section] 
-            public RunState runState = new RunState();
+            public RunState runState = new();
             
             [Section] 
-            public ShootState shootState = new ShootState();
+            public ShootState shootState = new();
 
             [Section] 
-            public DeathState deathState = new DeathState();
+            public DeathState deathState = new();
 
             [Construct]
             public void Construct(HeroModel model)

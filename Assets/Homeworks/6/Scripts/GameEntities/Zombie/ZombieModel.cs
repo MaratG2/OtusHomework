@@ -11,11 +11,11 @@ namespace Homeworks6.Zombie
         
         [Section]
         [SerializeField]
-        public ZombieModel_Core core = new ZombieModel_Core();
+        public ZombieModel_Core core = new();
 
         [Section]
         [SerializeField]
-        public ZombieModel_View view = new ZombieModel_View();
+        public ZombieModel_View view = new();
 
         public AtomicEvent<HeroEntity> onConstruct;
         

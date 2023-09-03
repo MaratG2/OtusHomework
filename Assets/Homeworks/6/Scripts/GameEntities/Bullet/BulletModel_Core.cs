@@ -13,15 +13,15 @@ namespace Homeworks6.Bullet
     {
         [Section] 
         [SerializeField] 
-        public LifeTimerSection lifeTimerSection = new LifeTimerSection();
+        public LifeTimerSection lifeTimerSection = new();
         
         [Section] 
         [SerializeField] 
-        public MoveSection moveSection = new MoveSection(true);
+        public MoveSection moveSection = new(true);
 
         [Section] 
         [SerializeField] 
-        public CollisionDamageSection collisionDamageSection = new CollisionDamageSection();
+        public CollisionDamageSection collisionDamageSection = new();
 
         [Construct]
         public void Init(BulletModel model)

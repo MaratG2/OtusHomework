@@ -15,7 +15,7 @@ namespace Homeworks6
         [HideInInspector] public AtomicEvent<Vector2> onMove;
         [HideInInspector] public AtomicEvent<float> onMoveEvent;
 
-        private AtomicVariable<bool> _isMoving = new AtomicVariable<bool>(false);
+        private AtomicVariable<bool> _isMoving = new(false);
         [HideInInspector] public AtomicEvent onMoveStart;
         [HideInInspector] public AtomicEvent onMoveFinish;
         private bool _wasMoving = false;

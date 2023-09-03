@@ -32,7 +32,7 @@ public class CFX_Demo_New : MonoBehaviour
 	private Vector3 defaultCamPosition;
 	private Quaternion defaultCamRotation;
 	
-	private List<GameObject> onScreenParticles = new List<GameObject>();
+	private List<GameObject> onScreenParticles = new();
 	
 	//-------------------------------------------------------------
 	

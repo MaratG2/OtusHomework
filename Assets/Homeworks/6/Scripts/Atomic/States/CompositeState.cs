@@ -4,7 +4,7 @@ namespace Atomic
 {
     public class CompositeState : IState
     {
-        private List<IState> _states = new List<IState>();
+        private List<IState> _states = new();
         
         void IState.Enter()
         {

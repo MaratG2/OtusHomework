@@ -26,7 +26,7 @@ namespace Atomic
         private TKey currentKey;
 
         private IState currentState;
-        private Dictionary<TKey, IState> states = new Dictionary<TKey, IState>();
+        private Dictionary<TKey, IState> states = new();
         private Action<TKey> onStateSwitched;
 
         public virtual void SwitchState(TKey key)

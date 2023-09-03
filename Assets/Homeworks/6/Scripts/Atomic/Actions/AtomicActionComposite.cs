@@ -7,8 +7,8 @@ namespace Atomic
     [Serializable]
     public class AtomicActionComposite : IAtomicAction
     {
-        private readonly List<IAtomicAction> actions = new List<IAtomicAction>();
-        private readonly List<IAtomicAction> cache = new List<IAtomicAction>();
+        private readonly List<IAtomicAction> actions = new();
+        private readonly List<IAtomicAction> cache = new();
         
         public static AtomicActionComposite operator +(AtomicActionComposite it, IAtomicAction action)
         {
@@ -49,8 +49,8 @@ namespace Atomic
     [Serializable]
     public class AtomicActionComposite<T> : IAtomicAction<T>
     {
-        private readonly List<IAtomicAction<T>> actions = new List<IAtomicAction<T>>();
-        private readonly List<IAtomicAction<T>> cache = new List<IAtomicAction<T>>();
+        private readonly List<IAtomicAction<T>> actions = new();
+        private readonly List<IAtomicAction<T>> cache = new();
 
         public static AtomicActionComposite<T> operator +(AtomicActionComposite<T> it, IAtomicAction<T> action)
         {

@@ -7,10 +7,10 @@ namespace Homeworks6.Hero
     {
         [Section] 
         [SerializeField] 
-        public HeroModel_Core core = new HeroModel_Core();
+        public HeroModel_Core core = new();
 
         [Section] 
         [SerializeField] 
-        public HeroModel_View view = new HeroModel_View();
+        public HeroModel_View view = new();
     }
 }

@@ -8,7 +8,7 @@ namespace Homeworks6.Spawner
 {
     public static class ZombieContainer
     {
-        private static List<ZombieEntity> _zombies = new List<ZombieEntity>();
+        private static List<ZombieEntity> _zombies = new();
         public static List<ZombieEntity> Zombies => _zombies;
 
         public static event Action OnZombieDeath; 

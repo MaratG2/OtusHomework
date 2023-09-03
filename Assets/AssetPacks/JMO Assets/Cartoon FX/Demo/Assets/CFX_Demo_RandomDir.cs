@@ -5,8 +5,8 @@ using System.Collections;
 
 public class CFX_Demo_RandomDir : MonoBehaviour
 {
-	public Vector3 min = new Vector3(0,0,0);
-	public Vector3 max = new Vector3(0,360,0);
+	public Vector3 min = new(0,0,0);
+	public Vector3 max = new(0,360,0);
 	
 	void Start ()
 	{
