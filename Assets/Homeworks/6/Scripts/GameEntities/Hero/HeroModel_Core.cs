@@ -51,6 +51,10 @@ namespace Homeworks6.Hero
                         onShootEvent?.Invoke();
                     }
                 });
+                onShootEvent += () =>
+                {
+                    shootReloader.ammo.RemoveAmmo();
+                };
             }
         }
 
@@ -62,16 +66,12 @@ namespace Homeworks6.Hero
             [SerializeReference] private Timer _timer;
 
             [Construct]
-            public void Init(ShootSection shooter, HeroModel model)
+            public void Init(HeroModel model)
             {
                 _timer.Start();
                 _timer.onEnd += () =>
                 {
                    ammo.AddAmmo();
-                };
-                shooter.onShootEvent += () =>
-                {
-                    ammo.RemoveAmmo();
                 };
             }
         }
