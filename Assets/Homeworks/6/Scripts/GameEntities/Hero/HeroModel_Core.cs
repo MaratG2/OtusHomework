@@ -44,7 +44,7 @@ namespace Homeworks6.Hero
                 _shootTimer.Start();
                 onRequestShoot.AddListener(() =>
                 {
-                    if (shootReloader.hasBullets.Value && !_shootTimer.IsPlaying && !life.isDead.Value)
+                    if (shootReloader.ammo.hasBullets.Value && !_shootTimer.IsPlaying && !life.isDead.Value)
                     {
                         _shootTimer.Start();
                         _bulletFactory.Create();
@@ -57,16 +57,35 @@ namespace Homeworks6.Hero
         [Serializable]
         public class ShootReloadSection
         {
-            [SerializeField] public AtomicVariable<int> maxBullets;
-            [HideInInspector] public AtomicVariable<int> currentBullets;
-            [HideInInspector] public AtomicVariable<bool> hasBullets;
-            [HideInInspector] public AtomicEvent onReload;
+            [Section] 
+            public BulletAmmo ammo;
             [SerializeReference] private Timer _timer;
 
             [Construct]
             public void Init(ShootSection shooter, HeroModel model)
             {
                 _timer.Start();
+                _timer.onEnd += () =>
+                {
+                   ammo.AddAmmo();
+                };
+                shooter.onShootEvent += () =>
+                {
+                    ammo.RemoveAmmo();
+                };
+            }
+        }
+
+        [Serializable]
+        public class BulletAmmo
+        {
+            [SerializeField] public AtomicVariable<int> maxBullets;
+            [HideInInspector] public AtomicVariable<int> currentBullets;
+            [HideInInspector] public AtomicVariable<bool> hasBullets;
+
+            [Construct]
+            public void Init()
+            {
                 currentBullets.OnChanged += newBullets =>
                 {
                     if (newBullets <= 0)
@@ -74,19 +93,24 @@ namespace Homeworks6.Hero
                     else
                         hasBullets.Value = true;
                 };
-                _timer.onEnd += () =>
+                
+                currentBullets.Value = maxBullets.Value;
+            }
+
+            public void AddAmmo()
+            {
+                if (currentBullets.Value < maxBullets.Value)
                 {
-                    if (currentBullets.Value < maxBullets.Value)
-                    {
-                        currentBullets.Value++;
-                        onReload?.Invoke();
-                    }
-                };
-                shooter.onShootEvent += () =>
+                    currentBullets.Value++;
+                }
+            }
+
+            public void RemoveAmmo()
+            {
+                if (currentBullets.Value > 0)
                 {
                     currentBullets.Value--;
-                };
-                currentBullets.Value = maxBullets.Value;
+                }
             }
         }
         

@@ -19,8 +19,8 @@ namespace Homeworks6.Hero
             this.Add(new HeroStatsComponent
                 (
                     _model.core.lifeSection.health,
-                    _model.core.shootReloadSection.currentBullets,
-                    _model.core.shootReloadSection.maxBullets
+                    _model.core.shootReloadSection.ammo.currentBullets,
+                    _model.core.shootReloadSection.ammo.maxBullets
                 ));
             this.Add(new DeathEventComponent(_model.core.lifeSection.onDeath));
             this.Add(new TargetComponent(_model.core.target));

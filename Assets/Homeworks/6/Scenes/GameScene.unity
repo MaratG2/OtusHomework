@@ -3606,12 +3606,13 @@ MonoBehaviour:
       _shootTimer:
         rid: 1925732183023026176
     shootReloadSection:
-      maxBullets:
-        value: 10
-      currentBullets:
-        value: 10
-      hasBullets:
-        value: 1
+      ammo:
+        maxBullets:
+          value: 10
+        currentBullets:
+          value: 0
+        hasBullets:
+          value: 0
       _timer:
         rid: 1925732183023026177
     target:
