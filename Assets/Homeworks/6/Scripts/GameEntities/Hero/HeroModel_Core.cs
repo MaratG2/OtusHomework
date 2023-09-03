@@ -152,14 +152,14 @@ namespace Homeworks6.Hero
                 {
                     stateMachine.SwitchState(HeroStateType.Death);
                 };
-                move.onMoveStart += () =>
+                move.moveEngine.onMoveStart += () =>
                 {
                     if (stateMachine.CurrentState != HeroStateType.Death)
                     {
                         stateMachine.SwitchState(HeroStateType.Run);
                     }
                 };
-                move.onMoveFinish += () =>
+                move.moveEngine.onMoveFinish += () =>
                 {
                     if (stateMachine.CurrentState != HeroStateType.Death)
                     {

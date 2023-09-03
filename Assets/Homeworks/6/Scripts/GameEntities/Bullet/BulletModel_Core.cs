@@ -29,7 +29,7 @@ namespace Homeworks6.Bullet
             moveSection.Init(model);
             model.onFixedUpdate += deltaTime =>
             {
-                moveSection.onMoveEvent.Invoke(deltaTime);
+                moveSection.moveEngine.onMoveEvent.Invoke(deltaTime);
             };
         }
         

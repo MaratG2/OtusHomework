@@ -17,12 +17,12 @@ namespace Homeworks6.Hero.States
         
         void IState.Enter()
         {
-            _move.IsEnabled = true;
+            _move.IsEnabled.Value = true;
         }
 
         void IState.Exit()
         {
-            _move.IsEnabled = false;
+            _move.IsEnabled.Value = false;
         }
     }
 }

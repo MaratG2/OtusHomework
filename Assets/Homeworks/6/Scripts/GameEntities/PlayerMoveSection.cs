@@ -2,7 +2,6 @@ using System;
 using Atomic;
 using Declarative;
 using Homeworks6.Hero;
-using Homeworks6.Hero.Custom;
 
 namespace Homeworks6
 {
@@ -18,7 +17,7 @@ namespace Homeworks6
         public void Init(HeroModel model)
         {
             moveSection.Init(model);
-            moveSection.onMove += _ =>
+            moveSection.moveEngine.onMove += _ =>
             {
                 _moveRequired.Value = true;
             };
@@ -26,7 +25,7 @@ namespace Homeworks6
             {
                 if (_moveRequired.Value)
                 {
-                    moveSection.onMoveEvent.Invoke(deltaTime);
+                    moveSection.moveEngine.onMoveEvent.Invoke(deltaTime);
                     _moveRequired.Value = false;
                 }
             };

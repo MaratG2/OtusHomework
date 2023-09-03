@@ -34,7 +34,7 @@ namespace Homeworks6.Zombie
             model.onUpdate += deltaTime =>
             {
                 if (!lifeSection.isDead.Value)
-                    moveSection.onMoveEvent.Invoke(deltaTime);
+                    moveSection.moveEngine.onMoveEvent.Invoke(deltaTime);
             };
             lifeSection.onDeath.AddListener(() =>
             {
@@ -102,7 +102,7 @@ namespace Homeworks6.Zombie
                 targetDirection.OnChanged += dir =>
                 {
                     if (!life.isDead.Value)
-                        mover.onMove?.Invoke(dir);
+                        mover.moveEngine.onMove?.Invoke(dir);
                 };
             }
         }
