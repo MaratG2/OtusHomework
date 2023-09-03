@@ -20,10 +20,7 @@ namespace Homeworks6.Hero
         public ShootReloadSection shootReloadSection = new();
 
         [Section]
-        public MoveSection moveSection = new(false);
-        
-        //TODO: WHY VAR THERE
-        [HideInInspector] public AtomicVariable<bool> moveRequired;
+        public PlayerMoveSection playerMoveSection = new();
         
         [Section]
         public HeroStatesSection heroStatesSection = new();
@@ -31,21 +28,7 @@ namespace Homeworks6.Hero
         [Construct]
         public void Init(HeroModel model)
         {
-            moveSection.Init(model);
-
-            //TODO: WHY LOGIC IN INIT
-            moveSection.onMove += dir =>
-            {
-                moveRequired.Value = true;
-            };
-            model.onFixedUpdate += deltaTime =>
-            {
-                if (moveRequired.Value)
-                {
-                    moveSection.onMoveEvent.Invoke(deltaTime);
-                    moveRequired.Value = false;
-                }
-            };
+            playerMoveSection.Init(model);
         }
 
         [Serializable]

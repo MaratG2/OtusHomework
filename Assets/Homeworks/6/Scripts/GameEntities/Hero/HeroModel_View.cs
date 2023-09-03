@@ -1,6 +1,7 @@
 using System;
 using Atomic;
 using Declarative;
+using Homeworks6.Custom;
 using Homeworks6.Hero.States;
 using UnityEngine;
 
@@ -10,11 +11,8 @@ namespace Homeworks6.Hero
     public class HeroModel_View
     {
         public AnimatorStateMachine<HeroAnimationStateType> animatorMachine;
-        [SerializeField] private ParticleSystem _shootVFX;
-        [SerializeField] private ParticleSystem _deathVFX;
-        [SerializeField] private AudioSource _audioSource;
-        [SerializeField] private AudioClip _shootSFX;
-        [SerializeField] private AudioClip _deathSFX;
+        [SerializeReference] private IFX _deathFX;
+        [SerializeReference] private IFX _shootFX;
         [SerializeField] private Transform _transform;
         [HideInInspector] public AtomicEvent<Vector3> onRotate;
         private HeroModel_Core.HeroStatesSection _heroStatesSection;
@@ -36,15 +34,9 @@ namespace Homeworks6.Hero
             animatorMachine.OnMessageReceived += msg =>
             {
                 if (msg == "shoot")
-                {
-                    _shootVFX.Play();
-                    _audioSource.PlayOneShot(_shootSFX);
-                }
+                    _shootFX.Play();
                 else if (msg == "death")
-                {
-                    _deathVFX.Play();
-                    _audioSource.PlayOneShot(_deathSFX);
-                }
+                    _deathFX.Play();
             };
         }
 

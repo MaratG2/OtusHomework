@@ -12,7 +12,7 @@ namespace Homeworks6.Hero
         {
             _model = GetComponent<HeroModel>();
 
-            this.Add(new MoveComponent(_model.core.moveSection.onMove));
+            this.Add(new MoveComponent(_model.core.playerMoveSection.moveSection.onMove));
             this.Add(new ShootComponent(_model.core.shootSection.onRequestShoot));
             this.Add(new RotateComponent(_model.view.onRotate));
             this.Add(new TakeDamageComponent(_model.core.lifeSection.onTakeDamage));
@@ -22,6 +22,7 @@ namespace Homeworks6.Hero
                     _model.core.shootReloadSection.currentBullets,
                     _model.core.shootReloadSection.maxBullets
                 ));
+            this.Add(new DeathEventComponent(_model.core.lifeSection.onDeath));
         }
     }
 }

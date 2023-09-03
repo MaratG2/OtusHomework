@@ -3614,25 +3614,23 @@ MonoBehaviour:
         value: 1
       _timer:
         rid: 1925732183023026177
-    moveSection:
-      IsEnabled: 0
-      _transform: {fileID: 1189594281}
-      maxSpeed:
-        value: 5
-      Direction:
-        value: {x: 0, y: 0, z: 0}
-    moveRequired:
-      value: 0
+    playerMoveSection:
+      moveSection:
+        IsEnabled: 1
+        _transform: {fileID: 1189594281}
+        maxSpeed:
+          value: 5
+        Direction:
+          value: {x: 0, y: 0, z: 0}
     heroStatesSection: {}
   view:
     animatorMachine:
       animator: {fileID: 433075505}
       dispatcher: {fileID: 433075506}
-    _shootVFX: {fileID: 1772985568}
-    _deathVFX: {fileID: 6511182}
-    _audioSource: {fileID: 485013797}
-    _shootSFX: {fileID: 8300000, guid: 05456ee4868a0114e84cf56b561424f8, type: 3}
-    _deathSFX: {fileID: 8300000, guid: 4811a1f8ead61a74ca8c39d8c550686e, type: 3}
+    _deathFX:
+      rid: 4779643096955355136
+    _shootFX:
+      rid: 4779643096955355137
     _transform: {fileID: 1189594281}
   references:
     version: 2
@@ -3647,6 +3645,18 @@ MonoBehaviour:
       data:
         _maxTime: 2
         _isAuto: 1
+    - rid: 4779643096955355136
+      type: {class: DefaultFX, ns: Homeworks6.Custom, asm: Assembly-CSharp}
+      data:
+        _audioSource: {fileID: 485013797}
+        _VFX: {fileID: 6511182}
+        _SFX: {fileID: 8300000, guid: 4811a1f8ead61a74ca8c39d8c550686e, type: 3}
+    - rid: 4779643096955355137
+      type: {class: DefaultFX, ns: Homeworks6.Custom, asm: Assembly-CSharp}
+      data:
+        _audioSource: {fileID: 485013797}
+        _VFX: {fileID: 1772985568}
+        _SFX: {fileID: 8300000, guid: 05456ee4868a0114e84cf56b561424f8, type: 3}
 --- !u!136 &1189594283
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3819,6 +3829,7 @@ Transform:
   m_Children:
   - {fileID: 159812681}
   - {fileID: 643235688}
+  - {fileID: 2017160533}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4244,6 +4255,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1772985567}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2017160532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2017160533}
+  - component: {fileID: 2017160534}
+  m_Layer: 0
+  m_Name: DeathController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2017160533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017160532}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1356904899}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2017160534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017160532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f1da85a5e5924418b83db31cfe7eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1980450348533929280
 RectTransform:
   m_ObjectHideFlags: 0
