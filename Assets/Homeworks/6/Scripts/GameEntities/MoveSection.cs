@@ -8,11 +8,12 @@ namespace Homeworks6
     [Serializable]
     public class MoveSection
     {
+        public MoveEngine moveEngine = new();
+        
         public AtomicVariable<bool> IsEnabled = new();
         [SerializeField] private Transform _transform;
         [SerializeField] public AtomicVariable<float> maxSpeed;
         [HideInInspector] public AtomicVariable<Vector3> Direction;
-        public MoveEngine moveEngine = new();
         
         public MoveSection(bool isEnabled)
         {
