@@ -2,6 +2,7 @@ using System;
 using Atomic;
 using Declarative;
 using Homeworks6.Custom;
+using Homeworks6.Hero.Custom;
 using Homeworks6.Hero.States;
 using UnityEngine;
 
@@ -16,6 +17,9 @@ namespace Homeworks6.Hero
         [SerializeField] private Transform _transform;
         [HideInInspector] public AtomicEvent<Vector3> onRotate;
         private HeroModel_Core.HeroStatesSection _heroStatesSection;
+        
+        [Section] 
+        public RotateTowardsObserver _rotateTowardsObserver = new();
 
         [Construct]
         public void Construct(HeroModel_Core.HeroStatesSection heroStatesSection)

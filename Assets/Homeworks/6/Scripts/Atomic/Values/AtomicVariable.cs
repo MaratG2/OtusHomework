@@ -24,8 +24,13 @@ namespace Atomic
             get { return this.value; }
             set
             {
-                if (!this.value.Equals(value))
-                    this.onUniqueChanged?.Invoke(value);
+                if (value != null)
+                {
+                    if(this.value == null)
+                        this.onUniqueChanged?.Invoke(value);
+                    else if(!this.value.Equals(value))
+                        this.onUniqueChanged?.Invoke(value);
+                }
                 
                 this.value = value;
                 this.onChanged?.Invoke(value);

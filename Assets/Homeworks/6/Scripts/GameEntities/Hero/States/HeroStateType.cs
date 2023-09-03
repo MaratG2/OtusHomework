@@ -4,7 +4,6 @@ namespace Homeworks6.Hero.States
     {
         Idle,
         Run,
-        Shoot,
         Death
     }
 }

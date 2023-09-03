@@ -23,6 +23,8 @@ namespace Homeworks6.Hero
                     _model.core.shootReloadSection.maxBullets
                 ));
             this.Add(new DeathEventComponent(_model.core.lifeSection.onDeath));
+            this.Add(new TargetComponent(_model.core.target));
+            this.Add(new TransformComponent(_model.transform));
         }
     }
 }

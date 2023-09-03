@@ -23,20 +23,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Controllers.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Controllers/DeathController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Controllers/DeathController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/FX.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/FX.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/IFX.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Custom/IFX.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/PlayerMoveSection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/PlayerMoveSection.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Controllers/ClosestZombieController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Controllers/ClosestZombieController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/TargetComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/TargetComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/TransformComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Components/TransformComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/Custom.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/Custom/AutoShootObserver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/Custom/RotateTowardsObserver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/Custom/RotateTowardsObserver.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/Values/AtomicVariable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Atomic/Values/AtomicVariable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_View.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_View.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/AutoShootState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/AutoShootState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/Custom/AutoShootObserver.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/HeroStateType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/HeroStateType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/ShootState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/ShootState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/PlayerMoveSection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/PlayerMoveSection.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +56,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Controllers/DeathController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/6/Scripts/Controllers/GameEndController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/Custom/RotateTowardsObserver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/TestFramework/ZenjectTestUtil.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/UnitTests/Editor/Conditions/TestConditionsTargetInstance.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.0.7/Editor/EditorCore/DestroyListener.cs" root0="SKIP_HIGHLIGHTING" />
@@ -134,7 +142,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "homework6",
     "last_opened_file_path": "C:/Unity_Projects/OtusHomework/Assets/Homeworks/6",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "preferences.build.unityPlugin"
   },
   "keyToStringList": {
     "rider.external.source.directories": [
@@ -217,7 +225,7 @@
       <workItem from="1691671637579" duration="1592000" />
       <workItem from="1691734382489" duration="608000" />
       <workItem from="1693503665641" duration="757000" />
-      <workItem from="1693739501493" duration="3333000" />
+      <workItem from="1693739501493" duration="6680000" />
     </task>
     <servers />
   </component>
@@ -237,5 +245,9 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

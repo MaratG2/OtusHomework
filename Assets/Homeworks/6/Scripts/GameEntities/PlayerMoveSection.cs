@@ -2,6 +2,7 @@ using System;
 using Atomic;
 using Declarative;
 using Homeworks6.Hero;
+using Homeworks6.Hero.Custom;
 
 namespace Homeworks6
 {

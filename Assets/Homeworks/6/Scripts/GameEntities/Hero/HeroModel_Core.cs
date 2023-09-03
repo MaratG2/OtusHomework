@@ -2,6 +2,7 @@ using System;
 using Atomic;
 using Declarative;
 using Homeworks6.Custom;
+using Homeworks6.Hero.Custom;
 using Homeworks6.Hero.States;
 using UnityEngine;
 
@@ -15,19 +16,23 @@ namespace Homeworks6.Hero
 
         [Section]
         public ShootSection shootSection = new();
-
+        
         [Section]
         public ShootReloadSection shootReloadSection = new();
-
+        public AtomicVariable<Entity> target = new();
+        
         [Section]
         public PlayerMoveSection playerMoveSection = new();
         
         [Section]
         public HeroStatesSection heroStatesSection = new();
-
+        
         [Serializable]
         public class ShootSection
         {
+            [Section] 
+            public AutoShootObserver autoShootObserver = new();
+            
             [SerializeField] private BulletFactory _bulletFactory = new();
             [SerializeReference] private Timer _shootTimer;
             [HideInInspector] public AtomicEvent onRequestShoot;
@@ -95,9 +100,6 @@ namespace Homeworks6.Hero
 
             [Section] 
             public RunState runState = new();
-            
-            [Section] 
-            public ShootState shootState = new();
 
             [Section] 
             public DeathState deathState = new();
@@ -107,14 +109,13 @@ namespace Homeworks6.Hero
             {
                 model.onStart += () =>
                 {
-                    stateMachine.SwitchState(HeroStateType.Shoot);
+                    stateMachine.SwitchState(HeroStateType.Idle);
                     stateMachine.Enter();
                 };
 
                 stateMachine.SetupStates(
                     (HeroStateType.Idle, idleState),
                     (HeroStateType.Run, runState),
-                    (HeroStateType.Shoot, shootState),
                     (HeroStateType.Death, deathState)
                     );
             }
@@ -136,32 +137,9 @@ namespace Homeworks6.Hero
                 };
                 move.onMoveFinish += () =>
                 {
-                    if (stateMachine.CurrentState != HeroStateType.Death && 
-                        shootReloadSection.currentBullets.Value > 0)
-                    {
-                        stateMachine.SwitchState(HeroStateType.Shoot);
-                    }
-                    if (stateMachine.CurrentState != HeroStateType.Death && 
-                        shootReloadSection.currentBullets.Value == 0)
+                    if (stateMachine.CurrentState != HeroStateType.Death)
                     {
                         stateMachine.SwitchState(HeroStateType.Idle);
-                    }
-                };
-                shootSection.onShootEvent += () =>
-                {
-                    if (stateMachine.CurrentState != HeroStateType.Death && 
-                        shootReloadSection.currentBullets.Value == 0)
-                    {
-                        stateMachine.SwitchState(HeroStateType.Idle);
-                    }
-                };
-                shootReloadSection.onReload += () =>
-                {
-                    if (stateMachine.CurrentState != HeroStateType.Death && 
-                        shootReloadSection.currentBullets.Value > 0 &&
-                        stateMachine.CurrentState != HeroStateType.Run)
-                    {
-                        stateMachine.SwitchState(HeroStateType.Shoot);
                     }
                 };
             }
