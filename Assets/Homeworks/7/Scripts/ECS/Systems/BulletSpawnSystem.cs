@@ -27,6 +27,7 @@ namespace Homework7.Ecs.Systems
                 
                 var positionC = _positionPool.Value.Get(entity);
                 Vector3 spawnPos = new Vector3(positionC.position.x, 0.5f, positionC.position.y);
+                _positionPool.Value.Del(entity);
                 var bullet = Object.Instantiate
                     (_data.Value.prefabBullet, spawnPos, Quaternion.identity, _data.Value.parent);
                 bullet.Init(systems.GetWorld());
