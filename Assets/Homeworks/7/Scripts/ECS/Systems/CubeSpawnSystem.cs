@@ -31,6 +31,7 @@ namespace Homework7.Ecs.Systems
                 var cubeTeam = poolTeam.Get(entity);
 
                 Vector3 spawnPos = new Vector3(cubePosition.position.x, 0.5f, cubePosition.position.y);
+                poolPositions.Del(entity);
                 var newCube = Object.Instantiate
                     (_data.Value.prefabCube, spawnPos, Quaternion.identity, _data.Value.parent);
                 newCube.Init(world);
