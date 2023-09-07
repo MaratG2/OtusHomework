@@ -23,6 +23,7 @@ namespace Homework7.Ecs
                 .Add(new MovementSystem())
                 .Add(new FightSystem())
                 .Add(new BulletInitializer())
+                .Add(new BulletDirectionSystem())
                 .Add(new BulletSpawnSystem())
                 .Add(new DamageSystem())
                 .Add(new CheckHealthSystem())

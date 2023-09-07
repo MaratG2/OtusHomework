@@ -9,7 +9,7 @@ namespace Homework7.Ecs.Systems
 {
     public struct BulletSpawnSystem : IEcsRunSystem
     {
-        private readonly EcsFilterInject<Inc<BulletTag_C, RequireSpawn_C>> _bulletFilter;
+        private readonly EcsFilterInject<Inc<Bullet_C, RequireSpawn_C>> _bulletFilter;
         private readonly EcsPoolInject<View_C> _viewPool;
         private readonly EcsPoolInject<RequireSpawn_C> _requireSpawnPool;
         private readonly EcsPoolInject<Position_C> _positionPool;

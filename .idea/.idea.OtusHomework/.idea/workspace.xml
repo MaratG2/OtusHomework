@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,22 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Bullet.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Bullet/BulletView_C.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Bullet/BulletView_C.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/CubeView_C.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/CubeView_C.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Bullet/BulletTag_C.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Bullet/BulletTag_C.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/EcsStartup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/EcsStartup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BorderCheckSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BorderCheckSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BulletInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BulletInitializer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BulletSpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BulletSpawnSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeSpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeSpawnSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/DestroySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/DestroySystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/MovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/MovementSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/8.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,11 +116,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="Discover.Launch.Via.Unity" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "homework7"
+  }
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files (x86)\Unity_Editors\2021.3.7f1\Editor\Unity.exe" />
@@ -195,7 +188,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
