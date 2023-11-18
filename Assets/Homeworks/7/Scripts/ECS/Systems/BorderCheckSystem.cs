@@ -10,7 +10,7 @@ namespace Homework7.Ecs.Systems
         private readonly EcsFilterInject<Inc<View_C>> _viewFilter;
         private readonly EcsPoolInject<View_C> _viewPool;
         private readonly EcsPoolInject<RequireDeath_C> _requireDeathPool;
-        private readonly EcsCustomInject<SharedData> _data;
+        private readonly EcsCustomInject<WorldSO> _worldData;
 
         public void Run(IEcsSystems systems)
         {
@@ -19,7 +19,7 @@ namespace Homework7.Ecs.Systems
                 ref var viewC = ref _viewPool.Value.Get(entity);
                 var viewPos = viewC.view.transform.position;
                 
-                if (CheckOutOfBounds.IsOut(viewPos, _data.Value))
+                if (CheckOutOfBounds.IsOut(viewPos, _worldData.Value))
                     _requireDeathPool.Value.Add(entity);
             }
         }

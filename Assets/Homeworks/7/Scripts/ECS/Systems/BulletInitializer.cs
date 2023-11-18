@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Homework7.Ecs.Components;
 using Homework7.Ecs.Components.Bullet;
 using Homework7.Ecs.Components.Cube;
@@ -14,7 +15,7 @@ namespace Homework7.Ecs.Systems
         private readonly EcsFilterInject<Inc<Fight_C>> _fightFilter;
         private readonly EcsPoolInject<Fight_C> _fightPool;
         private readonly EcsPoolInject<Team_C> _teamPool;
-        private readonly EcsCustomInject<SharedData> _data;
+        private readonly EcsCustomInject<List<CubeSO>> _cubeDatas;
         private readonly EcsWorldInject _world;
         
         public void Run(IEcsSystems systems)
@@ -51,12 +52,13 @@ namespace Homework7.Ecs.Systems
             requireSpawnPool.Add(entity);
             positionPool.Add(entity).position = new Vector2(origin.transform.position.x, origin.transform.position.z);
             Team team = _teamPool.Value.Get(origin.GetComponent<EcsMonoObject>().GetEntity()).team;
+            CubeSO cubeData = _cubeDatas.Value[(int)team]; 
             _teamPool.Value.Add(entity).team = team;
             ref var movementC = ref movementPool.Add(entity);
             movementC.isMoving = true;
-            movementC.movementSpeed = _data.Value.bulletSpeed;
+            movementC.movementSpeed = cubeData.BulletSpeed;
             rendererPool.Add(entity);
-            colorPool.Add(entity).color = team == Team.Blue ? _data.Value.colorBlue : _data.Value.colorRed;;
+            colorPool.Add(entity).color = cubeData.Color;
         }
     }
 }

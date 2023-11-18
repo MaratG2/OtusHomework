@@ -10,7 +10,7 @@ namespace Homework7.Ecs.Systems
     public struct SetSpawnPositionSystem : IEcsInitSystem
     {
         private EcsFilterInject<Inc<Position_C, Team_C>> _positionTeamFilter;
-        private EcsCustomInject<SharedData> _data;
+        private EcsCustomInject<WorldSO> _worldData;
         public void Init(IEcsSystems systems)
         {
             var poolPositions = _positionTeamFilter.Pools.Inc1;
@@ -26,14 +26,14 @@ namespace Homework7.Ecs.Systems
                 int id = entity;
                 if (teamC.team == Team.Blue)
                 {
-                    posX = _data.Value.leftPoint.x - _data.Value.gap * (id % 10);
-                    posY = _data.Value.leftPoint.y - _data.Value.gap * (id / 10);
+                    posX = _worldData.Value.LeftPoint.x - _worldData.Value.Gap * (id % 10);
+                    posY = _worldData.Value.LeftPoint.y - _worldData.Value.Gap * (id / 10);
                 }
                 else
                 {
                     id -= 100;
-                    posX = _data.Value.rightPoint.x + _data.Value.gap * (id % 10);
-                    posY = _data.Value.rightPoint.y - _data.Value.gap * (id / 10);
+                    posX = _worldData.Value.RightPoint.x + _worldData.Value.Gap * (id % 10);
+                    posY = _worldData.Value.RightPoint.y - _worldData.Value.Gap * (id / 10);
                 }
                 positionC.position = new Vector2(posX, posY);
             }

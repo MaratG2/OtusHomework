@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Homework7.Ecs.Systems;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
@@ -7,10 +8,13 @@ namespace Homework7.Ecs
 {
     public sealed class EcsStartup : MonoBehaviour 
     {
+        [SerializeField] private WorldSO _worldData;
+        [SerializeField] private SpawnSO _spawnData;
+        [SerializeField] private List<CubeSO> _cubeDatas;
+        
         private EcsWorld _world;        
         private IEcsSystems _systems;
-        [SerializeField] private SharedData _data;
-
+        
         private void Start() 
         {
             _world = new EcsWorld();
@@ -32,7 +36,9 @@ namespace Homework7.Ecs
 #if UNITY_EDITOR
                 .Add (new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem ())
 #endif
-                .Inject(_data)
+                .Inject(_worldData)
+                .Inject(_spawnData)
+                .Inject(_cubeDatas)
                 .Init();
         }
 
@@ -51,7 +57,7 @@ namespace Homework7.Ecs
             
             if (_world != null) 
             {
-                _world.Destroy ();
+                _world.Destroy();
                 _world = null;
             }
         }

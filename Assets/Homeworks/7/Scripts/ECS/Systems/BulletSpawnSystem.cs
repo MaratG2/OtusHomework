@@ -15,7 +15,7 @@ namespace Homework7.Ecs.Systems
         private readonly EcsPoolInject<Position_C> _positionPool;
         private readonly EcsPoolInject<Renderer_C> _rendererPool;
         private readonly EcsPoolInject<Rigidbody_C> _rigidbodyPool;
-        private readonly EcsCustomInject<SharedData> _data;
+        private readonly EcsCustomInject<SpawnSO> _spawnData;
         
         public void Run(IEcsSystems systems)
         {
@@ -29,7 +29,7 @@ namespace Homework7.Ecs.Systems
                 Vector3 spawnPos = new Vector3(positionC.position.x, 0.5f, positionC.position.y);
                 _positionPool.Value.Del(entity);
                 var bullet = Object.Instantiate
-                    (_data.Value.prefabBullet, spawnPos, Quaternion.identity, _data.Value.parent);
+                    (_spawnData.Value.PrefabBullet, spawnPos, Quaternion.identity, _spawnData.Value.Root);
                 bullet.Init(systems.GetWorld());
                 bullet.PackEntity(entity);
                 viewC.view = bullet.gameObject;

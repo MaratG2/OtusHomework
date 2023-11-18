@@ -1,15 +1,16 @@
+using System.Collections.Generic;
 using Homework7.Ecs.Components;
 using Homework7.Ecs.Components.Cube;
-using Homework7.Enums;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
-using UnityEngine;
+
 
 namespace Homework7.Ecs.Systems 
 {
     public struct CubeInitializer : IEcsInitSystem
     {
-        private readonly EcsCustomInject<SharedData> _data;
+        private readonly EcsCustomInject<SpawnSO> _spawnData;
+        private readonly EcsCustomInject<List<CubeSO>> _cubeDatas;
         public void Init (IEcsSystems systems)
         {
             var world = systems.GetWorld();
@@ -25,17 +26,20 @@ namespace Homework7.Ecs.Systems
             var poolPosition = world.GetPool<Position_C>();
             var poolRigidbody = world.GetPool<Rigidbody_C>();
             
-            for (int i = 0; i < _data.Value.countSpawn * 2; i++)
+            for (int i = 0; i < _spawnData.Value.CountSpawn * 2; i++)
             {
+                int cubeNumber = i < _spawnData.Value.CountSpawn ? 0 : 1;
+                CubeSO cubeData = _cubeDatas.Value[cubeNumber];
+                
                 int entity = world.NewEntity();
                 poolViews.Add(entity);
-                poolDamage.Add(entity).damage = _data.Value.damage;
-                poolMovement.Add(entity).movementSpeed = _data.Value.movementSpeed;
-                poolWeapon.Add(entity).reloadTime = _data.Value.reloadTime;
-                poolHealth.Add(entity).health = Random.Range((int)_data.Value.healthRange.x, (int)_data.Value.healthRange.y);
+                poolDamage.Add(entity).damage = cubeData.Damage;
+                poolMovement.Add(entity).movementSpeed = cubeData.MovementSpeed;
+                poolWeapon.Add(entity).reloadTime = cubeData.ReloadTime;
+                poolHealth.Add(entity).health = cubeData.Health.Value;
                 poolRenderers.Add(entity);
-                poolTeam.Add(entity).team = i < _data.Value.countSpawn ? Team.Blue : Team.Red;
-                poolColor.Add(entity).color = poolTeam.Get(entity).team == Team.Blue ? _data.Value.colorBlue : _data.Value.colorRed;
+                poolTeam.Add(entity).team =  cubeData.Team;
+                poolColor.Add(entity).color = cubeData.Color;
                 poolPosition.Add(entity);
                 poolRigidbody.Add(entity);
             }

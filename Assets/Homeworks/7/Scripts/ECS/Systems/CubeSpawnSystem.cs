@@ -10,7 +10,7 @@ namespace Homework7.Ecs.Systems
     public struct CubeSpawnSystem : IEcsInitSystem
     {
         private readonly EcsFilterInject<Inc<View_C, Rigidbody_C, Renderer_C, Position_C, Movement_C, Team_C>> _filterCube;
-        private readonly EcsCustomInject<SharedData> _data;
+        private readonly EcsCustomInject<SpawnSO> _spawnData;
         public void Init(IEcsSystems systems)
         {
             var world = systems.GetWorld();
@@ -33,7 +33,7 @@ namespace Homework7.Ecs.Systems
                 Vector3 spawnPos = new Vector3(cubePosition.position.x, 0.5f, cubePosition.position.y);
                 poolPositions.Del(entity);
                 var newCube = Object.Instantiate
-                    (_data.Value.prefabCube, spawnPos, Quaternion.identity, _data.Value.parent);
+                    (_spawnData.Value.PrefabCube, spawnPos, Quaternion.identity, _spawnData.Value.Root);
                 newCube.Init(world);
                 newCube.PackEntity(entity);
                 viewC.view = newCube.gameObject;

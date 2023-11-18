@@ -255,25 +255,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c904c42b037b29b4d9519a1054ac233c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _data:
-    parent: {fileID: 870456206}
-    borderX: 25
-    borderY: 25
-    gap: 1.5
-    leftPoint: {x: -7, y: 0}
-    rightPoint: {x: 7, y: 0}
-    countSpawn: 100
-    prefabCube: {fileID: 7986024376611734619, guid: cabde8cbe9effdb4e831ad97c6b56ade,
-      type: 3}
-    prefabBullet: {fileID: 6397255880797614484, guid: a6f4d6528bfd9ab41b9773bf56a7ecc3,
-      type: 3}
-    damage: 1
-    healthRange: {x: 1, y: 5}
-    movementSpeed: 16
-    bulletSpeed: 50
-    reloadTime: 2
-    colorBlue: {r: 0, g: 0, b: 1, a: 1}
-    colorRed: {r: 1, g: 0, b: 0, a: 1}
+  _worldData: {fileID: 11400000, guid: a9e9d989b8f3937448e6716c8eff214d, type: 2}
+  _spawnData: {fileID: 11400000, guid: 8aba8fb720270bb4c9e6a0fae0e43c09, type: 2}
+  _cubeDatas:
+  - {fileID: 11400000, guid: 58f905333526b734c852f33f88778d88, type: 2}
+  - {fileID: 11400000, guid: e6fc2cc709e2ee541989793f72b58cef, type: 2}
 --- !u!1 &171914051
 GameObject:
   m_ObjectHideFlags: 0
