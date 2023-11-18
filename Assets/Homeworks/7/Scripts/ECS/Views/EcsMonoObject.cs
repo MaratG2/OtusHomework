@@ -28,9 +28,12 @@ namespace Homework7.Ecs.Views
             
             int entity = _world.NewEntity();
             var poolFightC = _world.GetPool<Fight_C>();
-            ref var fightC = ref poolFightC.Add(entity);
-            fightC.firstFighter = firstCollide;
-            fightC.secondFighter = secondCollide;
+            if(!poolFightC.Has(entity))
+            {
+                ref var fightC = ref poolFightC.Add(entity);
+                fightC.firstFighter = firstCollide;
+                fightC.secondFighter = secondCollide;
+            }
         }
         
         protected virtual void OnBulletAction
@@ -40,9 +43,12 @@ namespace Homework7.Ecs.Views
                 return;
             int entity = _world.NewEntity();
             var poolHitC = _world.GetPool<Hit_C>();
-            ref var hitC = ref poolHitC.Add(entity);
-            hitC.firstCollide = firstCollide;
-            hitC.secondCollide = secondCollide;
+            if (!poolHitC.Has(entity))
+            {
+                ref var hitC = ref poolHitC.Add(entity);
+                hitC.firstCollide = firstCollide;
+                hitC.secondCollide = secondCollide;
+            }
         }
 
         public void Delete()

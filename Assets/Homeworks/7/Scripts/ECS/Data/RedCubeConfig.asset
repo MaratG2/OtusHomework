@@ -17,6 +17,6 @@ MonoBehaviour:
     _range: {x: 1, y: 5}
   _movementSpeed: 16
   _bulletSpeed: 50
-  _reloadTime: 2
+  _reloadTime: 3
   _color: {r: 1, g: 0.09262034, b: 0, a: 1}
   _team: 1

@@ -10,6 +10,7 @@ namespace Homework7.Ecs.Systems
     public struct CubeSpawnSystem : IEcsInitSystem
     {
         private readonly EcsFilterInject<Inc<View_C, Rigidbody_C, Renderer_C, Position_C, Movement_C, Team_C>> _filterCube;
+        
         private readonly EcsCustomInject<SpawnSO> _spawnData;
         public void Init(IEcsSystems systems)
         {
@@ -39,10 +40,8 @@ namespace Homework7.Ecs.Systems
                 viewC.view = newCube.gameObject;
                 rigidbodyC.rigidbody = newCube.gameObject.GetComponent<Rigidbody>();
                 cubeRendererC.renderer = newCube.GetComponent<Renderer>();
-
                 int direction = cubeTeam.team == Team.Blue ? 1 : -1;
                 cubeMovement.direction = new Vector2(direction, 0f);
-                cubeMovement.isMoving = true;
             }
         }
     }

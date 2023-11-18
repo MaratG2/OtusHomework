@@ -10,13 +10,11 @@ namespace Homework7.Ecs.Views
             if (other.gameObject.TryGetComponent<EcsMonoObject>(out var secondCollide))
             {
                 var poolTeamC = _world.GetPool<Team_C>();
-                var poolWeaponC = _world.GetPool<Weapon_C>();
                 var firstTeamC = poolTeamC.Get(this.GetEntity());
                 var secondTeamC = poolTeamC.Get(secondCollide.GetEntity());
-                ref var weaponC = ref poolWeaponC.Get(this.GetEntity());
-                if(firstTeamC.team != secondTeamC.team && !weaponC.hasTarget)
+                
+                if (firstTeamC.team != secondTeamC.team)
                 {
-                    weaponC.hasTarget = true;
                     OnFightAction(this, secondCollide);
                 }
             }

@@ -25,6 +25,7 @@ namespace Homework7.Ecs.Systems
             var poolColor = world.GetPool<Color_C>();
             var poolPosition = world.GetPool<Position_C>();
             var poolRigidbody = world.GetPool<Rigidbody_C>();
+            var poolRequireMove = world.GetPool<RequireMove_C>();
             
             for (int i = 0; i < _spawnData.Value.CountSpawn * 2; i++)
             {
@@ -42,6 +43,7 @@ namespace Homework7.Ecs.Systems
                 poolColor.Add(entity).color = cubeData.Color;
                 poolPosition.Add(entity);
                 poolRigidbody.Add(entity);
+                poolRequireMove.Add(entity);
             }
         }
     }

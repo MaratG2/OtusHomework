@@ -1,3 +1,4 @@
+using Homework7.Ecs.Components;
 using Homework7.Ecs.Components.Cube;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
@@ -9,8 +10,9 @@ namespace Homework7.Ecs.Systems
     {
         private readonly EcsFilterInject<Inc<Fight_C>> _fightFilter;
         private readonly EcsPoolInject<Fight_C> _fightPool;
-        private readonly EcsPoolInject<Movement_C> _movementPool;
+        private readonly EcsPoolInject<RequireMove_C> _requireMovePool;
         private readonly EcsPoolInject<Weapon_C> _weaponPool;
+        private readonly EcsPoolInject<RequireShoot_C> _requireShootPool;
         
         public void Run(IEcsSystems systems)
         {
@@ -21,28 +23,25 @@ namespace Homework7.Ecs.Systems
                 {
                     if (fightC.firstFighter)
                     {
-                        ref var cleanMovementC = ref _movementPool.Value.Get(fightC.firstFighter.GetEntity());
-                        ref var cleanWeaponC = ref _weaponPool.Value.Get(fightC.firstFighter.GetEntity());
-                        
-                        cleanWeaponC.hasTarget = false;
-                        cleanMovementC.isMoving = true;
-                        Debug.Log("END FIGHT, MOVE ON");
+                        if(!_requireMovePool.Value.Has(fightC.firstFighter.GetEntity()))
+                            _requireMovePool.Value.Add(fightC.firstFighter.GetEntity());
                     }
                     systems.GetWorld().DelEntity(entity);
                     continue;
                 }
                 
                 int firstFighterEntity = fightC.firstFighter.GetEntity();
-                ref var movementC = ref _movementPool.Value.Get(firstFighterEntity);
                 ref var weaponC = ref _weaponPool.Value.Get(firstFighterEntity);
 
-                movementC.isMoving = false;
-                if (weaponC.reloadTimer < weaponC.reloadTime && !fightC.shootRequired)
+                if(_requireMovePool.Value.Has(firstFighterEntity))
+                    _requireMovePool.Value.Del(firstFighterEntity);
+                
+                if (weaponC.reloadTimer < weaponC.reloadTime)
                     weaponC.reloadTimer += Time.deltaTime;
-                else
+                else if(fightC.firstFighter != null && fightC.secondFighter != null)
                 {
-                    weaponC.reloadTimer = 0f;
-                    fightC.shootRequired = true;
+                    _requireShootPool.Value.Add(entity);
+                    weaponC.reloadTimer = 0;
                 }
             }
         }

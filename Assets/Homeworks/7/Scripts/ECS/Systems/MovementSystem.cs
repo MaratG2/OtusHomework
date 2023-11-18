@@ -1,5 +1,4 @@
 using Homework7.Ecs.Components;
-using Homework7.Ecs.Components.Bullet;
 using Homework7.Ecs.Components.Cube;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
@@ -10,16 +9,15 @@ namespace Homework7.Ecs.Systems
     public struct MovementSystem : IEcsRunSystem
     {
         private readonly EcsFilterInject<Inc<Movement_C, Rigidbody_C>> _movementFilter;
-        private readonly EcsPoolInject<Movement_C> _poolMovement;
-        private readonly EcsPoolInject<Rigidbody_C> _poolRigidbody;
+        private readonly EcsPoolInject<RequireMove_C> _poolRequireMove;
         public void Run(IEcsSystems systems)
         {
             foreach (int entity in _movementFilter.Value)
             {
-                ref var movementC = ref _poolMovement.Value.Get(entity);
-                ref var rigidbodyC = ref _poolRigidbody.Value.Get(entity);
+                ref var movementC = ref _movementFilter.Pools.Inc1.Get(entity);
+                ref var rigidbodyC = ref _movementFilter.Pools.Inc2.Get(entity);
 
-                if (movementC.isMoving)
+                if (_poolRequireMove.Value.Has(entity))
                 {
                     Vector3 direction = new Vector3(movementC.direction.x, 0f, movementC.direction.y);
                     rigidbodyC.rigidbody.AddForce(direction * Time.deltaTime * movementC.movementSpeed);

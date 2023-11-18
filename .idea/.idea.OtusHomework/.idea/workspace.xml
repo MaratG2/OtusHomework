@@ -23,20 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/EcsStartup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/EcsStartup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/SharedData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/SharedData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BorderCheckSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BorderCheckSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/Fight_C.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/Fight_C.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/Movement_C.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/Movement_C.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/Weapon_C.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Components/Cube/Weapon_C.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Data/BlueCubeConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Data/BlueCubeConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Data/RedCubeConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Data/RedCubeConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BulletInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BulletInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BulletSpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/BulletSpawnSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeInitializer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeSpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeSpawnSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/SetSpawnPositionSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/SetSpawnPositionSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/Helpers/CheckOutOfBounds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/Helpers/CheckOutOfBounds.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/FightSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/FightSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/MovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/MovementSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Views/CubeView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Views/CubeView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Views/EcsMonoObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Views/EcsMonoObject.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +51,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Systems/CubeInitializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/7/Scripts/ECS/Views/BulletView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/TestFramework/ZenjectTestUtil.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecslite@a5fc58bdcd/src/components.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecslite@a5fc58bdcd/src/entities.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecslite@a5fc58bdcd/src/systems.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@7.0.11/IK/Runtime/Solver2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.0.7/Editor/EditorCore/DestroyListener.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../nb/Assets/UnityScripts/Controllers/CheatsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/72/d460cb2b/IEquatable`1.cs" root0="SKIP_HIGHLIGHTING" />
@@ -205,7 +206,7 @@
       <workItem from="1690521551480" duration="15388000" />
       <workItem from="1690560325480" duration="1943000" />
       <workItem from="1700293135877" duration="125000" />
-      <workItem from="1700296892224" duration="3087000" />
+      <workItem from="1700296892224" duration="5454000" />
     </task>
     <servers />
   </component>

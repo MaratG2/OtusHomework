@@ -12,7 +12,7 @@ namespace Homework7.Ecs.Systems
 {
     public struct BulletInitializer : IEcsRunSystem
     {
-        private readonly EcsFilterInject<Inc<Fight_C>> _fightFilter;
+        private readonly EcsFilterInject<Inc<RequireShoot_C>> _requireShootFilter;
         private readonly EcsPoolInject<Fight_C> _fightPool;
         private readonly EcsPoolInject<Team_C> _teamPool;
         private readonly EcsCustomInject<List<CubeSO>> _cubeDatas;
@@ -20,13 +20,13 @@ namespace Homework7.Ecs.Systems
         
         public void Run(IEcsSystems systems)
         {
-            foreach (int entity in _fightFilter.Value)
+            foreach (int entity in _requireShootFilter.Value)
             {
-                ref var fightC = ref _fightPool.Value.Get(entity);
-                if (fightC.shootRequired)
+                var fightC = _fightPool.Value.Get(entity);
+                if(fightC.firstFighter != null && fightC.secondFighter != null)
                 {
-                    fightC.shootRequired = false;
                     SpawnBullet(fightC.firstFighter.gameObject, fightC.secondFighter.gameObject);
+                    _requireShootFilter.Pools.Inc1.Del(entity);
                 }
             }
         }
@@ -38,6 +38,7 @@ namespace Homework7.Ecs.Systems
             var rigidbodyPool = _world.Value.GetPool<Rigidbody_C>();
             var positionPool = _world.Value.GetPool<Position_C>();
             var movementPool = _world.Value.GetPool<Movement_C>();
+            var reqMovePool = _world.Value.GetPool<RequireMove_C>();
             var rendererPool = _world.Value.GetPool<Renderer_C>();
             var colorPool = _world.Value.GetPool<Color_C>();
             var requireSpawnPool = _world.Value.GetPool<RequireSpawn_C>();
@@ -55,8 +56,8 @@ namespace Homework7.Ecs.Systems
             CubeSO cubeData = _cubeDatas.Value[(int)team]; 
             _teamPool.Value.Add(entity).team = team;
             ref var movementC = ref movementPool.Add(entity);
-            movementC.isMoving = true;
             movementC.movementSpeed = cubeData.BulletSpeed;
+            reqMovePool.Add(entity);
             rendererPool.Add(entity);
             colorPool.Add(entity).color = cubeData.Color;
         }
