@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/Database/CharacterInfoWrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scripts/Database/CharacterInfoWrapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/3/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/3/Scenes/GameScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,17 +22,16 @@
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/CharacterPresenter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Homeworks/3/Scripts/PM/CharacterStatView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Noname/JsonHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../nb/Assets/UnityScripts/Controllers/CheatsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../unity-pro-04.2023/Assets/Lessons/I.Architecture/Lesson_PM/Scripts/Popups/ProductPopup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../unity-pro-04.2023/Assets/Lessons/I.Architecture/Lesson_PM/Scripts/Product/IProductPresentationModel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../unity-pro-04.2023/Assets/Lessons/I.Architecture/Lesson_PM/Scripts/Product/Product.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../unity-pro-04.2023/Assets/Lessons/I.Architecture/Lesson_PM/Scripts/Product/ProductBuyer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../unity-pro-04.2023/Assets/Lessons/I.Architecture/Lesson_PM/Scripts/Product/ProductPopupShower.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../unity-pro-04.2023/Assets/Lessons/I.Architecture/Lesson_PM/Scripts/Product/ProductPresentationModel.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2PxpmqeYXLghpptNMV9yjjIcYAI" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -121,6 +121,7 @@
       <workItem from="1688930583037" duration="28000" />
       <workItem from="1688967509589" duration="17202000" />
       <workItem from="1688989797227" duration="5841000" />
+      <workItem from="1704139341772" duration="328000" />
     </task>
     <servers />
   </component>
