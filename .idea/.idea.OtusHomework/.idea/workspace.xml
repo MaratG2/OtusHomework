@@ -23,15 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84618076-c88b-43a0-90e1-5c07ad3a9103" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/MoveEngine.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/MoveEngine.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Bullet/BulletModel_Core.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_Core.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/RunState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/RunState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/MoveSection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/MoveSection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/PlayerMoveSection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/PlayerMoveSection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Zombie/ZombieModel_Core.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OtusHomework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Kevin Iglesias/Soldier Animations/AnimatorControllers/AssaultRifle/SoldierAssaultRifle - CombatIdle.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetPacks/Kevin Iglesias/Soldier Animations/AnimatorControllers/AssaultRifle/SoldierAssaultRifle - CombatIdle.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_View.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/HeroModel_View.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/HeroAnimationStateType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Homeworks/6/Scripts/GameEntities/Hero/States/HeroAnimationStateType.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,21 +119,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "homework6",
-    "last_opened_file_path": "C:/Unity_Projects/OtusHomework/Assets/Homeworks/6",
-    "settings.editor.selected.configurable": "preferences.build.unityPlugin"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;homework6&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Unity_Projects/OtusHomework/Assets/Homeworks/6&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.build.unityPlugin&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\DecompilerCache",
-      "C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\SourcesCache",
-      "C:\\Users\\god79\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\DecompilerCache&quot;,
+      &quot;C:\\Users\\god79\\AppData\\Local\\JetBrains\\Shared\\vAny\\SourcesCache&quot;,
+      &quot;C:\\Users\\god79\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files (x86)\Unity_Editors\2021.3.7f1\Editor\Unity.exe" />
@@ -174,10 +169,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="16900">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="16900" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -213,6 +208,7 @@
       <workItem from="1691734382489" duration="608000" />
       <workItem from="1693503665641" duration="757000" />
       <workItem from="1693739501493" duration="8182000" />
+      <workItem from="1704180502752" duration="2202000" />
     </task>
     <servers />
   </component>

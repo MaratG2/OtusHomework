@@ -49,9 +49,8 @@ namespace Homeworks6.Hero
         {
             animatorMachine.SetupStates
             (
-                (HeroAnimationStateType.Idle, null),
-                (HeroAnimationStateType.Run, null),
                 (HeroAnimationStateType.Shoot, null),
+                (HeroAnimationStateType.Run, null),
                 (HeroAnimationStateType.Death, null)
             );
             _heroStatesSection.stateMachine.OnStateSwitched += newState =>
