@@ -1,6 +1,6 @@
-<h2 align="center">Homeworks from online-course "Unity Game Developer. Professional" from OTUS.</h2>
+<h2 align="center">Homeworks from online-course "Unity Game Developer. Professional" from OTUS</h2>
 
-<h3 align="left">Links to git folder:</h3>
+<h3 align="left">Links to respective git folders:</h3>
 <ul>
   <li><a href="https://github.com/MaratG2/OtusHomework/tree/homework1/Assets/Homeworks/h1">1. Game states with events</a></li>
   <li><a href="https://github.com/MaratG2/OtusHomework/tree/homework2/Assets/Homeworks/h2">2. Dependency injection with Zenject and refactoring</a>. Also I wrote my own generic Pool with fabric and facade, included them in separate asmdef</li>
